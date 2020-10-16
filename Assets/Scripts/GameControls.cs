@@ -32,7 +32,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""id"": ""59d17645-80de-466e-830c-14b5d5e07f79"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
@@ -70,7 +70,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Joystick"",
+                    ""name"": ""Gamepad"",
                     ""id"": ""156bbc3a-72bf-4375-8be7-b0b21aa683bf"",
                     ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
@@ -83,7 +83,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""4da15839-4045-4e34-a752-18852eb374ce"",
-                    ""path"": ""<Joystick>/stick/up"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -94,7 +94,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""e9d2faf8-42f8-4329-af20-f178d8a06d13"",
-                    ""path"": ""<Joystick>/stick/down"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -105,7 +105,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""28bb78d5-95d8-47c6-9c01-3f7d95c930b5"",
-                    ""path"": ""<Joystick>/stick/left"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -116,7 +116,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""23979ee5-14d8-4ff6-9abf-10f7cfcc0716"",
-                    ""path"": ""<Joystick>/stick/right"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -128,6 +128,17 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""fdb2a007-d07f-4f31-b8c2-0325238b05e3"",
                     ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5add408a-41f0-4037-9aed-2618272a00a8"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

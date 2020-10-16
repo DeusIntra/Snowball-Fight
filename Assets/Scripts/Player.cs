@@ -28,7 +28,10 @@ public class Player : MonoBehaviour
 
     public void ReadShootInput(InputAction.CallbackContext callbackContext)
     {
-        GameObject snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
-        Debug.Log(callbackContext.ReadValueAsButton());
+        GameObject snowball;
+        if (callbackContext.started)
+        {
+            snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+        }
     }
 }
