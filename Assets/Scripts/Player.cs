@@ -4,9 +4,14 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
 {
-    public float speed = 0.05f;
-    public GameObject snowballPrefab;
+    public float speed = 4f;
+    public float maxShootForce = 15f;
 
+    public GameObject snowballPrefab;
+    public Transform snowballSpawn;
+    public ProgressBar shootProgressBar;
+
+    private float _shootForce;
     private Vector2 _movementVector;
     private Rigidbody _rigidbody;
 
@@ -28,10 +33,25 @@ public class Player : MonoBehaviour
 
     public void ReadShootInput(InputAction.CallbackContext callbackContext)
     {
-        GameObject snowball;
-        if (callbackContext.started)
+        if (callbackContext.phase == InputActionPhase.Started)
         {
-            snowball = Instantiate(snowballPrefab, transform.position, Quaternion.identity);
+            shootProgressBar.StartFilling();
         }
+
+        if (callbackContext.phase == InputActionPhase.Canceled)
+        {
+            _shootForce = shootProgressBar.currentFill * maxShootForce;
+            shootProgressBar.StopAndReset();
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        GameObject snowball = Instantiate(snowballPrefab, snowballSpawn.position, snowballSpawn.rotation);        
+        Rigidbody snowballRB = snowball.GetComponent<Rigidbody>();        
+        snowballRB.AddForce(snowball.transform.forward * _shootForce, ForceMode.Impulse);
+        
+        _shootForce = 0f;
     }
 }
