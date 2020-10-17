@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     public float speed = 4f;
     public float maxShootForce = 15f;
     public float minShootForceFraction = 0.4f;
-    public float boundaryDistance = 5f;
 
     public GameObject snowballPrefab;
     public Transform snowballSpawn;
@@ -26,16 +25,6 @@ public class Player : MonoBehaviour
     {
         float x = speed * _movementVector.x;
         _rigidbody.velocity = new Vector3(x, 0, 0);
-
-        if (transform.position.x < -boundaryDistance)
-        {
-            transform.position = new Vector3(-boundaryDistance, transform.position.y, transform.position.z);
-        }
-
-        if (transform.position.x > boundaryDistance)
-        {
-            transform.position = new Vector3(boundaryDistance, transform.position.y, transform.position.z);
-        }
     }
 
     public void ReadMovementInput(InputAction.CallbackContext callbackContext)
