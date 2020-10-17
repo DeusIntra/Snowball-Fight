@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321011689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1068,6 +1068,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1522330979}
     m_Modifications:
+    - target: {fileID: 686107178495179134, guid: 26180825cf4f3ae4fa47b7777bdf256b, type: 3}
+      propertyPath: timeToFillSeconds
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 723093957059075113, guid: 26180825cf4f3ae4fa47b7777bdf256b, type: 3}
       propertyPath: m_Color.r
       value: 0.9716981
@@ -1209,25 +1213,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 484951766, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.258819
-      objectReference: {fileID: 0}
-    - target: {fileID: 484951766, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9659259
-      objectReference: {fileID: 0}
-    - target: {fileID: 484951766, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -30
-      objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322642, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: shootProgressBar
       value: 
       objectReference: {fileID: 1289708244}
     - target: {fileID: 8668231041199322642, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: maxShootForce
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322643, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_Name

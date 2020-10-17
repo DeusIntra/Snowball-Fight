@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public float speed = 4f;
     public float maxShootForce = 15f;
+    public float minShootForceFraction = 0.4f;
 
     public GameObject snowballPrefab;
     public Transform snowballSpawn;
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour
 
         if (callbackContext.phase == InputActionPhase.Canceled)
         {
-            _shootForce = shootProgressBar.currentFill * maxShootForce;
+            _shootForce = shootProgressBar.currentFill * maxShootForce * (1 - minShootForceFraction);
             shootProgressBar.StopAndReset();
             Shoot();
         }
@@ -49,8 +50,10 @@ public class Player : MonoBehaviour
     private void Shoot()
     {
         GameObject snowball = Instantiate(snowballPrefab, snowballSpawn.position, snowballSpawn.rotation);        
-        Rigidbody snowballRB = snowball.GetComponent<Rigidbody>();        
-        snowballRB.AddForce(snowball.transform.forward * _shootForce, ForceMode.Impulse);
+        Rigidbody snowballRB = snowball.GetComponent<Rigidbody>();
+
+        float multiplier = _shootForce + maxShootForce * minShootForceFraction;
+        snowballRB.AddForce(snowball.transform.forward * multiplier, ForceMode.Impulse);
         
         _shootForce = 0f;
     }
