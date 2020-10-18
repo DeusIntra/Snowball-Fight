@@ -17,10 +17,17 @@ public class Player : MonoBehaviour
     private float _shootForce;
     private Vector2 _movementVector;
     private Rigidbody _rigidbody;
+    private Animator _animator;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Update()
+    {
+        _animator.speed = Mathf.Abs(_movementVector.x);
     }
 
     private void FixedUpdate()

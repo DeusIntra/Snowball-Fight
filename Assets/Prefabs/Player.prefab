@@ -89,7 +89,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8469494145858465668, guid: 5a62b75cd011f584eb055220cb8dcc7f, type: 3}
+  - {fileID: 2100000, guid: f564fb46d462339468a55a34848e7224, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,6 +191,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   maxShootForce: 15
+  minShootForceFraction: 0.4
+  boundaryDistance: 5
+  snowballSideVelocityMultiplier: 1
   snowballPrefab: {fileID: 5939075157995140235, guid: b0b121206a7ca8f4a9ae5585f357331e, type: 3}
   snowballSpawn: {fileID: 484951766}
   shootProgressBar: {fileID: 0}
