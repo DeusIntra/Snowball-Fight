@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float maxShootForce = 15f;
     public float minShootForceFraction = 0.4f;
     public float boundaryDistance = 5f;
+    public float snowballSideVelocityMultiplier = 1f;
 
     public GameObject snowballPrefab;
     public Transform snowballSpawn;
@@ -64,7 +65,10 @@ public class Player : MonoBehaviour
         Rigidbody snowballRB = snowball.GetComponent<Rigidbody>();
 
         float multiplier = _shootForce + maxShootForce * minShootForceFraction;
-        snowballRB.AddForce(snowball.transform.forward * multiplier, ForceMode.Impulse);
+        Vector3 forwardVelocity = snowball.transform.forward * multiplier;
+        Vector3 sideVelocity = _rigidbody.velocity * snowballSideVelocityMultiplier;
+        Vector3 snowballVelocity = forwardVelocity + sideVelocity;
+        snowballRB.AddForce(snowballVelocity, ForceMode.Impulse);
         
         _shootForce = 0f;
     }
