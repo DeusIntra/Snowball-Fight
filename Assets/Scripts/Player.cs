@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         float x = speed * _movementVector.x;
-        _rigidbody.velocity = new Vector3(x, 0, 0);
+        _rigidbody.velocity = new Vector3(x, 0f, 0f);
 
         if (transform.position.x < -boundaryDistance)
         {
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
 
         if (callbackContext.phase == InputActionPhase.Canceled)
         {
-            _shootForce = shootProgressBar.currentFill * maxShootForce * (1 - minShootForceFraction);
+            _shootForce = shootProgressBar.currentFill * maxShootForce * (1f - minShootForceFraction);
             shootProgressBar.StopAndReset();
             Shoot();
         }

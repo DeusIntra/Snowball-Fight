@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyShoot : MonoBehaviour
+public class Shooter : MonoBehaviour
 {
     public Transform snowballSpawn;
     public Transform target;
