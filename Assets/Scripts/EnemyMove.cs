@@ -9,7 +9,7 @@ public class EnemyMove : MonoBehaviour
     private Rigidbody _rigidbody;
     private float _targetPosition;
 
-    private const float minDifference = 0.05f;
+    private const float minDifference = 0.1f;
 
     private void Awake()
     {
@@ -32,6 +32,6 @@ public class EnemyMove : MonoBehaviour
 
     private void chooseTargetPosition()
     {
-        _targetPosition = Random.Range(-boundaryDistance, boundaryDistance);
+        _targetPosition = Random.Range(-boundaryDistance - minDifference, boundaryDistance + minDifference);
     }
 }
