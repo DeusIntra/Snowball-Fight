@@ -140,9 +140,17 @@
             "id": "83616197-8545-4577-9007-6fbb4f5e270e",
             "actions": [
                 {
-                    "name": "Touch",
+                    "name": "Pointer Position",
+                    "type": "Value",
+                    "id": "68bc1a9a-9554-49f9-a1c4-7262acb8c00b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pointer Press",
                     "type": "Button",
-                    "id": "07f955bc-2e78-430f-9ea4-a23497dcc7a9",
+                    "id": "a29697ae-16a8-4fb3-894d-a968bcbb14e5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -151,12 +159,45 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "da8e5ebc-a8ef-4100-8e97-8f6b7242354e",
+                    "id": "c2b12fdf-0192-4093-93e8-d9b89b97e9f7",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pointer Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34e5e55a-cd4c-4db0-a21e-a14b47a4eab6",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pointer Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2293e00-d05c-4144-a73c-f5ca9c934afd",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Touch",
+                    "action": "Pointer Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "26be0e02-91d7-4fcc-bed1-c600d98280f1",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pointer Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
