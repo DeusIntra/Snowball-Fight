@@ -3,13 +3,18 @@
 public class Shooter : MonoBehaviour
 {
     public Transform snowballSpawn;
-    public Transform target;
     public GameObject snowballPrefab;
 
     private float g;
     private float angle;
+    private Transform target;
 
     const float hack = 0.55f;
+
+    private void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void Start()
     {
