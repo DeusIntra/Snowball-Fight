@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db5551d0c0a39f49bc5053039e6a65d, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  girl: 0
-  boy: 0
-  penguin: 0
-  polarBear: 0
+  girlCount: 2
+  boyCount: 0
+  penguinCount: 0
+  polarBearCount: 0
+  girlPrefab: {fileID: 7461669163828901083, guid: 5a0e12f8f79973d48975d506d96bca8d, type: 3}
+  boyPrefab: {fileID: 0}
+  penguinPrefab: {fileID: 0}
+  polarBearPrefab: {fileID: 0}

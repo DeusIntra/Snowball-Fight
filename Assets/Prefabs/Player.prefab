@@ -140,7 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8668231041199322646}
-  - component: {fileID: 8668231041199322641}
+  - component: {fileID: 1963666284459681614}
   - component: {fileID: 8234439395668472694}
   - component: {fileID: 8668231041199322642}
   - component: {fileID: 9855064}
@@ -167,8 +167,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8668231041199322641
-CapsuleCollider:
+--- !u!65 &1963666284459681614
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -177,9 +177,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.6
-  m_Height: 2.4
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8234439395668472694
 Rigidbody:
@@ -210,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  maxShootForce: 30
+  maxShootForce: 32
   minShootForceFraction: 0.4
   boundaryDistance: 5
   snowballSideVelocityMultiplier: 1
