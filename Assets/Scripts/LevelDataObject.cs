@@ -4,8 +4,14 @@
 public class LevelDataObject : ScriptableObject
 {
     [Header("Enemies Count")]
-    public int girl;
-    public int boy;
-    public int penguin;
-    public int polarBear;
+    public int girlCount;
+    public int boyCount;
+    public int penguinCount;
+    public int polarBearCount;
+
+    [Header("Enemies Prefabs")]
+    public GameObject girlPrefab;
+    public GameObject boyPrefab;
+    public GameObject penguinPrefab;
+    public GameObject polarBearPrefab;
 }
