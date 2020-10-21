@@ -25,17 +25,6 @@ public class AnimatedMeshSequence : MonoBehaviour
             Play();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if(IsPlaying)
-                Stop();
-            else
-                Play();
-        }
-    }
-
     public void Play()
     {
         if (!IsReady()) return;
