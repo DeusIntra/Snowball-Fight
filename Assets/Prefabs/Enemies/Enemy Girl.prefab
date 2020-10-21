@@ -191,10 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41635d33a5d737344b19845f8863fc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: {fileID: 0}
+  walk: {fileID: 7624020132715942630}
   swing: {fileID: 0}
-  throwing: {fileID: 0}
-  death: {fileID: 0}
+  throwing: {fileID: 8600268336782960287}
+  death: {fileID: 6298372924598341939}
 --- !u!1 &7461669163828901083
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minShootTimeSeconds: 3
   maxShootTimeSeconds: 8
-  meshAnimations: {fileID: 0}
+  meshAnimations: {fileID: 8768740222910552338}
 --- !u!114 &7461669163828901059
 MonoBehaviour:
   m_ObjectHideFlags: 0

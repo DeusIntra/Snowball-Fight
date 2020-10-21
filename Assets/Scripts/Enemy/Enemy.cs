@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Shooter))]
 public class Enemy : MonoBehaviour
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     private Shooter shooter;
     private float timeToShoot;
+    private Coroutine _delayCoroutine;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         resetShootTime();
+        meshAnimations.walk.Play();
     }
 
     private void Update()
@@ -27,6 +30,12 @@ public class Enemy : MonoBehaviour
 
         if (timeToShoot <= 0)
         {
+            meshAnimations.walk.Stop();
+            meshAnimations.throwing.Play();
+            if (_delayCoroutine != null)
+                StopCoroutine(_delayCoroutine);
+            _delayCoroutine = StartCoroutine(WalkAnimation());
+
             shooter.ShootAtTarget();
             resetShootTime();
         }
@@ -35,6 +44,13 @@ public class Enemy : MonoBehaviour
     private void resetShootTime()
     {
         timeToShoot = Random.Range(minShootTimeSeconds, maxShootTimeSeconds);
+    }
+
+    private IEnumerator WalkAnimation()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        meshAnimations.throwing.Stop();
+        meshAnimations.walk.Play();
     }
 
 }
