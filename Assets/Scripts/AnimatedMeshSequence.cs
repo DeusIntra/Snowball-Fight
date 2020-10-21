@@ -49,10 +49,9 @@ public class AnimatedMeshSequence : MonoBehaviour
 
     private IEnumerator AnimateMesh()
     {
-        float waitTime = 1f/FramesPerSecond;
-
         while (IsPlaying)
         {
+            float waitTime = 1f/FramesPerSecond;
             IncrementPlayhead();
             MyMeshFilter.mesh = Meshes[Position];
             yield return new WaitForSeconds(waitTime);

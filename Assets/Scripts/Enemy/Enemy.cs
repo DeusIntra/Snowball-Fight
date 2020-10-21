@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
     public float minShootTimeSeconds = 3f;
     public float maxShootTimeSeconds = 8f;
 
+    public MeshAnimations meshAnimations;
+
     private Shooter shooter;
     private float timeToShoot;
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -13,11 +14,13 @@ public class Player : MonoBehaviour
     public GameObject snowballPrefab;
     public Transform snowballSpawn;
     public ProgressBar shootProgressBar;
+    public MeshAnimations meshAnimations;
 
     private float _shootForce;
     private Vector2 _movementVector;
     private Rigidbody _rigidbody;
     private Animator _animator;
+    private Coroutine _delayedCoroutine;
 
     private void Awake()
     {
@@ -25,9 +28,14 @@ public class Player : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+        meshAnimations.walk.Play();
+    }
+
     private void Update()
     {
-        _animator.speed = Mathf.Abs(_movementVector.x);
+        Animate();
     }
 
     private void FixedUpdate()
@@ -56,6 +64,12 @@ public class Player : MonoBehaviour
         if (callbackContext.phase == InputActionPhase.Started)
         {
             shootProgressBar.StartFilling();
+            meshAnimations.StopAll();
+            meshAnimations.swing.Play();
+            _animator.Play("swing");
+
+            if (_delayedCoroutine != null)
+                StopCoroutine(_delayedCoroutine);
         }
 
         if (callbackContext.phase == InputActionPhase.Canceled)
@@ -63,6 +77,12 @@ public class Player : MonoBehaviour
             _shootForce = shootProgressBar.currentFill * maxShootForce * (1f - minShootForceFraction);
             shootProgressBar.StopAndReset();
             Shoot();
+
+            meshAnimations.StopAll();
+            meshAnimations.throwing.Play();
+            _animator.Play("throwing");
+            
+            _delayedCoroutine = StartCoroutine(WalkAnimation());
         }
     }
 
@@ -78,5 +98,26 @@ public class Player : MonoBehaviour
         snowballRB.AddForce(snowballVelocity, ForceMode.Impulse);
         
         _shootForce = 0f;
+    }
+
+    private void Animate()
+    {
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("walk"))
+        {
+            _animator.speed = Mathf.Abs(_movementVector.x);
+        }
+
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("swing"))
+        {
+            meshAnimations.swing.FramesPerSecond = Mathf.Lerp(4, 10, shootProgressBar.currentFill);
+        }
+    }
+
+    private IEnumerator WalkAnimation()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        meshAnimations.StopAll();
+        meshAnimations.walk.Play();
+        _animator.Play("walk");
     }
 }
