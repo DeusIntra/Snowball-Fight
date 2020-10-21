@@ -1002,7 +1002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &624384904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3100,17 +3100,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5314093974557084311, guid: 24be1d661e10d2248b594abff31a727d, type: 3}
   m_PrefabInstance: {fileID: 5314093976347806492}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2102709912 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4469268961708367644, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-  m_PrefabInstance: {fileID: 8668231040505508563}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4496c205b5a53114cb36d8914311465a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2077090176301190616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3687,10 +3676,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 991317766, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: death
-      value: 
-      objectReference: {fileID: 2102709912}
     - target: {fileID: 8668231041199322642, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: shootProgressBar
       value: 

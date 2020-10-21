@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 7461669163828901085}
   - component: {fileID: 7461669163828901058}
   - component: {fileID: 7461669163828901059}
+  - component: {fileID: 7468152188850172987}
   m_Layer: 10
   m_Name: Enemy Girl
   m_TagString: Enemy
@@ -289,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minShootTimeSeconds: 3
   maxShootTimeSeconds: 8
+  isAlive: 1
   meshAnimations: {fileID: 8768740222910552338}
 --- !u!114 &7461669163828901059
 MonoBehaviour:
@@ -304,6 +306,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   boundaryDistance: 5
+--- !u!114 &7468152188850172987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461669163828901083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  enemyProjectileTag: Player Snowball
 --- !u!1 &7461669163883907169
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,11 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
       propertyPath: m_Name
-      value: Enemy Snowball
+      value: Enemy Snowball Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Snowball
       objectReference: {fileID: 0}
     - target: {fileID: 6666411003437033456, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
       propertyPath: m_LocalPosition.x

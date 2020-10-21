@@ -9,9 +9,9 @@ public class MeshAnimations : MonoBehaviour
 
     public void StopAll()
     {
-        walk.Stop();
-        swing.Stop();
-        throwing.Stop();
-        death.Stop();
+        if (walk != null) walk.Stop();
+        if (swing != null) swing.Stop();
+        if (throwing != null) throwing.Stop();
+        if (death != null) death.Stop();
     }
 }

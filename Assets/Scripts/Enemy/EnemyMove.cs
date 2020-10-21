@@ -6,8 +6,9 @@ public class EnemyMove : MonoBehaviour
     public float speed = 1.5f;
     public float boundaryDistance = 5f;
 
-    private Rigidbody _rigidbody;
     private float _targetPosition;
+
+    private Rigidbody _rigidbody;
 
     private const float minDifference = 0.1f;
 
@@ -30,8 +31,15 @@ public class EnemyMove : MonoBehaviour
 
     }
 
+    public void Stop()
+    {
+        _rigidbody.velocity = Vector3.zero;
+    }
+
     private void chooseTargetPosition()
     {
         _targetPosition = Random.Range(-boundaryDistance - minDifference, boundaryDistance + minDifference);
     }
+
+    
 }

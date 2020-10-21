@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Snowball
   - Enemy
   - Enemy Spawn Point
+  - Player Snowball
+  - Enemy Snowball
   layers:
   - Default
   - TransparentFX
