@@ -3,26 +3,30 @@ using System.Collections;
 
 public class AnimatedMeshSequence : MonoBehaviour
 {
-    public float FramesPerSecond = 12f;
-    public bool PlayAtStart = false;
-    public Mesh[] Meshes;
-    protected MeshFilter MyMeshFilter;
-    protected int Position;
+    public float framesPerSecond = 12f;
+    public bool playAtStart = false;
+    public Mesh[] meshes;
+
+    protected MeshFilter meshFilter;
+    protected int position;
 
     private Coroutine coroutine;
     
     public bool IsPlaying { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
-        MyMeshFilter = transform.parent.GetComponent<MeshFilter>();
-        IsPlaying = false;
-
+        IsPlaying = false;        
         if (!IsReady()) return;
-        MyMeshFilter.mesh = Meshes[0];
+        meshFilter.mesh = meshes[0];
 
-        if (PlayAtStart)
+        if (playAtStart)
             Play();
+    }
+
+    public void SetMeshFilter(MeshFilter meshFilter)
+    {
+        this.meshFilter = meshFilter;
     }
 
     public void Play()
@@ -51,23 +55,23 @@ public class AnimatedMeshSequence : MonoBehaviour
     {
         while (IsPlaying)
         {
-            float waitTime = 1f/FramesPerSecond;
+            float waitTime = 1f/framesPerSecond;
             IncrementPlayhead();
-            MyMeshFilter.mesh = Meshes[Position];
+            meshFilter.mesh = meshes[position];
             yield return new WaitForSeconds(waitTime);
         }
     }
 
     private void IncrementPlayhead()
     {
-        Position++;
-        if (Position > Meshes.Length - 1)
-            Position = 0;
+        position++;
+        if (position > meshes.Length - 1)
+            position = 0;
     }
 
     private bool IsReady()
     {
-        if (Meshes.Length > 0)
+        if (meshes.Length > 0)
             return true;
         Debug.LogError("No Meshes have been added to the AnimatedMeshSequence");
         return false;

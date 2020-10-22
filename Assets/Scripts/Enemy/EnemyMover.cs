@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class EnemyMove : MonoBehaviour
+public class EnemyMover : MonoBehaviour
 {
     public float speed = 1.5f;
     public float boundaryDistance = 5f;
@@ -28,10 +28,9 @@ public class EnemyMove : MonoBehaviour
         float x = sign * speed;
 
         _rigidbody.velocity = new Vector3(x, 0f, 0f);
-
     }
 
-    public void Stop()
+    private void OnDisable()
     {
         _rigidbody.velocity = Vector3.zero;
     }

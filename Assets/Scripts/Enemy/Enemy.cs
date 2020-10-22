@@ -1,80 +1,47 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Shooter))]
+[RequireComponent(typeof(EnemyShooter))]
+[RequireComponent(typeof(EnemyMover))]
+[RequireComponent(typeof(EnemyAnimator))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(BoxCollider))]
 public class Enemy : MonoBehaviour
 {
-    public float minShootTimeSeconds = 3f;
-    public float maxShootTimeSeconds = 8f;
-    [HideInInspector] public bool isAlive = true;
+    //public MeshAnimations meshAnimations;
 
-    public MeshAnimations meshAnimations;
+    private EnemyShooter _shooter;
+    private EnemyMover _mover;
+    private EnemyAnimator _enemyAnimator;
+    private Health _health;
+    private BoxCollider _collider;
 
-    private float timeToShoot;
-
-    private BoxCollider boxCollider;
-    private Shooter shooter;
-    private Health health;
-    private EnemyMove enemyMove;
-
-    private Coroutine _delayCoroutine;
+    //private Coroutine _delayCoroutine;
 
     private void Awake()
     {
-        shooter = GetComponent<Shooter>();
-        health = GetComponent<Health>();
-        boxCollider = GetComponent<BoxCollider>();
-        enemyMove = GetComponent<EnemyMove>();
-    }
-
-    private void Start()
-    {
-        resetShootTime();
-        meshAnimations.walk.Play();
+        _shooter = GetComponent<EnemyShooter>();
+        _mover = GetComponent<EnemyMover>();
+        _enemyAnimator = GetComponent<EnemyAnimator>();
+        _health = GetComponent<Health>();
+        _collider = GetComponent<BoxCollider>();
     }
 
     private void Update()
     {
-        if (health.isAlive)
+        if (!_health.isAlive)
         {
-            timeToShoot -= Time.deltaTime;
-
-            if (timeToShoot <= 0)
-            {
-                meshAnimations.walk.Stop();
-                meshAnimations.throwing.Play();
-
-                if (_delayCoroutine != null)
-                    StopCoroutine(_delayCoroutine);
-                _delayCoroutine = StartCoroutine(WalkAnimation());
-
-                shooter.ShootAtTarget();
-                resetShootTime();
-            }
+            Die();
         }
-        else
-        {
-            meshAnimations.StopAll();
-            meshAnimations.death.Play();
 
-            enemyMove.Stop();
-            enemyMove.enabled = false;
-
-            boxCollider.enabled = false;
-        }
     }
 
-    private void resetShootTime()
+    private void Die()
     {
-        timeToShoot = Random.Range(minShootTimeSeconds, maxShootTimeSeconds);
-    }
+        _enemyAnimator.Die();
 
-    private IEnumerator WalkAnimation()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
-        meshAnimations.throwing.Stop();
-        meshAnimations.walk.Play();
-    }
+        _mover.enabled = false;
+        _shooter.enabled = false;
 
+        _collider.enabled = false;
+    }
 }
