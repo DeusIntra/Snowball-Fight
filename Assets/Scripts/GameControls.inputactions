@@ -96,8 +96,8 @@
                 },
                 {
                     "name": "",
-                    "id": "26be0e02-91d7-4fcc-bed1-c600d98280f1",
-                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "id": "ba01f961-c610-42d1-8c63-9a6667d70b5a",
+                    "path": "<Touchscreen>/touch0/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -404,10 +404,6 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: fe309dc3-272c-4677-80b3-39330eacdc3e
-    m_ActionName: Gameplay/Move[/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 59d17645-80de-466e-830c-14b5d5e07f79
     m_ActionName: Gameplay/Shoot[/Keyboard/w]
   - m_PersistentCalls:
@@ -455,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846243355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.30105907, y: 3.777949, z: 7.6731997}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
