@@ -14,11 +14,10 @@ public class AnimatedMeshSequence : MonoBehaviour
     
     public bool IsPlaying { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         IsPlaying = false;        
         if (!IsReady()) return;
-        meshFilter.mesh = meshes[0];
 
         if (playAtStart)
             Play();
