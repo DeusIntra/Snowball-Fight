@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PlayerShooter))]
 [RequireComponent(typeof(PlayerMover))]
 [RequireComponent(typeof(PlayerAnimator))]
@@ -59,8 +58,15 @@ public class Player : MonoBehaviour
         healthBar.SetFill(_health.currentFraction);
     }
 
+    public void OnZeroHealth()
+    {
+        if (!_health.isAlive) Die();
+    }
+
     private void Die()
     {
+        _playerAnimator.Die();
+
         _shooter.enabled = false;
         _mover.enabled = false;
     }
