@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db5551d0c0a39f49bc5053039e6a65d, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  girlCount: 42
+  girlCount: 4
   boyCount: 0
   penguinCount: 0
   polarBearCount: 0

@@ -5,14 +5,18 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerShooter))]
 [RequireComponent(typeof(PlayerMover))]
 [RequireComponent(typeof(PlayerAnimator))]
+[RequireComponent(typeof(Health))]
 public class Player : MonoBehaviour
 {
+    public ProgressBar healthBar;
+
     private bool _isSwinging = false;
 
     private PlayerShooter _shooter;
     private PlayerMover _mover;
     private PlayerAnimator _playerAnimator;
-    private ProgressBar _shootProgressBar;    
+    private ProgressBarTimed _shootProgressBar;
+    private Health _health;
 
     private void Awake()
     {
@@ -20,6 +24,7 @@ public class Player : MonoBehaviour
         _playerAnimator = GetComponent<PlayerAnimator>();
         _mover = GetComponent<PlayerMover>();
         _shootProgressBar = _shooter.progressBar;
+        _health = GetComponent<Health>();
     }
 
     private void Update()
@@ -47,6 +52,11 @@ public class Player : MonoBehaviour
             _isSwinging = false;
             _playerAnimator.Throw();
         }
+    }
+
+    public void FillHealthBar()
+    {
+        healthBar.SetFill(_health.currentFraction);
     }
 
     private void Die()

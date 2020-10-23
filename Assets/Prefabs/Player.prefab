@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 6718269652752470965}
   - component: {fileID: 2331887240151962151}
   - component: {fileID: 4810657145280257783}
+  - component: {fileID: 8547217461581300474}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -564,3 +565,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f46f447f0e15b2438dd8b8649606a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8547217461581300474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668231041199322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  enemyProjectileTag: Enemy Snowball

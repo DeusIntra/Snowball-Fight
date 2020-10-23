@@ -8,7 +8,7 @@ public class PlayerShooter : MonoBehaviour
     public float minShootForceFraction = 0.4f;
     public float snowballSideVelocityMultiplier = 1f;
 
-    public ProgressBar progressBar;
+    public ProgressBarTimed progressBar;
 
     private Shooter _shooter;
     private Rigidbody _rigidbody;

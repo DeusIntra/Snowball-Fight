@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealth = 4;
+    public int max = 4;
     public string enemyProjectileTag;
+    public UnityEvent onChange;
 
-    private int currentHealth;
+    private int _current;
 
     public bool isAlive { get; private set; }
+    public float currentFraction => (float)_current / (float)max;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        _current = max;
         isAlive = true;
     }
 
@@ -21,10 +24,12 @@ public class Health : MonoBehaviour
         {
             GameObject projectile = collision.gameObject;
             int damage = projectile.GetComponent<Snowball>().damage;
-            currentHealth -= damage;
+            _current -= damage;
 
-            if (currentHealth <= 0)
+            if (_current <= 0)
                 isAlive = false;
+
+            onChange.Invoke();
         }
     }
 }
