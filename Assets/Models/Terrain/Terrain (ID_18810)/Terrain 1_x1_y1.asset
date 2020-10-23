@@ -119,7 +119,7 @@ Mesh:
       m_BitSize: 8
     m_Tangents:
       m_NumItems: 50
-      m_Range: 1.1765387
+      m_Range: 1.1765381
       m_Start: -0.17653883
       m_Data: ff30ff2ffc49ff20fc00ff2bff22ff2eff2afe0fff2eff21ff24ff25ff1eff29ff26ff29ff1ffe12ff1eff20ff24ff28ff1c
       m_BitSize: 8
@@ -133,7 +133,7 @@ Mesh:
       m_BitSize: 1
     m_TangentSigns:
       m_NumItems: 50
-      m_Data: 00000000410000
+      m_Data: 00000000400000
       m_BitSize: 1
     m_FloatColors:
       m_NumItems: 0
