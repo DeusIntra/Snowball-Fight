@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public bool isAlive { get; private set; }
     public float currentFraction => (float)_current / (float)max;
 
-    private void Start()
+    private void Awake()
     {
         _current = max;
         isAlive = true;

@@ -7,15 +7,11 @@
 [RequireComponent(typeof(BoxCollider))]
 public class Enemy : MonoBehaviour
 {
-    //public MeshAnimations meshAnimations;
-
     private EnemyShooter _shooter;
     private EnemyMover _mover;
     private EnemyAnimator _enemyAnimator;
     private Health _health;
     private BoxCollider _collider;
-
-    //private Coroutine _delayCoroutine;
 
     private void Awake()
     {
