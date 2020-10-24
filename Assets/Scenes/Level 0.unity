@@ -499,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c695a25da229af64482038a6141ff37e, type: 3}
     - target: {fileID: 2740286781210843155, guid: 26180825cf4f3ae4fa47b7777bdf256b, type: 3}
       propertyPath: m_FillAmount
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2740286781210843155, guid: 26180825cf4f3ae4fa47b7777bdf256b, type: 3}
       propertyPath: m_FillMethod
@@ -2653,6 +2653,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1453280397, guid: 88a9a6b9fc80bee41a08daf2099bcfe4, type: 3}
   m_PrefabInstance: {fileID: 1213865431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1077003068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 686107178495179134, guid: 26180825cf4f3ae4fa47b7777bdf256b, type: 3}
+  m_PrefabInstance: {fileID: 202444169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae94ccd3d22d99349a48e4da2ee51ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1086521983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5722812568771117760, guid: be5366f4dddf8ca4ebe9c7f86e0904ad, type: 3}
@@ -5465,6 +5476,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 415112025}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: spellBar
+      value: 
+      objectReference: {fileID: 1077003068}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 

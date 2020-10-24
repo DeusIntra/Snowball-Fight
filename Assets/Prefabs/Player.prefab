@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 2331887240151962151}
   - component: {fileID: 4810657145280257783}
   - component: {fileID: 8547217461581300474}
+  - component: {fileID: 2433762165267994096}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -565,6 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f46f447f0e15b2438dd8b8649606a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  spellBar: {fileID: 0}
 --- !u!114 &8547217461581300474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,5 +580,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  max: 4
   enemyProjectileTag: Enemy Snowball
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2433762165267994096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668231041199322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c0627152bff8143b80e9b3e86e987d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 15
+  onChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4810657145280257783}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: FillSpellBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

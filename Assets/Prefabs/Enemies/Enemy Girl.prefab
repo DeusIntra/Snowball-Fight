@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 4267791305991112895}
   - component: {fileID: 7461669163828901059}
   - component: {fileID: 7468152188850172987}
+  - component: {fileID: 6530781126144645875}
   - component: {fileID: 4827994008416530082}
   - component: {fileID: 7461669163828901058}
   m_Layer: 10
@@ -413,6 +414,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6530781126144645875}
+        m_TargetAssemblyTypeName: ManaGiver, Assembly-CSharp
+        m_MethodName: onHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6530781126144645875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461669163828901083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca11276efbbd4448a6bc0b383c0607d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHitAmount: 1
+  onKillAmount: 2
 --- !u!114 &4827994008416530082
 MonoBehaviour:
   m_ObjectHideFlags: 0

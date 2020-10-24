@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerMover))]
 [RequireComponent(typeof(PlayerAnimator))]
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(Mana))]
 public class Player : MonoBehaviour
 {
     public ProgressBar healthBar;

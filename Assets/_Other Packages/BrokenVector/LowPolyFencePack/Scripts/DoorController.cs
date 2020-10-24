@@ -47,9 +47,9 @@ namespace BrokenVector.LowPolyFencePack
         public float AnimationSpeed = 1;
 
         [SerializeField]
-        private AnimationClip openAnimation;
+        private AnimationClip openAnimation = null;
         [SerializeField]
-        private AnimationClip closeAnimation;
+        private AnimationClip closeAnimation = null;
 
         private Animation animator;
         private DoorState currentState;
