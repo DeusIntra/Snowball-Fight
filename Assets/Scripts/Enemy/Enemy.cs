@@ -22,13 +22,9 @@ public class Enemy : MonoBehaviour
         _collider = GetComponent<BoxCollider>();
     }
 
-    private void Update()
+    public void OnZeroHealth()
     {
-        if (!_health.isAlive)
-        {
-            Die();
-        }
-
+        if (!_health.isAlive) Die();
     }
 
     private void Die()

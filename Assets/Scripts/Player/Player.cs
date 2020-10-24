@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     public ProgressBar healthBar;
+    public ProgressBar spellBar;
 
     private bool _isSwinging = false;
 
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     private PlayerAnimator _playerAnimator;
     private ProgressBarTimed _shootProgressBar;
     private Health _health;
+    private Mana _mana;
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
         _mover = GetComponent<PlayerMover>();
         _shootProgressBar = _shooter.progressBar;
         _health = GetComponent<Health>();
+        _mana = GetComponent<Mana>();
     }
 
     private void Update()
@@ -61,6 +64,11 @@ public class Player : MonoBehaviour
     public void OnZeroHealth()
     {
         if (!_health.isAlive) Die();
+    }
+
+    public void FillSpellBar()
+    {
+        spellBar.SetFill(_mana.currentFraction);
     }
 
     private void Die()
