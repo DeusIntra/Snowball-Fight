@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 6922300060590311000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.75, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 7461669163828901084}
   m_RootOrder: 1
@@ -283,8 +283,10 @@ GameObject:
   - component: {fileID: 2665762353674860171}
   - component: {fileID: 7461669163828901056}
   - component: {fileID: 7461669163828901085}
-  - component: {fileID: 4267791305991112895}
   - component: {fileID: 7461669163828901059}
+  - component: {fileID: 4267791305991112895}
+  - component: {fileID: 5582482974718750326}
+  - component: {fileID: 6793022323001990113}
   - component: {fileID: 7468152188850172987}
   - component: {fileID: 6530781126144645875}
   - component: {fileID: 4827994008416530082}
@@ -321,7 +323,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7461669163828901083}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.45, y: 2, z: 0.75}
@@ -356,6 +358,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 7461669163883907174}
   snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
+--- !u!114 &7461669163828901059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461669163828901083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6363766509bd12a4fba09ccd5670fa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  boundaryDistance: 5
+  pauseTimeSeconds: 0
 --- !u!114 &4267791305991112895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +388,35 @@ MonoBehaviour:
   minShootTimeSeconds: 3
   maxShootTimeSeconds: 8
   _snowballSpawn: {fileID: 7461669163883907174}
---- !u!114 &7461669163828901059
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6793022323001990113}
+        m_TargetAssemblyTypeName: EnemyPause, Assembly-CSharp
+        m_MethodName: PauseMover
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6793022323001990113}
+        m_TargetAssemblyTypeName: EnemyPauser, Assembly-CSharp
+        m_MethodName: PauseJumper
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pauseTimeSeconds: 0
+--- !u!114 &5582482974718750326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,11 +425,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 7461669163828901083}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6363766509bd12a4fba09ccd5670fa97, type: 3}
+  m_Script: {fileID: 11500000, guid: d6e0890bb6f39734eb876f57648ba7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  boundaryDistance: 5
+  minPositionZ: 12.5
+  maxPositionZ: 25
+  minJumpTimeSeconds: 5
+  maxJumpTimeSeconds: 20
+  jumpingDistance: 2.5
+  jumpingTime: 0.4
+  jumpingHeight: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0033323837
+      value: -0.0031090546
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.05
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  onJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6793022323001990113}
+        m_TargetAssemblyTypeName: EnemyPauser, Assembly-CSharp
+        m_MethodName: PauseMover
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6793022323001990113}
+        m_TargetAssemblyTypeName: EnemyPauser, Assembly-CSharp
+        m_MethodName: PauseShooter
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  pauseTimeSeconds: 0
+--- !u!114 &6793022323001990113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7461669163828901083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555fb15c9024b824fa28bf7fe234b623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7468152188850172987
 MonoBehaviour:
   m_ObjectHideFlags: 0

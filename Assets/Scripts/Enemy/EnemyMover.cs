@@ -6,6 +6,9 @@ public class EnemyMover : MonoBehaviour
     public float speed = 1.5f;
     public float boundaryDistance = 5f;
 
+    [HideInInspector]
+    public float pauseTimeSeconds;
+
     private float _targetPosition;
 
     private Rigidbody _rigidbody;
@@ -19,6 +22,13 @@ public class EnemyMover : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (pauseTimeSeconds > 0f)
+        {
+            _rigidbody.velocity = Vector3.zero;
+            pauseTimeSeconds -= Time.deltaTime;
+            return;
+        }
+
         if (Mathf.Abs(_targetPosition - transform.position.x) < minDifference)
         {
             chooseTargetPosition();

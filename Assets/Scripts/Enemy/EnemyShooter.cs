@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Shooter))]
 [RequireComponent(typeof(EnemyAnimator))]
@@ -8,6 +9,11 @@ public class EnemyShooter : MonoBehaviour
     public float maxShootTimeSeconds = 8f;
 
     public Transform _snowballSpawn;
+
+    public UnityEvent onShoot;
+
+    [HideInInspector]
+    public float pauseTimeSeconds = 0f;
 
     private float g;
     private float angle;
@@ -35,6 +41,12 @@ public class EnemyShooter : MonoBehaviour
 
     private void Update()
     {
+        if (pauseTimeSeconds > 0f)
+        {
+            pauseTimeSeconds -= Time.deltaTime;
+            return;
+        }
+
         _timeToShoot -= Time.deltaTime;
 
         if (_timeToShoot <= 0)
@@ -42,6 +54,7 @@ public class EnemyShooter : MonoBehaviour
             _enemyAnimator.Throw();
             ShootAtTarget();
             resetShootTime();
+            onShoot.Invoke();
         }
     }
 

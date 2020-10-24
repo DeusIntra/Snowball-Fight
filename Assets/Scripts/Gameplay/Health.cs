@@ -18,11 +18,11 @@ public class Health : MonoBehaviour
         isAlive = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag(enemyProjectileTag))
+        if (other.CompareTag(enemyProjectileTag))
         {
-            GameObject projectile = collision.gameObject;
+            GameObject projectile = other.gameObject;
             int damage = projectile.GetComponent<Snowball>().damage;
             _current -= damage;
 

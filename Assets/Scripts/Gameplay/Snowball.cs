@@ -10,7 +10,17 @@ public class Snowball : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Break();
+    }
+
     private void OnCollisionEnter(Collision collision)
+    {
+        Break();
+    }
+
+    private void Break()
     {
         Destroy(gameObject);
     }
