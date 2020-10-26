@@ -420,7 +420,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668231041199322643}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2, z: 0.75}
@@ -580,11 +580,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 4
+  max: 10
   enemyProjectileTag: Enemy Snowball
   onChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4810657145280257783}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: FillHealthBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4810657145280257783}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnZeroHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2433762165267994096
 MonoBehaviour:
   m_ObjectHideFlags: 0

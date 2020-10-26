@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5296900003730285440}
   - component: {fileID: 644458750446243344}
   m_Layer: 9
-  m_Name: Player Snowball 1
+  m_Name: Player Snowball
   m_TagString: Player Snowball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5939075157995140235}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 2
   damage: 1
+  destructionChance: 0.25

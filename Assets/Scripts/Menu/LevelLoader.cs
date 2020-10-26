@@ -1,12 +1,28 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
     public string levelName;
+    public ProgressBar progressBar;
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(levelName);
+        StartCoroutine(LoadingCoroutine());
+    }
+
+    private IEnumerator LoadingCoroutine()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
+
+        float progress = 0f;
+
+        while (!operation.isDone)
+        {
+            progress = operation.progress / 0.9f;
+            if (progressBar != null) progressBar.SetFill(progress);
+            yield return null;
+        }
     }
 }

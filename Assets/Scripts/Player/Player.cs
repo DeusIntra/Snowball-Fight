@@ -51,9 +51,18 @@ public class Player : MonoBehaviour
 
         if (callbackContext.phase == InputActionPhase.Canceled)
         {
-            _shooter.Shoot();
+            if (_shootProgressBar.currentFill > 0.1f)
+            {
+                _shooter.Shoot();
+                _playerAnimator.Throw();
+            }
+            else
+            {
+                _shootProgressBar.StopAndReset();
+                _playerAnimator.Walk();
+            }
+
             _isSwinging = false;
-            _playerAnimator.Throw();
         }
     }
 
@@ -78,5 +87,7 @@ public class Player : MonoBehaviour
 
         _shooter.enabled = false;
         _mover.enabled = false;
+
+        _shootProgressBar.enabled = false;
     }
 }
