@@ -4136,6 +4136,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 407526, guid: d4f06407f06d8cf41b643015132cafca, type: 3}
   m_PrefabInstance: {fileID: 946039587}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1698969188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5151771169464062356, guid: fc3c32f272416aa48add2ebdbaa41814, type: 3}
+  m_PrefabInstance: {fileID: 3080930703759084701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1741637601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5651,6 +5656,10 @@ PrefabInstance:
       propertyPath: spellBar
       value: 
       objectReference: {fileID: 1077003068}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 1698969188}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 
