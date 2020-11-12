@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7db5551d0c0a39f49bc5053039e6a65d, type: 3}
-  m_Name: Level Data 2 -02
+  m_Name: Level Data 2-02
   m_EditorClassIdentifier: 
   minion1Count: 0
   minion2Count: 1
