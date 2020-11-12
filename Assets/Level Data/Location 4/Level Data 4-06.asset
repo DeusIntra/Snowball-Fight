@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7db5551d0c0a39f49bc5053039e6a65d, type: 3}
-  m_Name: Level Data 1 -08
+  m_Name: Level Data 1 -06
   m_EditorClassIdentifier: 
-  minion1Count: 1
-  minion2Count: 2
+  minion1Count: 2
+  minion2Count: 1
   hasBoss: 0
   minion1Prefab: {fileID: 7461669163828901083, guid: 5a0e12f8f79973d48975d506d96bca8d, type: 3}
   minion2Prefab: {fileID: 0}

@@ -9,7 +9,12 @@ public class LevelInitializer : MonoBehaviour
 
     private void Start()
     {
-
+        SpawnEnemy(levelData.minion1Prefab, levelData.minion1Count);
+        SpawnEnemy(levelData.minion2Prefab, levelData.minion2Count);
+        if (levelData.hasBoss)
+        {
+            // TODO: spawn boss
+        }
     }
 
     // REDO:
