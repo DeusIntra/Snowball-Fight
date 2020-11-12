@@ -9,13 +9,10 @@ public class LevelInitializer : MonoBehaviour
 
     private void Start()
     {
-        // spawn girls
-        SpawnEnemy(levelData.girlPrefab, levelData.girlCount);
-        SpawnEnemy(levelData.boyPrefab, levelData.boyCount);
-        SpawnEnemy(levelData.penguinPrefab, levelData.penguinCount);
-        SpawnEnemy(levelData.polarBearPrefab, levelData.polarBearCount);
+
     }
 
+    // REDO:
     private void SpawnEnemy(GameObject prefab, int count)
     {
         for (int i = 0; i < count; i++)
