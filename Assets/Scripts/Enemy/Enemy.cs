@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(EnemyShooter))]
 [RequireComponent(typeof(EnemyMover))]
@@ -8,12 +9,15 @@
 [RequireComponent(typeof(BoxCollider))]
 public class Enemy : MonoBehaviour
 {
+    public ProgressBar healthBar;
+
     private EnemyShooter _shooter;
     private EnemyMover _mover;
     private EnemyJumper _jumper;
     private EnemyAnimator _enemyAnimator;
     private Health _health;
     private BoxCollider _collider;
+    private Coroutine _coroutine;
 
     private void Awake()
     {
@@ -28,6 +32,24 @@ public class Enemy : MonoBehaviour
     public void OnZeroHealth()
     {
         if (!_health.isAlive) Die();
+    }
+
+    public void OnHit()
+    {
+        if (healthBar == null) return;
+
+        healthBar.gameObject.SetActive(true);
+        healthBar.SetFill(_health.currentFraction);
+
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        _coroutine = StartCoroutine(HideHealthBarAfter(1f));
+    }
+
+    private IEnumerator HideHealthBarAfter(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        healthBar.gameObject.SetActive(false);
     }
 
     private void Die()

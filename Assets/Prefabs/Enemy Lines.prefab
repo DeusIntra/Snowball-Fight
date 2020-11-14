@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5314093974457229109}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 5314093974509382110}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5314093974544967314}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 5314093974555630531}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 5314093974697058229}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 5314093974770649122}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 5314093974824492876}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 5314093974838494074}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 5314093974880562728}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 5314093974908383734}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 5314093974938236224}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 5314093974959050559}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 5314093974967275462}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 5314093974969622016}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 5314093975031692992}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 5314093975051798310}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 5314093975127755929}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 5314093975161186758}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 5314093975183480998}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 5314093975195928419}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 5314093975234018004}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 5314093975268194421}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 5314093975355527446}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 5314093975372324164}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 5314093975398501997}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 5314093975483626471}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 5314093975520381370}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Boss Spawn Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 5314093975610344179}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 5314093975621858371}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 5314093975648688825}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   - component: {fileID: 5314093975673134569}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 5314093975676843695}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 5314093975709056030}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 5314093975722880764}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 5314093975728058069}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 5314093975729701369}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,7 +1244,7 @@ GameObject:
   - component: {fileID: 5314093975771933050}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 5314093975801394394}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 5314093975832816968}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1334,7 +1334,7 @@ GameObject:
   - component: {fileID: 5314093975841859074}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 5314093975882696348}
   m_Layer: 0
   m_Name: Enemy Spawn Point (2)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 5314093975910238639}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 5314093975932115266}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1493,7 +1493,7 @@ GameObject:
   - component: {fileID: 5314093975932649050}
   m_Layer: 0
   m_Name: Enemy Spawn Point (4)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 5314093976036810407}
   m_Layer: 0
   m_Name: Enemy Spawn Point
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1592,7 +1592,7 @@ GameObject:
   - component: {fileID: 5314093976115259449}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 5314093976191173138}
   m_Layer: 0
   m_Name: Enemy Spawn Point (6)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 5314093976214239134}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 5314093976219348129}
   m_Layer: 0
   m_Name: Enemy Spawn Point (3)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1712,7 +1712,7 @@ GameObject:
   - component: {fileID: 5314093976219403774}
   m_Layer: 0
   m_Name: Enemy Spawn Point (5)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 5314093976250795132}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1772,7 @@ GameObject:
   - component: {fileID: 5314093976259316282}
   m_Layer: 0
   m_Name: Enemy Spawn Point (7)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 5314093976312258084}
   m_Layer: 0
   m_Name: Enemy Spawn Point (1)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1871,7 +1871,7 @@ GameObject:
   - component: {fileID: 5314093976537896738}
   m_Layer: 0
   m_Name: Enemy Spawn Point (8)
-  m_TagString: Enemy Spawn Point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

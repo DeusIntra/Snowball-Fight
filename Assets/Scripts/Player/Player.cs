@@ -93,6 +93,5 @@ public class Player : MonoBehaviour
         _shootProgressBar.enabled = false;
 
         button.SetActive(false);
-
     }
 }

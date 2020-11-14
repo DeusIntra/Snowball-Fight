@@ -18,14 +18,10 @@ public class Mana : MonoBehaviour
         onChange.Invoke();
     }
 
-    public bool Sub(int amount)
+    public void Zero()
     {
-        if (current < amount)
-            return false;
-
-        current -= amount;
+        current = 0;
         onChange.Invoke();
-        return true;
     }
 
 

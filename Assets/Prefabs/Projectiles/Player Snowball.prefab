@@ -126,5 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
-  damage: 1
+  damage: 4
   destructionChance: 0.25

@@ -15,6 +15,6 @@ MonoBehaviour:
   minion1Count: 2
   minion2Count: 1
   hasBoss: 0
-  minion1Prefab: {fileID: 0}
-  minion2Prefab: {fileID: 0}
+  minion1Prefab: {fileID: 7461669163828901083, guid: bc7c3a758445d2545bed07678b6dc848, type: 3}
+  minion2Prefab: {fileID: 7461669163828901083, guid: 4e8658724f77a8d4db13ee099e60df37, type: 3}
   bossPrefab: {fileID: 0}
