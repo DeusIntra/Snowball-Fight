@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public ProgressBar healthBar;
     public ProgressBar spellBar;
 
-    public GameObject button;
+    public GameObject shootButton;
 
     private bool _isSwinging = false;
 
@@ -92,6 +92,6 @@ public class Player : MonoBehaviour
         _mover.joystick.gameObject.SetActive(false);
         _shootProgressBar.enabled = false;
 
-        button.SetActive(false);
+        shootButton.SetActive(false);
     }
 }
