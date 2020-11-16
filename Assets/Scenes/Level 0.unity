@@ -5715,6 +5715,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449660992254070710, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 903198767401759322, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.74
+      objectReference: {fileID: 0}
     - target: {fileID: 2433762165267994096, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: onChange.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -5747,6 +5755,14 @@ PrefabInstance:
       propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4525027932520602322, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677901703080958387, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: healthBar
       value: 
@@ -5763,6 +5779,30 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 141260288}
+    - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: stepTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400032514238621007, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400032514238621007, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400032514238621007, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400032514238621007, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400032514238621007, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: progressBar
       value: 

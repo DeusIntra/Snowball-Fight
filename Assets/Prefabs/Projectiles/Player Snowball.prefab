@@ -128,3 +128,4 @@ MonoBehaviour:
   lifetime: 2
   damage: 4
   destructionChance: 0.25
+  particlesPrefab: {fileID: 1474407315411643914, guid: 2b7ce2a1074f70549b705f3dacdc764e, type: 3}
