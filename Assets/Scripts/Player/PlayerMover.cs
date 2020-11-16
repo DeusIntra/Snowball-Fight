@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
@@ -6,9 +7,16 @@ public class PlayerMover : MonoBehaviour
     public float speed = 4f;
     public float boundaryDistance = 5f;
 
+    public float stepTime = 0.5f;
+
     public Joystick joystick;
+    public Transform leftFoot;
+    public Transform rightFoot;
+    public ParticleSystem particlesPrefab;
 
     private float _horizontalMovement;
+    private float _timeToStep;
+    private bool _isLeftStep;
 
     private Rigidbody _rigidbody;
     private PlayerAnimator _playerAnimator;
@@ -22,7 +30,17 @@ public class PlayerMover : MonoBehaviour
     void Update()
     {
         _horizontalMovement = joystick.Horizontal;
-        _playerAnimator.SetSpeed(Mathf.Abs(_horizontalMovement));
+        float horizontalAbs = Mathf.Abs(_horizontalMovement);
+        _playerAnimator.SetSpeed(horizontalAbs);
+
+        if (_timeToStep >= stepTime)
+        {
+            _timeToStep = 0;
+            Step();
+        }
+
+        if (horizontalAbs > 0.01f) 
+            _timeToStep += Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -42,5 +60,16 @@ public class PlayerMover : MonoBehaviour
     private void OnDisable()
     {
         _rigidbody.velocity = Vector3.zero;
+    }
+
+    private void Step()
+    {
+        Vector3 spawnPoint;
+        if (_isLeftStep) spawnPoint = leftFoot.position;
+        else spawnPoint = rightFoot.position;
+        _isLeftStep = !_isLeftStep;
+
+        ParticleSystem particles = Instantiate(particlesPrefab, spawnPoint, particlesPrefab.transform.rotation);
+        Destroy(particles.gameObject, stepTime);
     }
 }

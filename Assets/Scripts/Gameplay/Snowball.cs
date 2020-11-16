@@ -6,6 +6,8 @@ public class Snowball : MonoBehaviour
     public int damage = 1;
     public float destructionChance = 0.1f;
 
+    public ParticleSystem particlesPrefab;
+
     private void Awake()
     {
         Destroy(gameObject, lifetime);
@@ -31,6 +33,9 @@ public class Snowball : MonoBehaviour
 
     public void Break()
     {
+        ParticleSystem particles = Instantiate(particlesPrefab, transform.position, particlesPrefab.transform.rotation);
+        Destroy(particles.gameObject, 0.5f);
+
         Destroy(gameObject);
     }
 }
