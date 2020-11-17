@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 4810657145280257783}
   - component: {fileID: 8547217461581300474}
   - component: {fileID: 2433762165267994096}
+  - component: {fileID: 2079463622}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -601,7 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   boundaryDistance: 5
-  stepTime: 0.5
+  stepTime: 0.4
   joystick: {fileID: 0}
   leftFoot: {fileID: 4525027932520602322}
   rightFoot: {fileID: 449660992254070710}
@@ -688,7 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c0627152bff8143b80e9b3e86e987d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 15
+  max: 12
   onChange:
     m_PersistentCalls:
       m_Calls:
@@ -704,3 +705,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2079463622}
+        m_TargetAssemblyTypeName: Spells, Assembly-CSharp
+        m_MethodName: OnManaChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2079463622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668231041199322643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35614e7bce5837d4cab7cecad343f1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell1Button: {fileID: 0}
+  spell2Button: {fileID: 0}
+  spell3Button: {fileID: 0}
