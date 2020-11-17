@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     private int _current;
 
     public bool isAlive { get; private set; }
+
+    public int current => _current;
     public float currentFraction => (float)_current / (float)max;
 
     private void Awake()

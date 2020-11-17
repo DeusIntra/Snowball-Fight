@@ -8,7 +8,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Mana))]
 public class Player : MonoBehaviour
 {
-    public ProgressBar healthBar;
+    //public ProgressBar healthBar;
+    public HeartsHealthBar healthBar;
     public ProgressBar spellBar;
 
     public GameObject button;
@@ -70,7 +71,9 @@ public class Player : MonoBehaviour
 
     public void FillHealthBar()
     {
-        healthBar.SetFill(_health.currentFraction);
+        //healthBar.SetFill(_health.currentFraction);
+        healthBar.value = _health.current;
+        healthBar.onChange();
     }
 
     public void OnZeroHealth()
