@@ -24,10 +24,12 @@ public class EnemyJumper : MonoBehaviour
     private float _timeToNextJump;
     private Coroutine _coroutine;
 
+
     private void Start()
     {
         resetJumpTime();
     }
+
 
     private void Update()
     {
@@ -48,15 +50,18 @@ public class EnemyJumper : MonoBehaviour
 
     }
 
+
     private void OnDisable()
     {
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
+
     private void resetJumpTime()
     {
         _timeToNextJump = Random.Range(minJumpTimeSeconds, maxJumpTimeSeconds);
     }
+
 
     private IEnumerator Jump()
     {
@@ -95,5 +100,4 @@ public class EnemyJumper : MonoBehaviour
             yield return null;
         }
     }
-
 }
