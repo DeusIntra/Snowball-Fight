@@ -11,13 +11,8 @@ public class SnowballHail : MonoBehaviour
 
     public void Cast()
     {
-        // stop time
-
-
         // animate
 
-        // deal damage
-
-        // resume time
+        // apply effect
     }
 }
