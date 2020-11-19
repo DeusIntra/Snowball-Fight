@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     private BoxCollider _collider;
     private Coroutine _coroutine;
 
+
     private void Awake()
     {
         _shooter = GetComponent<EnemyShooter>();
@@ -29,10 +30,19 @@ public class Enemy : MonoBehaviour
         _collider = GetComponent<BoxCollider>();
     }
 
+
+    private void Start()
+    {
+        EnemyHolder enemyHolder = FindObjectOfType<EnemyHolder>();
+        enemyHolder.enemies.Add(gameObject);
+    }
+
+
     public void OnZeroHealth()
     {
         if (!_health.isAlive) Die();
     }
+
 
     public void OnHit()
     {
@@ -45,12 +55,14 @@ public class Enemy : MonoBehaviour
         _coroutine = StartCoroutine(HideHealthBarAfter(1f));
     }
 
+
     private IEnumerator HideHealthBarAfter(float seconds)
     {
         yield return new WaitForSeconds(seconds);
 
         healthBar.gameObject.SetActive(false);
     }
+
 
     private void Die()
     {

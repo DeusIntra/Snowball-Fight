@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     public int max = 4;
     public string enemyProjectileTag;
     public UnityEvent onChange;
+    public UnityEvent onHit;
 
     private int _current;
 
@@ -20,18 +21,24 @@ public class Health : MonoBehaviour
         isAlive = true;
     }
 
+    public void Sub(int amount)
+    {
+        _current -= amount;
+
+        if (_current <= 0)
+            isAlive = false;
+
+        onChange.Invoke();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(enemyProjectileTag))
         {
             GameObject projectile = other.gameObject;
             int damage = projectile.GetComponent<Snowball>().damage;
-            _current -= damage;
-
-            if (_current <= 0)
-                isAlive = false;
-
-            onChange.Invoke();
+            Sub(damage);
+            onHit.Invoke();
         }
     }
 }
