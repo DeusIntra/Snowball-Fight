@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 3af7abf661730334898131114a88278d
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: angel
+    100002: bird
+    100004: Birdhouse
+    100006: //RootNode
+    100008: ChristmasTree
+    100010: Cottage
+    100012: Giftbag01
+    100014: Giftbag02
+    100016: girland01
+    100018: girland02
+    100020: ornament-01-gold
+    100022: ornament-01-red
+    100024: ornament-02-gold
+    100026: ornament-02-red
+    100028: ornament-03-gold
+    100030: ornament-03-red
+    100032: Ornament-ribbon
+    100034: Pine-tree01
+    100036: Pine-tree02
+    100038: present01
+    100040: present02
+    100042: present03
+    100044: Snowman
+    100046: star01
+    100048: star02
+    100050: wreath
+    400000: angel
+    400002: bird
+    400004: Birdhouse
+    400006: //RootNode
+    400008: ChristmasTree
+    400010: Cottage
+    400012: Giftbag01
+    400014: Giftbag02
+    400016: girland01
+    400018: girland02
+    400020: ornament-01-gold
+    400022: ornament-01-red
+    400024: ornament-02-gold
+    400026: ornament-02-red
+    400028: ornament-03-gold
+    400030: ornament-03-red
+    400032: Ornament-ribbon
+    400034: Pine-tree01
+    400036: Pine-tree02
+    400038: present01
+    400040: present02
+    400042: present03
+    400044: Snowman
+    400046: star01
+    400048: star02
+    400050: wreath
+    2100000: Green
+    2100002: Brown
+    2100004: White
+    2100006: ShinyRed
+    2100008: Gold
+    2100010: Red
+    2100012: Blue
+    2100014: LightGreen
+    2100016: black
+    2300000: angel
+    2300002: bird
+    2300004: Birdhouse
+    2300006: ChristmasTree
+    2300008: Cottage
+    2300010: Giftbag01
+    2300012: Giftbag02
+    2300014: girland01
+    2300016: girland02
+    2300018: ornament-01-gold
+    2300020: ornament-01-red
+    2300022: ornament-02-gold
+    2300024: ornament-02-red
+    2300026: ornament-03-gold
+    2300028: ornament-03-red
+    2300030: Ornament-ribbon
+    2300032: Pine-tree01
+    2300034: Pine-tree02
+    2300036: present01
+    2300038: present02
+    2300040: present03
+    2300042: Snowman
+    2300044: star01
+    2300046: star02
+    2300048: wreath
+    3300000: angel
+    3300002: bird
+    3300004: Birdhouse
+    3300006: ChristmasTree
+    3300008: Cottage
+    3300010: Giftbag01
+    3300012: Giftbag02
+    3300014: girland01
+    3300016: girland02
+    3300018: ornament-01-gold
+    3300020: ornament-01-red
+    3300022: ornament-02-gold
+    3300024: ornament-02-red
+    3300026: ornament-03-gold
+    3300028: ornament-03-red
+    3300030: Ornament-ribbon
+    3300032: Pine-tree01
+    3300034: Pine-tree02
+    3300036: present01
+    3300038: present02
+    3300040: present03
+    3300042: Snowman
+    3300044: star01
+    3300046: star02
+    3300048: wreath
+    4300000: Pine-tree01
+    4300002: Pine-tree02
+    4300004: ChristmasTree
+    4300006: ornament-02-red
+    4300008: ornament-03-red
+    4300010: ornament-02-gold
+    4300012: ornament-03-gold
+    4300014: ornament-01-red
+    4300016: ornament-01-gold
+    4300018: star01
+    4300020: star02
+    4300022: wreath
+    4300024: girland01
+    4300026: girland02
+    4300028: bird
+    4300030: Ornament-ribbon
+    4300032: present01
+    4300034: present02
+    4300036: present03
+    4300038: Giftbag01
+    4300040: Giftbag02
+    4300042: angel
+    4300044: Birdhouse
+    4300046: Cottage
+    4300048: Snowman
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: e97d27a640949f8468bc6675005a8233, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: c6e35248a555e254db6a4ec256c8b84d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 7cba044403221f54984c780b8b7ffe9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 0dc15ef6c2d2ca14ab31b41bf27377ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGreen
+    second: {fileID: 2100000, guid: fd5a907cc738f4743ad276ce9be0d567, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 2dc2ee98831a03041b90bbcf267faa89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShinyRed
+    second: {fileID: 2100000, guid: 5e0b51e722127254dbcb7cd7f417b469, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 4c8b9a1b77ff218469ebd77afc93b52e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: a774ab786667f9140bce02e667084a54, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
