@@ -128,7 +128,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 1
+          m_FloatArgument: 2
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -635,20 +635,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1855538652921190479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2585158290477976467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2284c1bfffaa514d8f3a162175edd77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeToFillSeconds: 2
-  _mask: {fileID: 8307654261711519959}
 --- !u!1 &1855538653097761295
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +890,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1855538652921190479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2585158290477976467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2284c1bfffaa514d8f3a162175edd77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToFillSeconds: 2
+  _mask: {fileID: 8307654261711519959}
 --- !u!1001 &1855538652035253394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 39353614469051112, guid: b2dcd43205fcfd14c891ded3b9ebcd95, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 39353614469051112, guid: b2dcd43205fcfd14c891ded3b9ebcd95, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CastHail
       objectReference: {fileID: 0}
     - target: {fileID: 2034693304127919850, guid: b2dcd43205fcfd14c891ded3b9ebcd95, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

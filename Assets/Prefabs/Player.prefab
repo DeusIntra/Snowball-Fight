@@ -635,7 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   spellBar: {fileID: 0}
-  button: {fileID: 0}
+  shootButton: {fileID: 0}
 --- !u!114 &8547217461581300474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 10
+  max: 20
   enemyProjectileTag: Enemy Snowball
   onChange:
     m_PersistentCalls:
@@ -677,6 +677,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2433762165267994096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35614e7bce5837d4cab7cecad343f1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hailDurationSeconds: 2
   spell1Button: {fileID: 0}
   spell2Button: {fileID: 0}
   spell3Button: {fileID: 0}
+  snowballSpawner: {fileID: 0}

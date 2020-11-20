@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
     public float speed = 4f;
     public float boundaryDistance = 5f;
-
     public float stepTime = 0.5f;
+    public bool doStep = true;
 
     public Joystick joystick;
     public Transform leftFoot;
@@ -33,7 +32,7 @@ public class PlayerMover : MonoBehaviour
         float horizontalAbs = Mathf.Abs(_horizontalMovement);
         _playerAnimator.SetSpeed(horizontalAbs);
 
-        if (_timeToStep >= stepTime)
+        if (doStep && _timeToStep >= stepTime)
         {
             _timeToStep = 0;
             Step();
