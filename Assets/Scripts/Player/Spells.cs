@@ -54,7 +54,8 @@ public class Spells : MonoBehaviour
 
     public void CastIceberg()
     {
-
+        _mana.Sub(_mana.max / 2);
+        icebergSpawner.Cast();
     }
 
 
@@ -72,9 +73,9 @@ public class Spells : MonoBehaviour
         yield return new WaitForSeconds(hailDurationSeconds);
 
         List<GameObject> enemies = _enemyHolder.enemies;
-        foreach (GameObject enemy in enemies)
+        for (int i = enemies.Count - 1; i >= 0; i--)
         {
-            Health health = enemy.GetComponent<Health>();
+            Health health = enemies[i].GetComponent<Health>();
             health.Sub(health.max / 4);
         }
     }
