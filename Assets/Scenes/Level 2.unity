@@ -5130,17 +5130,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_VertexStreams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc509e18f8005634b977448f4f167bc7, type: 2}
+    - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_VertexStreams.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_VertexStreams.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 498837948883582033, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.048
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582033, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.022
+      value: 1.087
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582033, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582033, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5185,6 +5205,14 @@ PrefabInstance:
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.6740388
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: NoiseModule.quality
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
