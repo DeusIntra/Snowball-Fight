@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.OnScreen;
 
 [RequireComponent(typeof(PlayerShooter))]
 [RequireComponent(typeof(PlayerMover))]
@@ -8,11 +9,10 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Mana))]
 public class Player : MonoBehaviour
 {
-    //public ProgressBar healthBar;
     public HeartsHealthBar healthBar;
     public ProgressBar spellBar;
 
-    public GameObject shootButton;
+    public OnScreenButton shootButton;
 
     private bool _isSwinging = false;
 
@@ -71,7 +71,6 @@ public class Player : MonoBehaviour
 
     public void FillHealthBar()
     {
-        //healthBar.SetFill(_health.currentFraction);
         healthBar.value = _health.current;
         healthBar.onChange();
     }
@@ -95,6 +94,7 @@ public class Player : MonoBehaviour
         _mover.joystick.gameObject.SetActive(false);
         _shootProgressBar.enabled = false;
 
-        shootButton.SetActive(false);
+        shootButton.gameObject.SetActive(false);
+        spellBar.gameObject.SetActive(false);
     }
 }

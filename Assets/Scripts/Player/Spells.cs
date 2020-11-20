@@ -56,6 +56,7 @@ public class Spells : MonoBehaviour
     {
         _mana.Sub(_mana.max / 2);
         icebergSpawner.Cast();
+        StartCoroutine(IcebergCoroutine());
     }
 
 
@@ -67,6 +68,18 @@ public class Spells : MonoBehaviour
         StartCoroutine(HailCoroutine());
     }
 
+    private IEnumerator IcebergCoroutine()
+    {
+        yield return new WaitForSeconds(hailDurationSeconds);
+
+        List<GameObject> enemies = _enemyHolder.enemies;
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            Health health = enemies[i].GetComponent<Health>();
+            health.Sub(health.max / 3);
+        }
+    }
+
 
     private IEnumerator HailCoroutine()
     {
@@ -76,7 +89,7 @@ public class Spells : MonoBehaviour
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 4);
+            health.Sub(health.max / 2);
         }
     }
 
