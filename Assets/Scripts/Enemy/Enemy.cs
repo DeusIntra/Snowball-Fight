@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     private Health _health;
     private BoxCollider _collider;
     private Coroutine _coroutine;
+    private EnemyHolder _enemyHolder;
 
 
     private void Awake()
@@ -28,13 +29,13 @@ public class Enemy : MonoBehaviour
         _enemyAnimator = GetComponent<EnemyAnimator>();
         _health = GetComponent<Health>();
         _collider = GetComponent<BoxCollider>();
+        _enemyHolder = FindObjectOfType<EnemyHolder>();
     }
 
 
     private void Start()
-    {
-        EnemyHolder enemyHolder = FindObjectOfType<EnemyHolder>();
-        enemyHolder.enemies.Add(gameObject);
+    {        
+        _enemyHolder.enemies.Add(gameObject);
     }
 
 
@@ -44,7 +45,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    public void OnHit()
+    public void OnHealthChange()
     {
         if (healthBar == null) return;
 
@@ -73,5 +74,7 @@ public class Enemy : MonoBehaviour
         _jumper.enabled = false;
 
         _collider.enabled = false;
+
+        _enemyHolder.Remove(gameObject);
     }
 }

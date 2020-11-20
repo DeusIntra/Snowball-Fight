@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
     public List<LevelDataObject> location4;
 
     private int locationIndex = -1;
-    private int levelIndex = -1;
+    //private int levelIndex = -1;
     private List<List<LevelDataObject>> locations;
 
     private void Awake()

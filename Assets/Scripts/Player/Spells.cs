@@ -26,6 +26,10 @@ public class Spells : MonoBehaviour
 
     public void OnManaChange()
     {
+        spell1Button.interactable = false;
+        spell2Button.interactable = false;
+        spell3Button.interactable = false;
+
         if (_mana.currentFraction >= 0.33f)
         {
             spell1Button.interactable = true;
@@ -37,7 +41,7 @@ public class Spells : MonoBehaviour
         if (_mana.currentFraction == 1f)
         {
             spell3Button.interactable = true;
-        }        
+        }
     }
 
 

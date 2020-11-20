@@ -25,8 +25,7 @@ public class Health : MonoBehaviour
     {
         _current -= amount;
 
-        if (_current <= 0)
-            isAlive = false;
+        if (_current <= 0) isAlive = false;
 
         onChange.Invoke();
     }
