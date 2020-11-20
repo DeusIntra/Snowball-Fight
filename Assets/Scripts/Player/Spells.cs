@@ -13,6 +13,7 @@ public class Spells : MonoBehaviour
     public Button spell3Button;
 
     public SnowballSpawner snowballSpawner;
+    public IcebergSpawner icebergSpawner;
 
     private EnemyHolder _enemyHolder;
 
