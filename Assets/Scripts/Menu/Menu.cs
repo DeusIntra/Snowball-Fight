@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public LevelDataHolder levelDataHolder;
+
     public GameObject LocationButtons;
     public GameObject LevelButtons;
 
-    public List<Scene> scenes;
+    public List<string> scenes;
 
     public List<LevelDataObject> location1;
     public List<LevelDataObject> location2;
@@ -15,7 +17,6 @@ public class Menu : MonoBehaviour
     public List<LevelDataObject> location4;
 
     private int locationIndex = -1;
-    //private int levelIndex = -1;
     private List<List<LevelDataObject>> locations;
 
     private void Awake()
@@ -36,8 +37,7 @@ public class Menu : MonoBehaviour
 
     public void LoadLevel(int levelIndex)
     {
-
+        levelDataHolder.levelData = locations[locationIndex - 1][levelIndex - 1];
+        SceneManager.LoadScene(scenes[locationIndex - 1]);
     }
-
-
 }

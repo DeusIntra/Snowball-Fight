@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class LevelInitializer : MonoBehaviour
 {
-    public LevelDataObject levelData;
+    public LevelDataHolder levelDataHolder;
     public Transform enemyLines;
 
     private List<Transform> _spawnPoints;
     private int _bossSpawnPointIndex = -1;
     private int _enemyCount = 0;
+    private LevelDataObject _levelData;
 
 
     private void Awake()
     {
+        _levelData = levelDataHolder.levelData;
+
         _spawnPoints = new List<Transform>();
 
         foreach (Transform enemyLine in enemyLines)
@@ -31,7 +34,7 @@ public class LevelInitializer : MonoBehaviour
 
     private void Start()
     {
-        if (levelData.hasBoss)
+        if (_levelData.hasBoss)
         {
             if (_bossSpawnPointIndex == -1)
             {
@@ -42,15 +45,15 @@ public class LevelInitializer : MonoBehaviour
             Transform spawnPoint = _spawnPoints[_bossSpawnPointIndex];
             _spawnPoints.RemoveAt(_bossSpawnPointIndex);
 
-            Instantiate(levelData.bossPrefab, spawnPoint.position, Quaternion.identity);
+            Instantiate(_levelData.bossPrefab, spawnPoint.position, Quaternion.identity);
 
             _enemyCount++;
         }
 
-        if (levelData.minion1Count > 0)
-            SpawnEnemy(levelData.minion1Prefab, levelData.minion1Count);
-        if (levelData.minion2Count > 0)
-            SpawnEnemy(levelData.minion2Prefab, levelData.minion2Count);
+        if (_levelData.minion1Count > 0)
+            SpawnEnemy(_levelData.minion1Prefab, _levelData.minion1Count);
+        if (_levelData.minion2Count > 0)
+            SpawnEnemy(_levelData.minion2Prefab, _levelData.minion2Count);
     }
 
 

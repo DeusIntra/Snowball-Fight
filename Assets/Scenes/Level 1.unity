@@ -10766,6 +10766,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1855538652738108763, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: levelName
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 1855538653209544843, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_Name
       value: UI Canvas
