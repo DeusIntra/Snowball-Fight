@@ -2077,6 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22025ad366ea330449b63e112548c344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDataHolder: {fileID: 11400000, guid: 904504cfd39ea8e4dacc00a308ebcf70, type: 2}
   LocationButtons: {fileID: 1043726167}
   LevelButtons: {fileID: 748087426}
   scenes:

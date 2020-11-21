@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public LevelDataHolder levelDataHolder;
+
     public GameObject LocationButtons;
     public GameObject LevelButtons;
 
@@ -35,9 +37,7 @@ public class Menu : MonoBehaviour
 
     public void LoadLevel(int levelIndex)
     {
-        Debug.Log("Scene: " + scenes[locationIndex - 1]);
-        Debug.Log("Level: " + locations[locationIndex - 1][levelIndex - 1]);
+        levelDataHolder.levelData = locations[locationIndex - 1][levelIndex - 1];
+        SceneManager.LoadScene(scenes[locationIndex - 1]);
     }
-
-
 }
