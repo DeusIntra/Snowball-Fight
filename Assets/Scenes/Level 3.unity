@@ -1216,7 +1216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1855538653209544847, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1855538653209544847, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2507,7 +2507,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3136350147627999202, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_Name
-      value: UICamera
+      value: UI Camera
       objectReference: {fileID: 0}
     - target: {fileID: 3136350147627999214, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4941,7 +4941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 40, y: -40, z: 0}
 --- !u!1001 &1862425672
 PrefabInstance:
@@ -5642,7 +5642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

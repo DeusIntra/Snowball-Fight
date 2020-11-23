@@ -603,6 +603,7 @@ MonoBehaviour:
   speed: 4
   boundaryDistance: 5
   stepTime: 0.4
+  doStep: 0
   joystick: {fileID: 0}
   leftFoot: {fileID: 4525027932520602322}
   rightFoot: {fileID: 449660992254070710}
@@ -732,8 +733,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35614e7bce5837d4cab7cecad343f1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stormDurationSeconds: 2
+  icebergFallSeconds: 0.2
   hailDurationSeconds: 2
+  freezeDebuffDurationSeconds: 7
   spell1Button: {fileID: 0}
   spell2Button: {fileID: 0}
   spell3Button: {fileID: 0}
   snowballSpawner: {fileID: 0}
+  icebergSpawner: {fileID: 0}

@@ -6,7 +6,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Mana))]
 public class Spells : MonoBehaviour
 {
+    public float stormDurationSeconds = 2f;
+    public float icebergFallSeconds = 0.2f;
     public float hailDurationSeconds = 2f;
+
+    public float freezeDebuffDurationSeconds = 7f;
 
     public Button spell1Button;
     public Button spell2Button;
@@ -48,7 +52,9 @@ public class Spells : MonoBehaviour
 
     public void CastStorm()
     {
-
+        _mana.Sub(_mana.max / 4);
+        // TODO: cast storm animation
+        StartCoroutine(StormCoroutine());
     }
 
 
@@ -68,15 +74,39 @@ public class Spells : MonoBehaviour
         StartCoroutine(HailCoroutine());
     }
 
-    private IEnumerator IcebergCoroutine()
+
+    private IEnumerator StormCoroutine()
     {
-        yield return new WaitForSeconds(hailDurationSeconds);
+        yield return new WaitForSeconds(stormDurationSeconds);
 
         List<GameObject> enemies = _enemyHolder.enemies;
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
+            EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
+            if (enemyDebuff != null)
+            {
+                enemyDebuff.SlowDown(stormDurationSeconds * 2f);
+                enemyDebuff.Stun(stormDurationSeconds * 2f);
+            }
+        }
+    }
+
+
+    private IEnumerator IcebergCoroutine()
+    {
+        yield return new WaitForSeconds(icebergFallSeconds);
+
+        List<GameObject> enemies = _enemyHolder.enemies;
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
+            if (enemyDebuff != null)
+            {
+                enemyDebuff.Freeze(freezeDebuffDurationSeconds);
+            }
+
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 3);
+            health.Sub(health.max / 4);
         }
     }
 
@@ -88,8 +118,14 @@ public class Spells : MonoBehaviour
         List<GameObject> enemies = _enemyHolder.enemies;
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
+            EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
+            if (enemyDebuff != null)
+            {
+                enemyDebuff.Stun(stormDurationSeconds * 2f);
+            }
+
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 2);
+            health.Sub(health.max / 3);
         }
     }
 
