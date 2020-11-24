@@ -19,6 +19,7 @@ public class Spells : MonoBehaviour
     public StormSpawner stormSpawner;
     public SnowballSpawner snowballSpawner;
     public IcebergSpawner icebergSpawner;
+    public GameObject iceDestructionPrefab;
 
     private EnemyHolder _enemyHolder;
 
@@ -115,6 +116,11 @@ public class Spells : MonoBehaviour
     private IEnumerator IcebergCoroutine()
     {
         yield return new WaitForSeconds(icebergFallSeconds);
+
+        Vector3 destructionPosition = icebergSpawner.endPosition.position;
+        destructionPosition.y = 0;
+        GameObject iceDestructionParticles = Instantiate(iceDestructionPrefab, destructionPosition, iceDestructionPrefab.transform.rotation);
+        Destroy(iceDestructionParticles, 2f);
 
         List<GameObject> enemies = _enemyHolder.enemies;
         for (int i = enemies.Count - 1; i >= 0; i--)

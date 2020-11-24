@@ -783,6 +783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair01_a01
       objectReference: {fileID: 0}
+    - target: {fileID: 171676, guid: 83a3509435aa05244a54ca0ab2a578b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 481742, guid: 83a3509435aa05244a54ca0ab2a578b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.29
@@ -867,6 +871,10 @@ PrefabInstance:
     - target: {fileID: 188714, guid: e8623453a3709ad429e35b16a63634ff, type: 3}
       propertyPath: m_Name
       value: Vane01_a01
+      objectReference: {fileID: 0}
+    - target: {fileID: 188714, guid: e8623453a3709ad429e35b16a63634ff, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 457216, guid: e8623453a3709ad429e35b16a63634ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1286,6 +1294,10 @@ PrefabInstance:
     - target: {fileID: 128178, guid: 8ddcb62f6c2df7e478384fd8781918eb, type: 3}
       propertyPath: m_Name
       value: Chimney01
+      objectReference: {fileID: 0}
+    - target: {fileID: 128178, guid: 8ddcb62f6c2df7e478384fd8781918eb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 412266, guid: 8ddcb62f6c2df7e478384fd8781918eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2917,6 +2929,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wine03_a01
       objectReference: {fileID: 0}
+    - target: {fileID: 113788, guid: 4e7dc3de309b0734c8cc6366a6356f58, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 132476, guid: 4e7dc3de309b0734c8cc6366a6356f58, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 135436, guid: 4e7dc3de309b0734c8cc6366a6356f58, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 157528, guid: 4e7dc3de309b0734c8cc6366a6356f58, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 471958, guid: 4e7dc3de309b0734c8cc6366a6356f58, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5195
@@ -3836,6 +3864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light02_a04
       objectReference: {fileID: 0}
+    - target: {fileID: 177392, guid: 6001da597a12e8d45bcda50edd56772e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 487474, guid: 6001da597a12e8d45bcda50edd56772e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.682
@@ -4073,6 +4105,10 @@ PrefabInstance:
     - target: {fileID: 179390, guid: 8e933864a199e524c984068d31913f13, type: 3}
       propertyPath: m_Name
       value: Wood02_a04
+      objectReference: {fileID: 0}
+    - target: {fileID: 179390, guid: 8e933864a199e524c984068d31913f13, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 425708, guid: 8e933864a199e524c984068d31913f13, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4595,6 +4631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanger01_a01
       objectReference: {fileID: 0}
+    - target: {fileID: 108602, guid: bd99fd9ce0a4d7146a8ea6912f781027, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 440106, guid: bd99fd9ce0a4d7146a8ea6912f781027, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.075
@@ -5111,6 +5151,10 @@ PrefabInstance:
     - target: {fileID: 498837948883582030, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_Name
       value: Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 498837948883582030, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582032, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: m_VertexStreams.Array.size

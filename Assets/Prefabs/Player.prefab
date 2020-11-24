@@ -740,5 +740,7 @@ MonoBehaviour:
   spell1Button: {fileID: 0}
   spell2Button: {fileID: 0}
   spell3Button: {fileID: 0}
+  stormSpawner: {fileID: 0}
   snowballSpawner: {fileID: 0}
   icebergSpawner: {fileID: 0}
+  iceDestructionPrefab: {fileID: 6337392538445521817, guid: 1b613a36e7eccda4cb0f1a914214c31a, type: 3}
