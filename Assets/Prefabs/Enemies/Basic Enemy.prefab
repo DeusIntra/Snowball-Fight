@@ -79,8 +79,38 @@ Transform:
   - {fileID: 2645445408004645420}
   - {fileID: 8864827599790112566}
   m_Father: {fileID: 7695807918632469616}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3419264817424463976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3059555952824129623}
+  m_Layer: 10
+  m_Name: Stun Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3059555952824129623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419264817424463976}
+  m_LocalRotation: {x: -0.122787856, y: 0.6963643, z: 0.122787856, w: 0.6963643}
+  m_LocalPosition: {x: -0.8, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7695807918632469616}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -20, y: 90, z: 0}
 --- !u!1 &5122981780627992767
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7695807918820735178}
+  - {fileID: 3059555952824129623}
   - {fileID: 4072742967314159678}
   - {fileID: 9055542668719243941}
   - {fileID: 4216961814392269036}
@@ -483,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca11276efbbd4448a6bc0b383c0607d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitAmount: 1
+  onHitAmount: 20
   onKillAmount: 2
 --- !u!114 &5638602311746608654
 MonoBehaviour:
@@ -510,6 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d25e6ddc5fd6154f8d681d23626ad8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunParticlesPrefab: {fileID: 1126076118739761333, guid: 563be475413f68e4e8d5805edeced92b, type: 3}
+  stunParticlesSpawnPoint: {fileID: 3059555952824129623}
   icePrefab: {fileID: 2275258206812925142, guid: af04160236c20384985a5f2314bcdeed, type: 3}
 --- !u!114 &7695807918632469614
 MonoBehaviour:
@@ -586,7 +619,7 @@ RectTransform:
   m_Children:
   - {fileID: 7529776179335663259}
   m_Father: {fileID: 7695807918632469616}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -684,7 +717,7 @@ Transform:
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 7695807918632469616}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &2903197588695455121
 MeshFilter:

@@ -4,6 +4,8 @@
 [RequireComponent(typeof(EnemyMover))]
 public class EnemyDebuff : MonoBehaviour
 {
+    public GameObject stunParticlesPrefab;
+    public Transform stunParticlesSpawnPoint;
     public GameObject icePrefab;
 
     private PausableEnemy _pausable;
@@ -27,6 +29,9 @@ public class EnemyDebuff : MonoBehaviour
     {
         _pausable.PauseShooter(seconds);
         _pausable.PauseJumper(seconds);
+
+        GameObject stunParticles = Instantiate(stunParticlesPrefab, stunParticlesSpawnPoint);
+        Destroy(stunParticles, seconds);
     }
 
 
@@ -35,8 +40,8 @@ public class EnemyDebuff : MonoBehaviour
         _pausable.PauseShooter(seconds);
         _pausable.PauseJumper(seconds);
         _pausable.PauseMover(seconds);
-        
-        GameObject ice = Instantiate(icePrefab, transform.position, transform.rotation);
+
+        GameObject ice = Instantiate(icePrefab, transform);
         Destroy(ice, seconds);
     }
 }
