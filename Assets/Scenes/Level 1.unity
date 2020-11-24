@@ -1848,6 +1848,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77695bc95257c3042a756999d4e43b36, type: 3}
+--- !u!114 &242508941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2799498376675749371, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+  m_PrefabInstance: {fileID: 6757219863655331220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a254f5c7a119adc42a6545576cbd9236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &253348782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4052,7 +4063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2024900692}
-  m_RootOrder: 15
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &679540021
 PrefabInstance:
@@ -4241,7 +4252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2024900692}
-  m_RootOrder: 21
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!64 &688750061
 MeshCollider:
@@ -6411,6 +6422,10 @@ PrefabInstance:
       propertyPath: icebergSpawner
       value: 
       objectReference: {fileID: 1573003344}
+    - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: stormSpawner
+      value: 
+      objectReference: {fileID: 242508941}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: healthBar
       value: 
@@ -10207,6 +10222,8 @@ Transform:
   m_Children:
   - {fileID: 2017156401}
   - {fileID: 1199027247}
+  - {fileID: 677913538}
+  - {fileID: 688750060}
   - {fileID: 1374263696}
   - {fileID: 1134909948}
   - {fileID: 1417750985}
@@ -10220,13 +10237,11 @@ Transform:
   - {fileID: 1139729926}
   - {fileID: 904709699}
   - {fileID: 1918028569}
-  - {fileID: 677913538}
   - {fileID: 229253460}
   - {fileID: 1282948661}
   - {fileID: 841250300}
   - {fileID: 2086431651}
   - {fileID: 963754835}
-  - {fileID: 688750060}
   - {fileID: 933416346}
   - {fileID: 1003876195}
   - {fileID: 62636607}
@@ -11275,7 +11290,19 @@ PrefabInstance:
     - target: {fileID: 1855538651376402152, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1573003344}
+      objectReference: {fileID: 242508941}
+    - target: {fileID: 1855538651376402152, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Cast
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855538651376402152, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StormSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855538651376402152, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1855538653209544843, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -11438,10 +11465,6 @@ PrefabInstance:
       propertyPath: CollisionModule.plane0
       value: 
       objectReference: {fileID: 1963811326}
-    - target: {fileID: 6757219863420487994, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: levelData
-      value: 
-      objectReference: {fileID: 11400000, guid: 88952586ed7b62846a8c7afd020e9873, type: 2}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level

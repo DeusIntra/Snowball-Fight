@@ -187,8 +187,8 @@ GameObject:
   - component: {fileID: 3008013853584639527}
   - component: {fileID: 7695807918632469612}
   - component: {fileID: 7695807918632469617}
-  - component: {fileID: 7695807918632469615}
   - component: {fileID: 3925469274262616083}
+  - component: {fileID: 7695807918632469615}
   - component: {fileID: 4627689020216647386}
   - component: {fileID: 5982334854970141517}
   - component: {fileID: 7702308527376925847}
@@ -264,22 +264,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 7695807918820735178}
   snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
---- !u!114 &7695807918632469615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7695807918632469623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6363766509bd12a4fba09ccd5670fa97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.5
-  debuffedSpeedFraction: 0.5
-  boundaryDistance: 5
-  pauseTimeSeconds: 0
 --- !u!114 &3925469274262616083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +306,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pauseTimeSeconds: 0
+--- !u!114 &7695807918632469615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695807918632469623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6363766509bd12a4fba09ccd5670fa97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  debuffedSpeedFraction: 0.5
+  boundaryDistance: 5
   pauseTimeSeconds: 0
 --- !u!114 &4627689020216647386
 MonoBehaviour:

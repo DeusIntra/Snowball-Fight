@@ -7,6 +7,7 @@ public class EnemyAnimator : MonoBehaviour
 
     private Coroutine _coroutine;
 
+
     public void Walk()
     {
         if (_coroutine != null)
@@ -14,6 +15,7 @@ public class EnemyAnimator : MonoBehaviour
 
         meshAnimator.Play("Walk");
     }
+
 
     public void Throw()
     {
@@ -24,6 +26,7 @@ public class EnemyAnimator : MonoBehaviour
 
         _coroutine = StartCoroutine(DelayWalk());
     }
+
 
     public void Die()
     {
@@ -38,9 +41,24 @@ public class EnemyAnimator : MonoBehaviour
         meshAnimator.SetFPS(FPS);
     }
 
+
+    public float GetFPS()
+    {
+        return meshAnimator.GetFPS();
+    }
+
+
+    public void Pause(float seconds)
+    {
+        meshAnimator.Pause(seconds);
+    }
+
+
     private IEnumerator DelayWalk()
     {
         yield return new WaitForSecondsRealtime(0.5f);
+
+        while (meshAnimator.isPaused) yield return null;
         Walk();
     }
 }

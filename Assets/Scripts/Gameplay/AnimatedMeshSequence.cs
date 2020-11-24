@@ -14,6 +14,7 @@ public class AnimatedMeshSequence : MonoBehaviour
     
     public bool IsPlaying { get; private set; }
 
+
     private void Awake()
     {
         IsPlaying = false;        
@@ -23,10 +24,12 @@ public class AnimatedMeshSequence : MonoBehaviour
             Play();
     }
 
+
     public void SetMeshFilter(MeshFilter meshFilter)
     {
         this.meshFilter = meshFilter;
     }
+
 
     public void Play()
     {
@@ -39,6 +42,7 @@ public class AnimatedMeshSequence : MonoBehaviour
         }
     }
 
+
     public void Stop()
     {
         if (!IsReady()) return;
@@ -49,6 +53,7 @@ public class AnimatedMeshSequence : MonoBehaviour
             if (coroutine != null) StopCoroutine(coroutine);
         }
     }
+
 
     private IEnumerator AnimateMesh()
     {
@@ -61,12 +66,14 @@ public class AnimatedMeshSequence : MonoBehaviour
         }
     }
 
+
     private void IncrementPlayhead()
     {
         position++;
         if (position > meshes.Length - 1)
             position = 0;
     }
+
 
     private bool IsReady()
     {

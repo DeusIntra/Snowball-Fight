@@ -16,6 +16,7 @@ public class Spells : MonoBehaviour
     public Button spell2Button;
     public Button spell3Button;
 
+    public StormSpawner stormSpawner;
     public SnowballSpawner snowballSpawner;
     public IcebergSpawner icebergSpawner;
 
@@ -53,7 +54,7 @@ public class Spells : MonoBehaviour
     public void CastStorm()
     {
         _mana.Sub(_mana.max / 4);
-        // TODO: cast storm animation
+        stormSpawner.Cast(stormDurationSeconds);
         StartCoroutine(StormCoroutine());
     }
 
@@ -77,7 +78,7 @@ public class Spells : MonoBehaviour
 
     private IEnumerator StormCoroutine()
     {
-        yield return new WaitForSeconds(stormDurationSeconds);
+        yield return new WaitForSeconds(stormDurationSeconds / 2f);
 
         List<GameObject> enemies = _enemyHolder.enemies;
         for (int i = enemies.Count - 1; i >= 0; i--)
@@ -87,6 +88,25 @@ public class Spells : MonoBehaviour
             {
                 enemyDebuff.SlowDown(stormDurationSeconds * 2f);
                 enemyDebuff.Stun(stormDurationSeconds * 2f);
+            }
+
+            EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
+            if (enemyAnimator != null)
+            {
+                float FPS = enemyAnimator.GetFPS();
+                enemyAnimator.SetFPS(FPS / 2f);
+            }
+        }
+
+        yield return new WaitForSeconds(stormDurationSeconds * 2f);
+
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
+            if (enemyAnimator != null)
+            {
+                float FPS = enemyAnimator.GetFPS();
+                enemyAnimator.SetFPS(FPS * 2f);
             }
         }
     }
@@ -105,8 +125,14 @@ public class Spells : MonoBehaviour
                 enemyDebuff.Freeze(freezeDebuffDurationSeconds);
             }
 
+            EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
+            if (enemyAnimator != null)
+            {
+                enemyAnimator.Pause(freezeDebuffDurationSeconds);
+            }
+
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 4);
+            health.Sub(health.max / 4);            
         }
     }
 

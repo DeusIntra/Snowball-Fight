@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MeshAnimator : MonoBehaviour
 {
     public string initialMeshAnimation;
-
 
     [Tooltip("Mesh Animations Parent")]
     public Transform holder;
@@ -12,6 +12,8 @@ public class MeshAnimator : MonoBehaviour
     private MeshFilter _meshFilter;
     private Dictionary<string, AnimatedMeshSequence> _meshAnimations;
     private AnimatedMeshSequence _currentMeshAnimation;
+    public bool isPaused { get; private set; }
+
 
     private void Awake()
     {
@@ -26,12 +28,14 @@ public class MeshAnimator : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         bool isValid = _meshAnimations.TryGetValue(initialMeshAnimation, out _currentMeshAnimation);
         if (!isValid) Debug.LogError("Initial mesh animation is not valid");
         else _currentMeshAnimation.Play();
     }
+
 
     public void Play(string name)
     {
@@ -43,9 +47,34 @@ public class MeshAnimator : MonoBehaviour
         else _currentMeshAnimation.Play();
     }
 
+
     public void SetFPS(float FPS)
     {
         if (_currentMeshAnimation != null)
             _currentMeshAnimation.framesPerSecond = FPS;
+    }
+
+
+    public float GetFPS()
+    {
+        return _currentMeshAnimation.framesPerSecond;
+    }
+
+
+    public void Pause(float seconds)
+    {
+        StartCoroutine(PauseCoroutine(seconds));
+    }
+
+
+    private IEnumerator PauseCoroutine(float seconds)
+    {
+        _currentMeshAnimation.Stop();
+        isPaused = true;
+
+        yield return new WaitForSeconds(seconds);
+
+        _currentMeshAnimation.Play();
+        isPaused = false;
     }
 }
