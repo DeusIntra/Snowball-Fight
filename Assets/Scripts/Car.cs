@@ -21,20 +21,20 @@ public class Car : MonoBehaviour
     }
 
 
-    public void SetDestination(Vector3 destination, float speed = 1f)
+    public void SetDestination(Vector3 destination, float speed = 1f, float t = 0)
     {
         _startPosition = transform.position;
         _endPosition = destination;
         _speed = speed;
         if (_material != null) _startAlpha = _material.color.a;
 
-        StartCoroutine(DriveCoroutine());
+        StartCoroutine(DriveCoroutine(t));
     }
 
 
-    private IEnumerator DriveCoroutine()
+    private IEnumerator DriveCoroutine(float t)
     {
-        float t = _time * _speed;
+        _time = t / _speed;
         while (t < 1)
         {
             t = _time * _speed;

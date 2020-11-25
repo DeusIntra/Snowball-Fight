@@ -7,6 +7,8 @@ public class CarSpawner : MonoBehaviour
     public float minSpawnDelaySeconds = 2f;
     public float maxSpawnDelaySeconds = 7f;
 
+    public bool randomAtStart = false;
+
     public List<GameObject> carPrefabs;
 
     public Transform startPosition;
@@ -18,6 +20,18 @@ public class CarSpawner : MonoBehaviour
     private void Start()
     {
         startPosition.LookAt(endPosition);
+
+        if (randomAtStart)
+        {
+            int count = Random.Range(2, 5);
+
+            for (int i = 0; i < count; i++)
+            {
+                float t = Random.Range(0f, 1f);
+
+                Spawn(startPosition.position, endPosition.position, t);
+            }
+        }
     }
 
 
@@ -25,7 +39,7 @@ public class CarSpawner : MonoBehaviour
     {
         if (_time <= 0)
         {
-            Spawn();
+            Spawn(startPosition.position, endPosition.position);
             _time = Random.Range(minSpawnDelaySeconds, maxSpawnDelaySeconds);
         }
 
@@ -33,17 +47,20 @@ public class CarSpawner : MonoBehaviour
     }
 
 
-    private void Spawn()
+    private void Spawn(Vector3 startPos, Vector3 endPos, float t = 0)
     {
         int randIndex = Random.Range(0, carPrefabs.Count);
 
-        GameObject carGO = Instantiate(carPrefabs[randIndex], startPosition.position, startPosition.rotation);
+        Vector3 direction = (startPos - endPos).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+
+        GameObject carGO = Instantiate(carPrefabs[randIndex], startPos, lookRotation);
 
         Car car = carGO.GetComponent<Car>();
 
         if (car != null)
         {
-            car.SetDestination(endPosition.position, speed);
+            car.SetDestination(endPos, speed, t);
         }
     }
 }
