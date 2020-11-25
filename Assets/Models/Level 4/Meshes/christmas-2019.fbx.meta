@@ -1,144 +1,416 @@
 fileFormatVersion: 2
 guid: 3af7abf661730334898131114a88278d
 ModelImporter:
-  serializedVersion: 22
-  fileIDToRecycleName:
-    100000: angel
-    100002: bird
-    100004: Birdhouse
-    100006: //RootNode
-    100008: ChristmasTree
-    100010: Cottage
-    100012: Giftbag01
-    100014: Giftbag02
-    100016: girland01
-    100018: girland02
-    100020: ornament-01-gold
-    100022: ornament-01-red
-    100024: ornament-02-gold
-    100026: ornament-02-red
-    100028: ornament-03-gold
-    100030: ornament-03-red
-    100032: Ornament-ribbon
-    100034: Pine-tree01
-    100036: Pine-tree02
-    100038: present01
-    100040: present02
-    100042: present03
-    100044: Snowman
-    100046: star01
-    100048: star02
-    100050: wreath
-    400000: angel
-    400002: bird
-    400004: Birdhouse
-    400006: //RootNode
-    400008: ChristmasTree
-    400010: Cottage
-    400012: Giftbag01
-    400014: Giftbag02
-    400016: girland01
-    400018: girland02
-    400020: ornament-01-gold
-    400022: ornament-01-red
-    400024: ornament-02-gold
-    400026: ornament-02-red
-    400028: ornament-03-gold
-    400030: ornament-03-red
-    400032: Ornament-ribbon
-    400034: Pine-tree01
-    400036: Pine-tree02
-    400038: present01
-    400040: present02
-    400042: present03
-    400044: Snowman
-    400046: star01
-    400048: star02
-    400050: wreath
-    2100000: Green
-    2100002: Brown
-    2100004: White
-    2100006: ShinyRed
-    2100008: Gold
-    2100010: Red
-    2100012: Blue
-    2100014: LightGreen
-    2100016: black
-    2300000: angel
-    2300002: bird
-    2300004: Birdhouse
-    2300006: ChristmasTree
-    2300008: Cottage
-    2300010: Giftbag01
-    2300012: Giftbag02
-    2300014: girland01
-    2300016: girland02
-    2300018: ornament-01-gold
-    2300020: ornament-01-red
-    2300022: ornament-02-gold
-    2300024: ornament-02-red
-    2300026: ornament-03-gold
-    2300028: ornament-03-red
-    2300030: Ornament-ribbon
-    2300032: Pine-tree01
-    2300034: Pine-tree02
-    2300036: present01
-    2300038: present02
-    2300040: present03
-    2300042: Snowman
-    2300044: star01
-    2300046: star02
-    2300048: wreath
-    3300000: angel
-    3300002: bird
-    3300004: Birdhouse
-    3300006: ChristmasTree
-    3300008: Cottage
-    3300010: Giftbag01
-    3300012: Giftbag02
-    3300014: girland01
-    3300016: girland02
-    3300018: ornament-01-gold
-    3300020: ornament-01-red
-    3300022: ornament-02-gold
-    3300024: ornament-02-red
-    3300026: ornament-03-gold
-    3300028: ornament-03-red
-    3300030: Ornament-ribbon
-    3300032: Pine-tree01
-    3300034: Pine-tree02
-    3300036: present01
-    3300038: present02
-    3300040: present03
-    3300042: Snowman
-    3300044: star01
-    3300046: star02
-    3300048: wreath
-    4300000: Pine-tree01
-    4300002: Pine-tree02
-    4300004: ChristmasTree
-    4300006: ornament-02-red
-    4300008: ornament-03-red
-    4300010: ornament-02-gold
-    4300012: ornament-03-gold
-    4300014: ornament-01-red
-    4300016: ornament-01-gold
-    4300018: star01
-    4300020: star02
-    4300022: wreath
-    4300024: girland01
-    4300026: girland02
-    4300028: bird
-    4300030: Ornament-ribbon
-    4300032: present01
-    4300034: present02
-    4300036: present03
-    4300038: Giftbag01
-    4300040: Giftbag02
-    4300042: angel
-    4300044: Birdhouse
-    4300046: Cottage
-    4300048: Snowman
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: angel
+  - first:
+      1: 100002
+    second: bird
+  - first:
+      1: 100004
+    second: Birdhouse
+  - first:
+      1: 100006
+    second: //RootNode
+  - first:
+      1: 100008
+    second: ChristmasTree
+  - first:
+      1: 100010
+    second: Cottage
+  - first:
+      1: 100012
+    second: Giftbag01
+  - first:
+      1: 100014
+    second: Giftbag02
+  - first:
+      1: 100016
+    second: girland01
+  - first:
+      1: 100018
+    second: girland02
+  - first:
+      1: 100020
+    second: ornament-01-gold
+  - first:
+      1: 100022
+    second: ornament-01-red
+  - first:
+      1: 100024
+    second: ornament-02-gold
+  - first:
+      1: 100026
+    second: ornament-02-red
+  - first:
+      1: 100028
+    second: ornament-03-gold
+  - first:
+      1: 100030
+    second: ornament-03-red
+  - first:
+      1: 100032
+    second: Ornament-ribbon
+  - first:
+      1: 100034
+    second: Pine-tree01
+  - first:
+      1: 100036
+    second: Pine-tree02
+  - first:
+      1: 100038
+    second: present01
+  - first:
+      1: 100040
+    second: present02
+  - first:
+      1: 100042
+    second: present03
+  - first:
+      1: 100044
+    second: Snowman
+  - first:
+      1: 100046
+    second: star01
+  - first:
+      1: 100048
+    second: star02
+  - first:
+      1: 100050
+    second: wreath
+  - first:
+      4: 400000
+    second: angel
+  - first:
+      4: 400002
+    second: bird
+  - first:
+      4: 400004
+    second: Birdhouse
+  - first:
+      4: 400006
+    second: //RootNode
+  - first:
+      4: 400008
+    second: ChristmasTree
+  - first:
+      4: 400010
+    second: Cottage
+  - first:
+      4: 400012
+    second: Giftbag01
+  - first:
+      4: 400014
+    second: Giftbag02
+  - first:
+      4: 400016
+    second: girland01
+  - first:
+      4: 400018
+    second: girland02
+  - first:
+      4: 400020
+    second: ornament-01-gold
+  - first:
+      4: 400022
+    second: ornament-01-red
+  - first:
+      4: 400024
+    second: ornament-02-gold
+  - first:
+      4: 400026
+    second: ornament-02-red
+  - first:
+      4: 400028
+    second: ornament-03-gold
+  - first:
+      4: 400030
+    second: ornament-03-red
+  - first:
+      4: 400032
+    second: Ornament-ribbon
+  - first:
+      4: 400034
+    second: Pine-tree01
+  - first:
+      4: 400036
+    second: Pine-tree02
+  - first:
+      4: 400038
+    second: present01
+  - first:
+      4: 400040
+    second: present02
+  - first:
+      4: 400042
+    second: present03
+  - first:
+      4: 400044
+    second: Snowman
+  - first:
+      4: 400046
+    second: star01
+  - first:
+      4: 400048
+    second: star02
+  - first:
+      4: 400050
+    second: wreath
+  - first:
+      21: 2100000
+    second: Green
+  - first:
+      21: 2100002
+    second: Brown
+  - first:
+      21: 2100004
+    second: White
+  - first:
+      21: 2100006
+    second: ShinyRed
+  - first:
+      21: 2100008
+    second: Gold
+  - first:
+      21: 2100010
+    second: Red
+  - first:
+      21: 2100012
+    second: Blue
+  - first:
+      21: 2100014
+    second: LightGreen
+  - first:
+      21: 2100016
+    second: black
+  - first:
+      23: 2300000
+    second: angel
+  - first:
+      23: 2300002
+    second: bird
+  - first:
+      23: 2300004
+    second: Birdhouse
+  - first:
+      23: 2300006
+    second: ChristmasTree
+  - first:
+      23: 2300008
+    second: Cottage
+  - first:
+      23: 2300010
+    second: Giftbag01
+  - first:
+      23: 2300012
+    second: Giftbag02
+  - first:
+      23: 2300014
+    second: girland01
+  - first:
+      23: 2300016
+    second: girland02
+  - first:
+      23: 2300018
+    second: ornament-01-gold
+  - first:
+      23: 2300020
+    second: ornament-01-red
+  - first:
+      23: 2300022
+    second: ornament-02-gold
+  - first:
+      23: 2300024
+    second: ornament-02-red
+  - first:
+      23: 2300026
+    second: ornament-03-gold
+  - first:
+      23: 2300028
+    second: ornament-03-red
+  - first:
+      23: 2300030
+    second: Ornament-ribbon
+  - first:
+      23: 2300032
+    second: Pine-tree01
+  - first:
+      23: 2300034
+    second: Pine-tree02
+  - first:
+      23: 2300036
+    second: present01
+  - first:
+      23: 2300038
+    second: present02
+  - first:
+      23: 2300040
+    second: present03
+  - first:
+      23: 2300042
+    second: Snowman
+  - first:
+      23: 2300044
+    second: star01
+  - first:
+      23: 2300046
+    second: star02
+  - first:
+      23: 2300048
+    second: wreath
+  - first:
+      33: 3300000
+    second: angel
+  - first:
+      33: 3300002
+    second: bird
+  - first:
+      33: 3300004
+    second: Birdhouse
+  - first:
+      33: 3300006
+    second: ChristmasTree
+  - first:
+      33: 3300008
+    second: Cottage
+  - first:
+      33: 3300010
+    second: Giftbag01
+  - first:
+      33: 3300012
+    second: Giftbag02
+  - first:
+      33: 3300014
+    second: girland01
+  - first:
+      33: 3300016
+    second: girland02
+  - first:
+      33: 3300018
+    second: ornament-01-gold
+  - first:
+      33: 3300020
+    second: ornament-01-red
+  - first:
+      33: 3300022
+    second: ornament-02-gold
+  - first:
+      33: 3300024
+    second: ornament-02-red
+  - first:
+      33: 3300026
+    second: ornament-03-gold
+  - first:
+      33: 3300028
+    second: ornament-03-red
+  - first:
+      33: 3300030
+    second: Ornament-ribbon
+  - first:
+      33: 3300032
+    second: Pine-tree01
+  - first:
+      33: 3300034
+    second: Pine-tree02
+  - first:
+      33: 3300036
+    second: present01
+  - first:
+      33: 3300038
+    second: present02
+  - first:
+      33: 3300040
+    second: present03
+  - first:
+      33: 3300042
+    second: Snowman
+  - first:
+      33: 3300044
+    second: star01
+  - first:
+      33: 3300046
+    second: star02
+  - first:
+      33: 3300048
+    second: wreath
+  - first:
+      43: 4300000
+    second: Pine-tree01
+  - first:
+      43: 4300002
+    second: Pine-tree02
+  - first:
+      43: 4300004
+    second: ChristmasTree
+  - first:
+      43: 4300006
+    second: ornament-02-red
+  - first:
+      43: 4300008
+    second: ornament-03-red
+  - first:
+      43: 4300010
+    second: ornament-02-gold
+  - first:
+      43: 4300012
+    second: ornament-03-gold
+  - first:
+      43: 4300014
+    second: ornament-01-red
+  - first:
+      43: 4300016
+    second: ornament-01-gold
+  - first:
+      43: 4300018
+    second: star01
+  - first:
+      43: 4300020
+    second: star02
+  - first:
+      43: 4300022
+    second: wreath
+  - first:
+      43: 4300024
+    second: girland01
+  - first:
+      43: 4300026
+    second: girland02
+  - first:
+      43: 4300028
+    second: bird
+  - first:
+      43: 4300030
+    second: Ornament-ribbon
+  - first:
+      43: 4300032
+    second: present01
+  - first:
+      43: 4300034
+    second: present02
+  - first:
+      43: 4300036
+    second: present03
+  - first:
+      43: 4300038
+    second: Giftbag01
+  - first:
+      43: 4300040
+    second: Giftbag02
+  - first:
+      43: 4300042
+    second: angel
+  - first:
+      43: 4300044
+    second: Birdhouse
+  - first:
+      43: 4300046
+    second: Cottage
+  - first:
+      43: 4300048
+    second: Snowman
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -186,7 +458,7 @@ ModelImporter:
       name: black
     second: {fileID: 2100000, guid: a774ab786667f9140bce02e667084a54, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -203,6 +475,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -217,21 +490,31 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -239,10 +522,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -252,14 +538,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

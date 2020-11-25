@@ -1,92 +1,221 @@
 fileFormatVersion: 2
 guid: fac7246f9cacd7342afe347336abab3e
-timeCreated: 1468655319
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Center
-    100002: Corner in
-    100004: Corner Out
-    100006: Corner Out 2
-    100008: Dead End
-    100010: Middle
-    100012: //RootNode
-    100014: Straight
-    100016: T junction 1
-    100018: T junction 2
-    100020: T junction 3
-    400000: Center
-    400002: Corner in
-    400004: Corner Out
-    400006: Corner Out 2
-    400008: Dead End
-    400010: Middle
-    400012: //RootNode
-    400014: Straight
-    400016: T junction 1
-    400018: T junction 2
-    400020: T junction 3
-    2300000: Center
-    2300002: Corner in
-    2300004: Corner Out
-    2300006: Corner Out 2
-    2300008: Dead End
-    2300010: Middle
-    2300012: Straight
-    2300014: T junction 1
-    2300016: T junction 2
-    2300018: T junction 3
-    3300000: Center
-    3300002: Corner in
-    3300004: Corner Out
-    3300006: Corner Out 2
-    3300008: Dead End
-    3300010: Middle
-    3300012: Straight
-    3300014: T junction 1
-    3300016: T junction 2
-    3300018: T junction 3
-    4300000: T junction 3
-    4300002: T junction 2
-    4300004: T junction 1
-    4300006: Corner in
-    4300008: Corner Out 2
-    4300010: Corner Out
-    4300012: Dead End
-    4300014: Middle
-    4300016: Straight
-    4300018: Center
-    6400000: Center
-    6400002: Corner in
-    6400004: Corner Out
-    6400006: Corner Out 2
-    6400008: Dead End
-    6400010: Middle
-    6400012: Straight
-    6400014: T junction 1
-    6400016: T junction 2
-    6400018: T junction 3
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Center
+  - first:
+      1: 100002
+    second: Corner in
+  - first:
+      1: 100004
+    second: Corner Out
+  - first:
+      1: 100006
+    second: Corner Out 2
+  - first:
+      1: 100008
+    second: Dead End
+  - first:
+      1: 100010
+    second: Middle
+  - first:
+      1: 100012
+    second: //RootNode
+  - first:
+      1: 100014
+    second: Straight
+  - first:
+      1: 100016
+    second: T junction 1
+  - first:
+      1: 100018
+    second: T junction 2
+  - first:
+      1: 100020
+    second: T junction 3
+  - first:
+      4: 400000
+    second: Center
+  - first:
+      4: 400002
+    second: Corner in
+  - first:
+      4: 400004
+    second: Corner Out
+  - first:
+      4: 400006
+    second: Corner Out 2
+  - first:
+      4: 400008
+    second: Dead End
+  - first:
+      4: 400010
+    second: Middle
+  - first:
+      4: 400012
+    second: //RootNode
+  - first:
+      4: 400014
+    second: Straight
+  - first:
+      4: 400016
+    second: T junction 1
+  - first:
+      4: 400018
+    second: T junction 2
+  - first:
+      4: 400020
+    second: T junction 3
+  - first:
+      23: 2300000
+    second: Center
+  - first:
+      23: 2300002
+    second: Corner in
+  - first:
+      23: 2300004
+    second: Corner Out
+  - first:
+      23: 2300006
+    second: Corner Out 2
+  - first:
+      23: 2300008
+    second: Dead End
+  - first:
+      23: 2300010
+    second: Middle
+  - first:
+      23: 2300012
+    second: Straight
+  - first:
+      23: 2300014
+    second: T junction 1
+  - first:
+      23: 2300016
+    second: T junction 2
+  - first:
+      23: 2300018
+    second: T junction 3
+  - first:
+      33: 3300000
+    second: Center
+  - first:
+      33: 3300002
+    second: Corner in
+  - first:
+      33: 3300004
+    second: Corner Out
+  - first:
+      33: 3300006
+    second: Corner Out 2
+  - first:
+      33: 3300008
+    second: Dead End
+  - first:
+      33: 3300010
+    second: Middle
+  - first:
+      33: 3300012
+    second: Straight
+  - first:
+      33: 3300014
+    second: T junction 1
+  - first:
+      33: 3300016
+    second: T junction 2
+  - first:
+      33: 3300018
+    second: T junction 3
+  - first:
+      43: 4300000
+    second: T junction 3
+  - first:
+      43: 4300002
+    second: T junction 2
+  - first:
+      43: 4300004
+    second: T junction 1
+  - first:
+      43: 4300006
+    second: Corner in
+  - first:
+      43: 4300008
+    second: Corner Out 2
+  - first:
+      43: 4300010
+    second: Corner Out
+  - first:
+      43: 4300012
+    second: Dead End
+  - first:
+      43: 4300014
+    second: Middle
+  - first:
+      43: 4300016
+    second: Straight
+  - first:
+      43: 4300018
+    second: Center
+  - first:
+      64: 6400000
+    second: Center
+  - first:
+      64: 6400002
+    second: Corner in
+  - first:
+      64: 6400004
+    second: Corner Out
+  - first:
+      64: 6400006
+    second: Corner Out 2
+  - first:
+      64: 6400008
+    second: Dead End
+  - first:
+      64: 6400010
+    second: Middle
+  - first:
+      64: 6400012
+    second: Straight
+  - first:
+      64: 6400014
+    second: T junction 1
+  - first:
+      64: 6400016
+    second: T junction 2
+  - first:
+      64: 6400018
+    second: T junction 3
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -94,25 +223,45 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -122,11 +271,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

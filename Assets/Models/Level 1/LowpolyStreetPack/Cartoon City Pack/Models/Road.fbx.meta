@@ -1,74 +1,167 @@
 fileFormatVersion: 2
 guid: 0aa56ab718e806c4797fe4c8418ecb23
-timeCreated: 1468828135
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Road
-    100004: Road Corner
-    100006: Road Crossroad
-    100008: Road Large
-    100010: Road Large Corner
-    100012: Road TJunction
-    100014: Road to Large
-    400000: //RootNode
-    400002: Road
-    400004: Road Corner
-    400006: Road Crossroad
-    400008: Road Large
-    400010: Road Large Corner
-    400012: Road TJunction
-    400014: Road to Large
-    2300000: Road
-    2300002: Road Corner
-    2300004: Road Crossroad
-    2300006: Road Large
-    2300008: Road Large Corner
-    2300010: Road TJunction
-    2300012: Road to Large
-    3300000: Road
-    3300002: Road Corner
-    3300004: Road Crossroad
-    3300006: Road Large
-    3300008: Road Large Corner
-    3300010: Road TJunction
-    3300012: Road to Large
-    4300000: Road Crossroad
-    4300002: Road TJunction
-    4300004: Road Corner
-    4300006: Road Large Corner
-    4300008: Road to Large
-    4300010: Road Large
-    4300012: Road
-    6400000: Road
-    6400002: Road Corner
-    6400004: Road Crossroad
-    6400006: Road Large
-    6400008: Road Large Corner
-    6400010: Road TJunction
-    6400012: Road to Large
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Road
+  - first:
+      1: 100004
+    second: Road Corner
+  - first:
+      1: 100006
+    second: Road Crossroad
+  - first:
+      1: 100008
+    second: Road Large
+  - first:
+      1: 100010
+    second: Road Large Corner
+  - first:
+      1: 100012
+    second: Road TJunction
+  - first:
+      1: 100014
+    second: Road to Large
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Road
+  - first:
+      4: 400004
+    second: Road Corner
+  - first:
+      4: 400006
+    second: Road Crossroad
+  - first:
+      4: 400008
+    second: Road Large
+  - first:
+      4: 400010
+    second: Road Large Corner
+  - first:
+      4: 400012
+    second: Road TJunction
+  - first:
+      4: 400014
+    second: Road to Large
+  - first:
+      23: 2300000
+    second: Road
+  - first:
+      23: 2300002
+    second: Road Corner
+  - first:
+      23: 2300004
+    second: Road Crossroad
+  - first:
+      23: 2300006
+    second: Road Large
+  - first:
+      23: 2300008
+    second: Road Large Corner
+  - first:
+      23: 2300010
+    second: Road TJunction
+  - first:
+      23: 2300012
+    second: Road to Large
+  - first:
+      33: 3300000
+    second: Road
+  - first:
+      33: 3300002
+    second: Road Corner
+  - first:
+      33: 3300004
+    second: Road Crossroad
+  - first:
+      33: 3300006
+    second: Road Large
+  - first:
+      33: 3300008
+    second: Road Large Corner
+  - first:
+      33: 3300010
+    second: Road TJunction
+  - first:
+      33: 3300012
+    second: Road to Large
+  - first:
+      43: 4300000
+    second: Road Crossroad
+  - first:
+      43: 4300002
+    second: Road TJunction
+  - first:
+      43: 4300004
+    second: Road Corner
+  - first:
+      43: 4300006
+    second: Road Large Corner
+  - first:
+      43: 4300008
+    second: Road to Large
+  - first:
+      43: 4300010
+    second: Road Large
+  - first:
+      43: 4300012
+    second: Road
+  - first:
+      64: 6400000
+    second: Road
+  - first:
+      64: 6400002
+    second: Road Corner
+  - first:
+      64: 6400004
+    second: Road Crossroad
+  - first:
+      64: 6400006
+    second: Road Large
+  - first:
+      64: 6400008
+    second: Road Large Corner
+  - first:
+      64: 6400010
+    second: Road TJunction
+  - first:
+      64: 6400012
+    second: Road to Large
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -76,25 +169,45 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 1
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -104,11 +217,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

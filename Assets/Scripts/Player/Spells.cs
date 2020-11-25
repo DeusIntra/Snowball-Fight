@@ -82,6 +82,7 @@ public class Spells : MonoBehaviour
         yield return new WaitForSeconds(stormDurationSeconds / 2f);
 
         List<GameObject> enemies = _enemyHolder.enemies;
+        float[] enemiesFPS = new float[enemies.Count];
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
             EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
@@ -94,8 +95,8 @@ public class Spells : MonoBehaviour
             EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
             if (enemyAnimator != null)
             {
-                float FPS = enemyAnimator.GetFPS();
-                enemyAnimator.SetFPS(FPS / 2f);
+                enemiesFPS[i] = enemyAnimator.GetFPS();
+                enemyAnimator.SetFPS(enemiesFPS[i] / 2f);
             }
         }
 
@@ -106,8 +107,7 @@ public class Spells : MonoBehaviour
             EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
             if (enemyAnimator != null)
             {
-                float FPS = enemyAnimator.GetFPS();
-                enemyAnimator.SetFPS(FPS * 2f);
+                enemyAnimator.SetFPS(enemiesFPS[i]);
             }
         }
     }
@@ -138,7 +138,7 @@ public class Spells : MonoBehaviour
             }
 
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 4);            
+            health.Sub(7);            
         }
     }
 

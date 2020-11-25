@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca11276efbbd4448a6bc0b383c0607d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHitAmount: 20
+  onHitAmount: 1
   onKillAmount: 2
 --- !u!114 &5638602311746608654
 MonoBehaviour:
