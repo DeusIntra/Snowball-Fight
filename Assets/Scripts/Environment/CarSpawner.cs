@@ -8,6 +8,7 @@ public class CarSpawner : MonoBehaviour
     public float maxSpawnDelaySeconds = 7f;
 
     public bool randomAtStart = false;
+    public bool randomRotation = false;
 
     public List<GameObject> carPrefabs;
 
@@ -55,6 +56,11 @@ public class CarSpawner : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(direction);
 
         GameObject carGO = Instantiate(carPrefabs[randIndex], startPos, lookRotation);
+
+        if (randomRotation)
+        {
+            carGO.transform.Rotate(new Vector3(0, Random.Range(0f, 360f), 0));
+        }
 
         Car car = carGO.GetComponent<Car>();
 

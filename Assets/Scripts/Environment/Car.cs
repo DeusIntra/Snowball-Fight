@@ -5,6 +5,7 @@ public class Car : MonoBehaviour
 {
     public float fadeTimeSeconds = 0f;
     public float pauseBeforeFadeSeconds = 0f;
+    public float speedMultiplier = 1f;
 
     private Vector3 _startPosition;
     private Vector3 _endPosition;
@@ -25,7 +26,7 @@ public class Car : MonoBehaviour
     {
         _startPosition = transform.position;
         _endPosition = destination;
-        _speed = speed;
+        _speed = speed * speedMultiplier;
         if (_material != null) _startAlpha = _material.color.a;
 
         StartCoroutine(DriveCoroutine(t));
