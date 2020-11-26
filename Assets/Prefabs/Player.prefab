@@ -619,7 +619,7 @@ MonoBehaviour:
   speed: 4
   boundaryDistance: 5
   stepTime: 0.4
-  useJoystick: 1
+  useJoystick: 0
   doStep: 0
   joystick: {fileID: 0}
   leftFoot: {fileID: 4525027932520602322}

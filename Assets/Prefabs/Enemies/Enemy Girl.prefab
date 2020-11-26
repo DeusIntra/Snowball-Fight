@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 0b6183b3a7362bb48b4050f4611bd9d9, type: 3}
+    - target: {fileID: 3925469274262616083, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: maxShootTimeSeconds
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627689020216647386, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: minJumpTimeSeconds
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627689020216647386, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: maxJumpTimeSeconds
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7695807918632469616, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

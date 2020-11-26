@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 7d6be15c32990344ab4b085b13a0fee4, type: 3}
+    - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: m_Size.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: m_Center.y
+      value: 1.375
+      objectReference: {fileID: 0}
     - target: {fileID: 3059555952824129623, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.2
@@ -23,6 +31,14 @@ PrefabInstance:
       propertyPath: meshes.Array.data[1]
       value: 
       objectReference: {fileID: -2432090755550338912, guid: e08e302e1e597c744b9753532d817930, type: 3}
+    - target: {fileID: 3925469274262616083, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: minShootTimeSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925469274262616083, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: maxShootTimeSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4072742967314159678, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -31,10 +47,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 3.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4627689020216647386, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: minJumpTimeSeconds
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4627689020216647386, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: maxJumpTimeSeconds
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5588024429551642161, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: meshes.Array.data[0]
       value: 
       objectReference: {fileID: -2432090755550338912, guid: e752018a8da66b747b9ea367c6cefc3e, type: 3}
+    - target: {fileID: 7695807918632469615, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: speed
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7695807918632469616, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -91,5 +119,6 @@ PrefabInstance:
       propertyPath: meshes.Array.data[0]
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b6e4790e5553f944ab22414417926a97, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1047307387874480603, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}

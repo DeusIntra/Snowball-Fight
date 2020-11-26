@@ -13,11 +13,19 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: 56e2519bc0c7ebb49a8e4e898b260d67, type: 3}
     - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_Size.y
-      value: 2.75
+      value: 3.7369027
       objectReference: {fileID: 0}
     - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_Center.y
-      value: 1.375
+      value: 1.8684514
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008013853584639527, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: m_Center.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3059555952824129623, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31,6 +39,14 @@ PrefabInstance:
       propertyPath: meshes.Array.data[1]
       value: 
       objectReference: {fileID: -2432090755550338912, guid: fd92c75d15127a5429f58eccde970424, type: 3}
+    - target: {fileID: 3925469274262616083, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: minShootTimeSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925469274262616083, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: maxShootTimeSeconds
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4072742967314159678, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
