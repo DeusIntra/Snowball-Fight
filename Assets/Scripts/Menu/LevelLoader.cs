@@ -16,6 +16,8 @@ public class LevelLoader : MonoBehaviour
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
 
+        operation.allowSceneActivation = false;
+
         float progress = 0f;
 
         while (!operation.isDone)
@@ -23,6 +25,12 @@ public class LevelLoader : MonoBehaviour
             progress = operation.progress / 0.9f;
             if (progressBar != null) progressBar.SetFill(progress);
             yield return null;
-        }
+
+            if (progress >= 1f)
+            {
+                Time.timeScale = 1f;
+                operation.allowSceneActivation = true;
+            }
+        }        
     }
 }
