@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db5551d0c0a39f49bc5053039e6a65d, type: 3}
   m_Name: Level Data 2-10
   m_EditorClassIdentifier: 
-  minion1Count: 0
+  minion1Count: 2
   minion2Count: 0
   hasBoss: 1
-  minion1Prefab: {fileID: 0}
+  minion1Prefab: {fileID: 1527132861052218233, guid: 1cc9d10427c9855429ceb9a3dcf08c55, type: 3}
   minion2Prefab: {fileID: 0}
   bossPrefab: {fileID: 6798328376149715714, guid: e6b398512464d4c4097cd81c4461020d, type: 3}
