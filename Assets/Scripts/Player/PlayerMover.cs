@@ -6,6 +6,7 @@ public class PlayerMover : MonoBehaviour
     public float speed = 4f;
     public float boundaryDistance = 5f;
     public float stepTime = 0.5f;
+    public bool useJoystick = true;
     public bool doStep = true;
 
     public Joystick joystick;
@@ -28,7 +29,11 @@ public class PlayerMover : MonoBehaviour
 
     void Update()
     {
-        _horizontalMovement = joystick.Horizontal;
+        if (useJoystick)
+        {
+            _horizontalMovement = joystick.Horizontal;
+        }
+        
         float horizontalAbs = Mathf.Abs(_horizontalMovement);
         _playerAnimator.SetSpeed(horizontalAbs);
 
@@ -59,6 +64,12 @@ public class PlayerMover : MonoBehaviour
     private void OnDisable()
     {
         _rigidbody.velocity = Vector3.zero;
+    }
+
+
+    public void SetHorizontal(float value)
+    {
+        _horizontalMovement = value;
     }
 
     private void Step()
