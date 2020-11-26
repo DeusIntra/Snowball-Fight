@@ -1708,6 +1708,10 @@ PrefabInstance:
       propertyPath: icebergSpawner
       value: 
       objectReference: {fileID: 766928240}
+    - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: stormSpawner
+      value: 
+      objectReference: {fileID: 1289611409}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: healthBar
       value: 
@@ -1799,6 +1803,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5392898733955948005, guid: dd58348230a080d49b543d63f1272bd7, type: 3}
   m_PrefabInstance: {fileID: 1958337496}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289611409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2799498376675749371, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+  m_PrefabInstance: {fileID: 561990702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a254f5c7a119adc42a6545576cbd9236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295511342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6827164599185347846, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
@@ -2574,6 +2589,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 242997374}
+    - target: {fileID: 1822829156812067531, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CastStorm
+      objectReference: {fileID: 0}
     - target: {fileID: 1855538652738108762, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
