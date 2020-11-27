@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e07ef0efa9a78459e6958924ea72fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxShootForce: 32
+  maxShootForce: 34
   minShootForceFraction: 0.4
   snowballSideVelocityMultiplier: 1
   progressBar: {fileID: 0}
@@ -619,7 +619,7 @@ MonoBehaviour:
   speed: 4
   boundaryDistance: 5
   stepTime: 0.4
-  useJoystick: 0
+  useJoystick: 1
   doStep: 0
   joystick: {fileID: 0}
   leftFoot: {fileID: 4525027932520602322}
