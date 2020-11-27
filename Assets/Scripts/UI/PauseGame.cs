@@ -10,6 +10,7 @@ public class PauseGame : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
+
         foreach (GameObject obj in objectsToHideOnPause)
         {
             obj.SetActive(false);
@@ -24,6 +25,7 @@ public class PauseGame : MonoBehaviour
     public void Unpause()
     {
         Time.timeScale = 1f;
+
         foreach (GameObject obj in objectsToHideOnPause)
         {
             obj.SetActive(true);

@@ -2833,7 +2833,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2891011129039539216, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 1855538652317724451}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855538652317724457}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae94ccd3d22d99349a48e4da2ee51ff8, type: 3}
@@ -3820,6 +3820,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9855064, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9855064, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 101019147}
     - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: spell1Button
       value: 
@@ -3862,7 +3870,7 @@ PrefabInstance:
       objectReference: {fileID: 210638980}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: useJoystick
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: progressBar
@@ -6023,7 +6031,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3675386670712808808, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 1855538652317724451}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855538652317724456}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
@@ -6621,10 +6629,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6757219863655331221}
-    - target: {fileID: 759484045, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Unpause
-      objectReference: {fileID: 0}
     - target: {fileID: 431391553649718985, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6633,18 +6637,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 859040499}
-    - target: {fileID: 1855538651376402152, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 242508941}
     - target: {fileID: 1855538652738108762, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6757219863655331221}
-    - target: {fileID: 1855538652738108762, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Pause
-      objectReference: {fileID: 0}
     - target: {fileID: 1855538653209544843, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -6741,7 +6737,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
 --- !u!1 &1855538652317724452 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1942134605, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2699578245030412816, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 1855538652317724451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855538652317724453 stripped
@@ -6757,16 +6753,6 @@ GameObject:
 --- !u!1 &1855538652317724455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7539594244140655081, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-  m_PrefabInstance: {fileID: 1855538652317724451}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1855538652317724456 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6827164599185347846, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-  m_PrefabInstance: {fileID: 1855538652317724451}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1855538652317724457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6284480366092232249, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 1855538652317724451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3136350148913186788
@@ -6835,30 +6821,46 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.size
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: scriptsToStopOnPause.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: objectsToRevealOnPause.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[0]
       value: 
-      objectReference: {fileID: 1855538652317724457}
+      objectReference: {fileID: 1855538652317724454}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[1]
       value: 
-      objectReference: {fileID: 1855538652317724456}
+      objectReference: {fileID: 1855538652317724455}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[2]
       value: 
-      objectReference: {fileID: 1855538652317724455}
+      objectReference: {fileID: 1855538652317724454}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[3]
       value: 
-      objectReference: {fileID: 1855538652317724454}
+      objectReference: {fileID: 1855538652317724453}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[4]
       value: 
       objectReference: {fileID: 1855538652317724453}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToRevealOnPause.Array.data[0]
+      value: 
+      objectReference: {fileID: 1855538652317724452}
+    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: scriptsToStopOnPause.Array.data[0]
+      value: 
+      objectReference: {fileID: 2007839439}
+    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: objectsToRevealOnPause.Array.data[1]
       value: 
       objectReference: {fileID: 1855538652317724452}
     - target: {fileID: 1346000281512233498, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}

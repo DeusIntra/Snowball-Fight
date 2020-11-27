@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!1 &445124658 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1942134605, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2699578245030412816, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 445124655}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &445124659 stripped
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2891011129039539216, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 445124655}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445124668}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae94ccd3d22d99349a48e4da2ee51ff8, type: 3}
@@ -1482,11 +1482,6 @@ GameObject:
 --- !u!1 &445124667 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6827164599185347846, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
-  m_PrefabInstance: {fileID: 445124655}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &445124668 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6284480366092232249, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 445124655}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &509691599 stripped
@@ -3246,7 +3241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToRevealOnPause.Array.size
@@ -3259,7 +3254,7 @@ PrefabInstance:
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[0]
       value: 
-      objectReference: {fileID: 445124668}
+      objectReference: {fileID: 445124665}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[1]
       value: 
