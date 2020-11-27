@@ -436,7 +436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
@@ -456,15 +456,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.6886792
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.5399411
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.43854573
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 498837948883582035, guid: 916589e2de77007408a34999bbd4a3dd, type: 3}
       propertyPath: InheritVelocityModule.enabled
