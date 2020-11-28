@@ -28,6 +28,12 @@ public class Menu : MonoBehaviour
         locations.Add(location4);
     }
 
+    private void Start()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+    }
+
     public void ChooseLocation(int index)
     {
         locationIndex = index;
