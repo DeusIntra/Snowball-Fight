@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33787996914548686}
   - component: {fileID: 23580592811182950}
   - component: {fileID: -8248363345983053994}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: rpgpp_lt_cloud_02 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,3 +96,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeTimeSeconds: 0
   pauseBeforeFadeSeconds: 0
+  speedMultiplier: 1
