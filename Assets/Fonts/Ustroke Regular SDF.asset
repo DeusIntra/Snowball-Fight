@@ -57,9 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Ustroke Regular SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -840740182
   material: {fileID: 8037602951135830651}
-  materialHashCode: 0
+  materialHashCode: -1299390902
   m_Version: 1.1.0
   m_SourceFontFileGUID: 73fe90db5e3aa764f81f7b7cd098ad81
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 73fe90db5e3aa764f81f7b7cd098ad81, type: 3}
@@ -2004,7 +2004,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1d48257acbdaa4a43888444f8fd6dfed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -2030,12 +2030,12 @@ Material:
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
+    - _GlowInner: 0.109
+    - _GlowOffset: 0.146
+    - _GlowOuter: 0.162
+    - _GlowPower: 0.818
     - _GradientScale: 6
-    - _LightAngle: 3.1416
+    - _LightAngle: 3.27
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineSoftness: 0
@@ -2044,14 +2044,14 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.40016744
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
     - _Sharpness: 0
-    - _SpecularPower: 2
+    - _SpecularPower: 2.11
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -2059,19 +2059,21 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 512
     - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
+    - _UnderlayDilate: 0.712
+    - _UnderlayOffsetX: 0.624
+    - _UnderlayOffsetY: -0.98
     - _UnderlaySoftness: 0
+    - _UseUIAlphaClip: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
     - _WeightNormal: 0
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
+    - _GlowColor: {r: 0.504717, g: 0.8505067, b: 1, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
