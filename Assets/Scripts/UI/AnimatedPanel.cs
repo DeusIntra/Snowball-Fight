@@ -19,16 +19,14 @@ public class AnimatedPanel : MonoBehaviour
 
     public void Open()
     {
-        if (_coroutine == null)
-            _coroutine = StartCoroutine(Animation(speed));
-        else
-            Debug.Log("stop coroutine");
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        _coroutine = StartCoroutine(Animation(speed));
     }
 
     public void Close()
     {
-        if (_coroutine == null)
-            _coroutine = StartCoroutine(Animation(-speed));
+        if (_coroutine != null) StopCoroutine(_coroutine);
+        _coroutine = StartCoroutine(Animation(-speed));
     }
 
     private IEnumerator Animation(float speed)
