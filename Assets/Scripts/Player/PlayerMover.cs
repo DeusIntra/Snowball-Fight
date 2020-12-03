@@ -69,7 +69,10 @@ public class PlayerMover : MonoBehaviour
 
     public void SetHorizontal(float value)
     {
-        _horizontalMovement = value;
+        if (!useJoystick)
+        {
+            _horizontalMovement = value;
+        }
     }
 
     private void Step()

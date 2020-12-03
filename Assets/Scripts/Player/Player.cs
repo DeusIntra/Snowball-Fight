@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     private Health _health;
     private Mana _mana;
 
+    private GameControls _gameControls;
+
     private void Awake()
     {
         _shooter = GetComponent<PlayerShooter>();
@@ -31,10 +33,25 @@ public class Player : MonoBehaviour
         _shootProgressBar = _shooter.progressBar;
         _health = GetComponent<Health>();
         _mana = GetComponent<Mana>();
+
+        _gameControls = new GameControls();
+        ReadShootInput();
+    }
+
+    private void OnEnable()
+    {
+        _gameControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _gameControls.Disable();
     }
 
     private void Update()
     {
+        ReadMoveInput();
+
         if (_isSwinging)
         {
             float FPS = Mathf.Lerp(4, 10, _shootProgressBar.currentFill);
@@ -42,17 +59,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ReadShootInput(InputAction.CallbackContext callbackContext)
+    public void ReadShootInput()
     {
-        if (callbackContext.phase == InputActionPhase.Started)
+        _gameControls.Gameplay.Shoot.started += ctx =>
         {
             _shootProgressBar.StartFilling();
             _isSwinging = true;
             _playerAnimator.Swing();
             _playerAnimator.SetFPS(4f);
-        }
+        };
 
-        if (callbackContext.phase == InputActionPhase.Canceled)
+        _gameControls.Gameplay.Shoot.canceled += ctx =>
         {
             if (_shootProgressBar.currentFill > 0.1f)
             {
@@ -66,12 +83,12 @@ public class Player : MonoBehaviour
             }
 
             _isSwinging = false;
-        }
+        };
     }
 
-    public void ReadMoveInput(InputAction.CallbackContext callbackContext)
+    public void ReadMoveInput()
     {
-        float value = callbackContext.ReadValue<float>();
+        float value = _gameControls.Gameplay.Move.ReadValue<float>();
         _mover.SetHorizontal(value);
     }
 

@@ -28,7 +28,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""ea3ed139-1a84-4ae7-ab36-2396acd336b4"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
