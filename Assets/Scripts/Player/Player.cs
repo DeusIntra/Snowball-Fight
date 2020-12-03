@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     private Health _health;
     private Mana _mana;
 
-
     private void Awake()
     {
         _shooter = GetComponent<PlayerShooter>();
@@ -34,7 +33,6 @@ public class Player : MonoBehaviour
         _mana = GetComponent<Mana>();
     }
 
-
     private void Update()
     {
         if (_isSwinging)
@@ -43,7 +41,6 @@ public class Player : MonoBehaviour
             _playerAnimator.SetFPS(FPS);
         }
     }
-
 
     public void ReadShootInput(InputAction.CallbackContext callbackContext)
     {
@@ -72,13 +69,11 @@ public class Player : MonoBehaviour
         }
     }
 
-
     public void ReadMoveInput(InputAction.CallbackContext callbackContext)
     {
         float value = callbackContext.ReadValue<float>();
         _mover.SetHorizontal(value);
     }
-
 
     public void FillHealthBar()
     {
@@ -86,18 +81,15 @@ public class Player : MonoBehaviour
         healthBar.onChange();
     }
 
-
     public void OnZeroHealth()
     {
         if (!_health.isAlive) Die();
     }
 
-
     public void FillSpellBar()
     {
         spellBar.SetFill(_mana.currentFraction);
     }
-
 
     private void Die()
     {
