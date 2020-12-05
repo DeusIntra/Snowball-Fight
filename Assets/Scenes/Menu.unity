@@ -381,33 +381,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: 1500, y: 0}
-  positionOverTime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 1500, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
+  - speed: 1
+    startPosition: {x: 1500, y: 0}
+    endPosition: {x: 0, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!1 &61137942
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +940,7 @@ GameObject:
   - component: {fileID: 139079771}
   - component: {fileID: 139079770}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Cloud Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1989,13 +2024,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 472425009}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2709,13 +2744,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 643405109}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2883,6 +2918,7 @@ GameObject:
   - component: {fileID: 378494730}
   - component: {fileID: 378494732}
   - component: {fileID: 378494731}
+  - component: {fileID: 378494733}
   m_Layer: 5
   m_Name: Title Text (TMP)
   m_TagString: Untagged
@@ -2897,13 +2933,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378494729}
-  m_LocalRotation: {x: 0, y: 0, z: -0.01745245, w: 0.99984777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 853625470}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 10, y: 100}
@@ -3010,6 +3046,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378494729}
   m_CullTransparentMesh: 0
+--- !u!114 &378494733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378494729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140322244aa55d7459eb760ce574e5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animateOnStart: 1
+  rotationSpeed: 0.1
+  rotationMultiplier: 5
+  rotationZCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  scaleSpeed: 0.2
+  scaleMultiplier: 0.1
+  scaleXYCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
 --- !u!1001 &404343862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3179,13 +3280,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 54228973}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3390,33 +3491,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: -1500, y: 0}
-  positionOverTime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: -1500, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
+  - speed: 1
+    startPosition: {x: -1500, y: 0}
+    endPosition: {x: 0, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!114 &472425010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4625,33 +4761,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  startPosition: {x: 0, y: 0}
-  endPosition: {x: 0, y: 880}
-  positionOverTime:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 880}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
+  - speed: 1
+    startPosition: {x: 0, y: 800}
+    endPosition: {x: 0, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!114 &643405110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4703,6 +4874,7 @@ GameObject:
   - component: {fileID: 644856244}
   - component: {fileID: 644856243}
   - component: {fileID: 644856246}
+  - component: {fileID: 644856247}
   m_Layer: 5
   m_Name: Open Options Button
   m_TagString: Untagged
@@ -4726,7 +4898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 300, y: 0}
+  m_AnchoredPosition: {x: 300, y: 300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &644856243
@@ -4773,9 +4945,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 54228973}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Open
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4850,6 +5022,50 @@ MonoBehaviour:
   - {fileID: 644856241}
   - {fileID: 1283496753}
   - {fileID: 1879130968}
+--- !u!114 &644856247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644856241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: 300, y: 300}
+    endPosition: {x: 300, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!1 &685516907
 GameObject:
   m_ObjectHideFlags: 0
@@ -6238,6 +6454,8 @@ GameObject:
   - component: {fileID: 853625470}
   - component: {fileID: 853625472}
   - component: {fileID: 853625471}
+  - component: {fileID: 853625473}
+  - component: {fileID: 853625474}
   m_Layer: 5
   m_Name: Title panel
   m_TagString: Untagged
@@ -6252,7 +6470,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853625469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6303,6 +6521,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853625469}
   m_CullTransparentMesh: 0
+--- !u!114 &853625473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853625469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animateOnStart: 0
+  animations: []
+--- !u!114 &853625474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853625469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 853625471}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 870137876}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: HideTitleAndShowButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &870137875
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,6 +6622,11 @@ MonoBehaviour:
   levelDataHolder: {fileID: 11400000, guid: 904504cfd39ea8e4dacc00a308ebcf70, type: 2}
   LocationButtons: {fileID: 1043726167}
   LevelButtons: {fileID: 748087426}
+  titlePanel: {fileID: 853625469}
+  menuButtons:
+  - {fileID: 644856247}
+  - {fileID: 1283496759}
+  - {fileID: 1879130974}
   scenes:
   - Level 1
   - Level 2
@@ -9627,6 +9919,7 @@ GameObject:
   - component: {fileID: 1283496756}
   - component: {fileID: 1283496755}
   - component: {fileID: 1283496758}
+  - component: {fileID: 1283496759}
   m_Layer: 5
   m_Name: Open Shop Button
   m_TagString: Untagged
@@ -9650,7 +9943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -300, y: 300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1283496755
@@ -9697,9 +9990,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 472425009}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Open
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9774,6 +10067,50 @@ MonoBehaviour:
   - {fileID: 644856241}
   - {fileID: 1283496753}
   - {fileID: 1879130968}
+--- !u!114 &1283496759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283496753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: -300, y: 300}
+    endPosition: {x: -300, y: 0}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!1001 &1301000677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12207,6 +12544,7 @@ GameObject:
   - component: {fileID: 1879130971}
   - component: {fileID: 1879130970}
   - component: {fileID: 1879130973}
+  - component: {fileID: 1879130974}
   m_Layer: 5
   m_Name: Open Play Button
   m_TagString: Untagged
@@ -12230,7 +12568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1879130970
@@ -12277,9 +12615,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 643405109}
-        m_TargetAssemblyTypeName: AnimatedPanel, Assembly-CSharp
-        m_MethodName: Open
-        m_Mode: 1
+        m_TargetAssemblyTypeName: AnimatedObject, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12354,6 +12692,50 @@ MonoBehaviour:
   - {fileID: 644856241}
   - {fileID: 1283496753}
   - {fileID: 1879130968}
+--- !u!114 &1879130974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879130968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513a7cf24c41ef94f89ab9d6d6598af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animateOnStart: 0
+  animations:
+  - speed: 1
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 300}
+    positionOverTime:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+    setAnchorsAfterAnimation: 0
+    min: {x: 0, y: 0}
+    max: {x: 0, y: 0}
 --- !u!1001 &1895614047
 PrefabInstance:
   m_ObjectHideFlags: 0

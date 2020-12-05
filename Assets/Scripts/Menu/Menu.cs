@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Menu : MonoBehaviour
 
     public GameObject LocationButtons;
     public GameObject LevelButtons;
+
+    public GameObject titlePanel;
+    public List<AnimatedObject> menuButtons;
 
     public List<string> scenes;
 
@@ -45,5 +49,15 @@ public class Menu : MonoBehaviour
     {
         levelDataHolder.levelData = locations[locationIndex - 1][levelIndex - 1];
         SceneManager.LoadScene(scenes[locationIndex - 1]);
+    }
+
+    public void HideTitleAndShowButtons()
+    {
+        titlePanel.GetComponent<Button>().interactable = false;
+
+        foreach (AnimatedObject button in menuButtons)
+        {
+            button.Animate();
+        }
     }
 }
