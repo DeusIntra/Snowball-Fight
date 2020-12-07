@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 363419118084897880, guid: 71f5432ea19ff7545b99aafd36b1462e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.63
+      objectReference: {fileID: 0}
     - target: {fileID: 969119147767385301, guid: 71f5432ea19ff7545b99aafd36b1462e, type: 3}
       propertyPath: m_Name
       value: Ice Plate Variant 3
