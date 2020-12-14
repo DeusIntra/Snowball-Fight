@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyJumper : MonoBehaviour
 {
     public float minPositionZ = 12.5f;
@@ -14,6 +16,8 @@ public class EnemyJumper : MonoBehaviour
     public float jumpingTime = 0.4f;
     public float jumpingHeight = 1f;
 
+    public List<AudioClip> jumpSounds;
+
     public AnimationCurve curve;
 
     public UnityEvent onJump;
@@ -21,15 +25,19 @@ public class EnemyJumper : MonoBehaviour
     [HideInInspector]
     public float pauseTimeSeconds = 0f;
 
+    private AudioSource _audioSource;
     private float _timeToNextJump;
     private Coroutine _coroutine;
 
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
         resetJumpTime();
     }
-
 
     private void Update()
     {
@@ -46,22 +54,30 @@ public class EnemyJumper : MonoBehaviour
             _coroutine = StartCoroutine(Jump());
             resetJumpTime();
             _timeToNextJump += jumpingTime;
+
+            if (jumpSounds.Count > 0)
+            {
+                _audioSource.clip = jumpSounds[Random.Range(0, jumpSounds.Count)];
+                _audioSource.Play();
+            }
+            else
+            {
+                Debug.LogWarning("No jump sounds to play");
+            }
+
         }
 
     }
-
 
     private void OnDisable()
     {
         transform.position = new Vector3(transform.position.x, 0, transform.position.z);
     }
 
-
     private void resetJumpTime()
     {
         _timeToNextJump = Random.Range(minJumpTimeSeconds, maxJumpTimeSeconds);
     }
-
 
     private IEnumerator Jump()
     {
