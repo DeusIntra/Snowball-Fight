@@ -4,4 +4,5 @@
 public class ItemEffect : ScriptableObject
 {
     public new string name;
+    public float value;
 }

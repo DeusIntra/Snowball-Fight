@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99ebf184df97e774c9731e2995c776e6, type: 3}
-  m_Name: Stun
+  m_Script: {fileID: 11500000, guid: be05b791f36f0a244a0a0839c9d00c64, type: 3}
+  m_Name: Trainers
   m_EditorClassIdentifier: 
-  name: Stun
+  name: Trainers
+  price: 0
+  image: {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: 7d2e84274e2de1c4ea56b2b9f7ee44b0, type: 2}

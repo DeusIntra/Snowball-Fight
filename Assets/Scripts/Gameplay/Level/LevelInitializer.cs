@@ -5,12 +5,14 @@ public class LevelInitializer : MonoBehaviour
 {
     public LevelDataHolder levelDataHolder;
     public Transform enemyLines;
+    public Inventory inventory;
 
     private List<Transform> _spawnPoints;
     private int _bossSpawnPointIndex = -1;
     private int _enemyCount = 0;
     private LevelDataObject _levelData;
 
+    private GameObject _player;
 
     private void Awake()
     {
@@ -29,11 +31,14 @@ public class LevelInitializer : MonoBehaviour
                 }
             }
         }
+
+        _player = FindObjectOfType<Player>().gameObject;
     }
 
 
     private void Start()
     {
+        #region Enemy spawning
         if (_levelData.hasBoss)
         {
             if (_bossSpawnPointIndex == -1)
@@ -54,8 +59,35 @@ public class LevelInitializer : MonoBehaviour
             SpawnEnemy(_levelData.minion1Prefab, _levelData.minion1Count);
         if (_levelData.minion2Count > 0)
             SpawnEnemy(_levelData.minion2Prefab, _levelData.minion2Count);
-    }
+        #endregion
 
+        #region Passive items buffs
+        foreach (PassiveItem passiveItem in inventory.passiveItems)
+        {
+            if (passiveItem.effects.Count == 0)
+            {
+                Debug.LogError("Item " + passiveItem.name + " has 0 effects");
+                continue;
+            }
+
+            foreach (ItemEffect effect in passiveItem.effects)
+            {
+                switch (effect.name)
+                {
+                    case "Speed Multiplier":
+                        MultiplyPlayerSpeed(effect.value);
+                        break;
+                    default:
+                        Debug.LogError("Effect name " + effect.name + " is not used");
+                        break;
+                }
+            }
+
+        }
+
+        // inventory.ClearPassiveItems();
+        #endregion
+    }
 
     private void SpawnEnemy(GameObject prefab, int count)
     {
@@ -77,4 +109,12 @@ public class LevelInitializer : MonoBehaviour
             _enemyCount++;
         }
     }
+
+    #region Passive item effects
+    private void MultiplyPlayerSpeed(float value)
+    {
+        PlayerMover playerMover = _player.GetComponent<PlayerMover>();
+        playerMover.speedMultiplier = value;
+    }
+    #endregion
 }

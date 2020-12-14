@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Time Dilation
   m_EditorClassIdentifier: 
   name: Time Dilation
+  value: 0

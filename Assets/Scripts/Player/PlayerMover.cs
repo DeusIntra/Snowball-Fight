@@ -4,6 +4,7 @@
 public class PlayerMover : MonoBehaviour
 {
     public float speed = 4f;
+    public float speedMultiplier = 1f;
     public float boundaryDistance = 5f;
     public float stepTime = 0.5f;
     public bool useJoystick = true;
@@ -49,7 +50,7 @@ public class PlayerMover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float x_speed = speed * _horizontalMovement;
+        float x_speed = speed * speedMultiplier * _horizontalMovement;
         _rigidbody.velocity = new Vector3(x_speed, 0f, 0f);
 
         if (transform.position.x < -boundaryDistance || transform.position.x > boundaryDistance)

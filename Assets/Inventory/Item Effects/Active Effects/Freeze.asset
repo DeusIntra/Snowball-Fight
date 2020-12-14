@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be5cb102381c1cf4e9d931d83f30003a, type: 3}
-  m_Name: Inventory
+  m_Script: {fileID: 11500000, guid: 99ebf184df97e774c9731e2995c776e6, type: 3}
+  m_Name: Freeze
   m_EditorClassIdentifier: 
-  stashedItems: []
-  passiveItems:
-  - {fileID: 11400000, guid: 9ab15443f1a26c04e82484e9118bcbe6, type: 2}
-  maxPassiveItemsCount: 3
+  name: Freeze
+  value: 0

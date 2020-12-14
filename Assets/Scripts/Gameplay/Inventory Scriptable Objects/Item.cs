@@ -10,13 +10,3 @@ public class Item : ScriptableObject
     public List<ItemEffect> effects;
 }
 
-public class ActiveItem : Item
-{
-
-}
-
-[CreateAssetMenu(fileName = "New Passive Item", menuName = "ScriptableObjects/Passive Item", order = 6)]
-public class PassiveItem : Item
-{
-
-}
