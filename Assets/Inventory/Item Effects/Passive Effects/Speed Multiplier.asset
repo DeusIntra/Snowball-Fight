@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Speed Multiplier
   m_EditorClassIdentifier: 
   name: Speed Multiplier
-  value: 5
+  value: 1.2
