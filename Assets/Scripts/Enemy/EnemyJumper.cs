@@ -64,7 +64,6 @@ public class EnemyJumper : MonoBehaviour
             {
                 Debug.LogWarning("No jump sounds to play");
             }
-
         }
 
     }

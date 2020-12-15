@@ -11,12 +11,12 @@ public class PlayerShooter : MonoBehaviour
     public ProgressBarTimed progressBar;
 
     private Shooter _shooter;
-    private Rigidbody _rigidbody;
+    private Rigidbody _rigidbody;    
 
     private void Awake()
     {
         _shooter = GetComponent<Shooter>();
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponent<Rigidbody>();        
     }
 
     public void Shoot()

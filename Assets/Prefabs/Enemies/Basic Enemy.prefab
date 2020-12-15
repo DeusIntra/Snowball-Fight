@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 7695807918820735178}
   snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
+  throwSound: {fileID: 8300000, guid: 86242382465d14840be5d3fff02b79f3, type: 3}
 --- !u!114 &3925469274262616083
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Mana))]
+[RequireComponent(typeof(AudioSource))]
 public class Spells : MonoBehaviour
 {
     public float stormDurationSeconds = 2f;
@@ -20,15 +21,18 @@ public class Spells : MonoBehaviour
     public SnowballSpawner snowballSpawner;
     public IcebergSpawner icebergSpawner;
     public GameObject iceDestructionPrefab;
+    public AudioClip stunSound;
 
     private EnemyHolder _enemyHolder;
-
     private Mana _mana;
+    private AudioSource _audioSource;
+    private bool _enemiesStunned = false;
 
     private void Awake()
     {
         _mana = GetComponent<Mana>();
         _enemyHolder = FindObjectOfType<EnemyHolder>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void OnManaChange()
@@ -90,6 +94,7 @@ public class Spells : MonoBehaviour
             {
                 enemyDebuff.SlowDown(stormDurationSeconds * 2f);
                 enemyDebuff.Stun(stormDurationSeconds * 2f);
+                _enemiesStunned = true;
             }
 
             EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
@@ -98,6 +103,13 @@ public class Spells : MonoBehaviour
                 enemiesFPS[i] = enemyAnimator.GetFPS();
                 enemyAnimator.SetFPS(enemiesFPS[i] / 2f);
             }
+        }
+
+        if (_enemiesStunned)
+        {
+            _audioSource.clip = stunSound;
+            _audioSource.Play();
+            _enemiesStunned = false;
         }
 
         yield return new WaitForSeconds(stormDurationSeconds * 2f);

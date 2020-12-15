@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class PlayerMover : MonoBehaviour
 {
     public float speed = 4f;
@@ -14,6 +15,7 @@ public class PlayerMover : MonoBehaviour
     public Transform leftFoot;
     public Transform rightFoot;
     public ParticleSystem particlesPrefab;
+    public AudioClip stepSound;
 
     private float _horizontalMovement;
     private float _timeToStep;
@@ -21,11 +23,13 @@ public class PlayerMover : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private PlayerAnimator _playerAnimator;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _playerAnimator = GetComponent<PlayerAnimator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -38,7 +42,7 @@ public class PlayerMover : MonoBehaviour
         float horizontalAbs = Mathf.Abs(_horizontalMovement);
         _playerAnimator.SetSpeed(horizontalAbs);
 
-        if (doStep && _timeToStep >= stepTime)
+        if (_timeToStep >= stepTime)
         {
             _timeToStep = 0;
             Step();
@@ -78,12 +82,18 @@ public class PlayerMover : MonoBehaviour
 
     private void Step()
     {
-        Vector3 spawnPoint;
-        if (_isLeftStep) spawnPoint = leftFoot.position;
-        else spawnPoint = rightFoot.position;
-        _isLeftStep = !_isLeftStep;
+        if (doStep)
+        {
+            Vector3 spawnPoint;
+            if (_isLeftStep) spawnPoint = leftFoot.position;
+            else spawnPoint = rightFoot.position;
+            _isLeftStep = !_isLeftStep;
 
-        ParticleSystem particles = Instantiate(particlesPrefab, spawnPoint, particlesPrefab.transform.rotation);
-        Destroy(particles.gameObject, stepTime);
+            ParticleSystem particles = Instantiate(particlesPrefab, spawnPoint, particlesPrefab.transform.rotation);
+            Destroy(particles.gameObject, stepTime);
+
+            _audioSource.clip = stepSound;
+            _audioSource.Play();
+        }
     }
 }

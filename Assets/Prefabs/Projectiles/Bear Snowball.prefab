@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: damage
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1987853269668391477, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
       propertyPath: m_Name
       value: Bear Snowball

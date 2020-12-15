@@ -1,15 +1,23 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(MeshRenderer))]
 public class Snowball : MonoBehaviour
 {
     public float lifetime = 2f;
     public int damage = 1;
     public float destructionChance = 0.1f;
-
+    
     public ParticleSystem particlesPrefab;
+    public AudioClip breakSound;
+
+    private AudioSource _audioSource;
+    private MeshRenderer _meshRenderer;
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
+        _meshRenderer = GetComponent<MeshRenderer>();
         Destroy(gameObject, lifetime);
     }
 
@@ -36,6 +44,11 @@ public class Snowball : MonoBehaviour
         ParticleSystem particles = Instantiate(particlesPrefab, transform.position, particlesPrefab.transform.rotation);
         Destroy(particles.gameObject, 0.5f);
 
-        Destroy(gameObject);
+        _audioSource.clip = breakSound;
+        _audioSource.Play();
+
+        _meshRenderer.enabled = false;
+
+        Destroy(gameObject, 1f);
     }
 }

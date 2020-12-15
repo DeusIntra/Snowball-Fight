@@ -10,7 +10,7 @@ public class EnemyDebuff : MonoBehaviour
 
     private PausableEnemy _pausable;
     private EnemyMover _mover;
-
+    
 
     private void Awake()
     {
@@ -18,12 +18,10 @@ public class EnemyDebuff : MonoBehaviour
         _mover = GetComponent<EnemyMover>();
     }
 
-
     public void SlowDown(float seconds)
     {
         _mover.SlowDown(seconds);
     }
-
 
     public void Stun(float seconds)
     {
@@ -31,9 +29,8 @@ public class EnemyDebuff : MonoBehaviour
         _pausable.PauseJumper(seconds);
 
         GameObject stunParticles = Instantiate(stunParticlesPrefab, stunParticlesSpawnPoint);
-        Destroy(stunParticles, seconds);
+        Destroy(stunParticles, seconds);        
     }
-
 
     public void Freeze(float seconds)
     {

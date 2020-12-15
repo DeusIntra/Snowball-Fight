@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 8547217461581300474}
   - component: {fileID: 2433762165267994096}
   - component: {fileID: 2079463622}
+  - component: {fileID: 6594636129157379639}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -517,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 484951766}
   snowballPrefab: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
+  throwSound: {fileID: 8300000, guid: 86242382465d14840be5d3fff02b79f3, type: 3}
 --- !u!114 &8590910627596644898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  speedMultiplier: 1
   boundaryDistance: 5
   stepTime: 0.4
   useJoystick: 1
@@ -554,6 +557,7 @@ MonoBehaviour:
   leftFoot: {fileID: 4525027932520602322}
   rightFoot: {fileID: 449660992254070710}
   particlesPrefab: {fileID: 1474407315411643914, guid: 2b7ce2a1074f70549b705f3dacdc764e, type: 3}
+  stepSound: {fileID: 8300000, guid: d58039c3309f7c54da847c1f2da45c07, type: 3}
 --- !u!114 &2331887240151962151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,3 +694,100 @@ MonoBehaviour:
   snowballSpawner: {fileID: 0}
   icebergSpawner: {fileID: 0}
   iceDestructionPrefab: {fileID: 6337392538445521817, guid: 1b613a36e7eccda4cb0f1a914214c31a, type: 3}
+  stunSound: {fileID: 8300000, guid: e0f0ba818e7120c4687150cb197be16e, type: 3}
+--- !u!82 &6594636129157379639
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668231041199322643}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
