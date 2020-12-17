@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelInitializer : MonoBehaviour
@@ -13,6 +14,7 @@ public class LevelInitializer : MonoBehaviour
     private LevelDataObject _levelData;
 
     private GameObject _player;
+    private EnablerDisabler _enablerDisabler;
 
     private void Awake()
     {
@@ -33,6 +35,8 @@ public class LevelInitializer : MonoBehaviour
         }
 
         _player = FindObjectOfType<Player>().gameObject;
+
+        _enablerDisabler = GetComponent<EnablerDisabler>();
     }
 
 
@@ -87,6 +91,8 @@ public class LevelInitializer : MonoBehaviour
 
         // inventory.ClearPassiveItems();
         #endregion
+
+        StartCoroutine(CountdownCoroutine());
     }
 
     private void SpawnEnemy(GameObject prefab, int count)
@@ -117,4 +123,17 @@ public class LevelInitializer : MonoBehaviour
         playerMover.speedMultiplier = value;
     }
     #endregion
+
+    private IEnumerator CountdownCoroutine(int seconds = 3)
+    {
+        Time.timeScale = 0;
+        _enablerDisabler.DisableObjects();
+        for (int i = seconds; i > 0; i--)
+        {
+            Debug.Log(i);
+            yield return new WaitForSecondsRealtime(1f);
+        }
+        Time.timeScale = 1;
+        _enablerDisabler.EnableObjects();
+    }
 }
