@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private PlayerShooter _shooter;
     private PlayerMover _mover;
     private PlayerAnimator _playerAnimator;
-    private ProgressBarTimed _shootProgressBar;
+    private ProgressBarTimed _shotProgressBar;
     private Health _health;
     private Mana _mana;
 
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
         _shooter = GetComponent<PlayerShooter>();
         _playerAnimator = GetComponent<PlayerAnimator>();
         _mover = GetComponent<PlayerMover>();
-        _shootProgressBar = _shooter.progressBar;
+        _shotProgressBar = _shooter.progressBar;
         _health = GetComponent<Health>();
         _mana = GetComponent<Mana>();
 
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 
         if (_isSwinging)
         {
-            float FPS = Mathf.Lerp(4, 10, _shootProgressBar.currentFill);
+            float FPS = Mathf.Lerp(4, 10, _shotProgressBar.currentFill);
             _playerAnimator.SetFPS(FPS);
         }
     }
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     {
         _gameControls.Gameplay.Shoot.started += ctx =>
         {
-            _shootProgressBar.StartFilling();
+            _shotProgressBar.StartFilling();
             _isSwinging = true;
             _playerAnimator.Swing();
             _playerAnimator.SetFPS(4f);
@@ -71,14 +71,14 @@ public class Player : MonoBehaviour
 
         _gameControls.Gameplay.Shoot.canceled += ctx =>
         {
-            if (_shootProgressBar.currentFill > 0.1f)
+            if (_shotProgressBar.currentFill > 0.1f)
             {
                 _shooter.Shoot();
                 _playerAnimator.Throw();
             }
             else
             {
-                _shootProgressBar.StopAndReset();
+                _shotProgressBar.StopAndReset();
                 _playerAnimator.Walk();
             }
 
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
         _shooter.enabled = false;
         _mover.enabled = false;
         _mover.joystick.gameObject.SetActive(false);
-        _shootProgressBar.enabled = false;
+        _shotProgressBar.enabled = false;
 
         shootButton.gameObject.SetActive(false);
         spellBar.gameObject.SetActive(false);

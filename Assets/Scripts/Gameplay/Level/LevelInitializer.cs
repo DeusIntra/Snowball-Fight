@@ -7,6 +7,7 @@ public class LevelInitializer : MonoBehaviour
     public LevelDataHolder levelDataHolder;
     public Transform enemyLines;
     public Inventory inventory;
+    public ProgressBarTimed shotProgressBar;
 
     private List<Transform> _spawnPoints;
     private int _bossSpawnPointIndex = -1;
@@ -80,6 +81,9 @@ public class LevelInitializer : MonoBehaviour
                 {
                     case "Speed Multiplier":
                         MultiplyPlayerSpeed(effect.value);
+                        break;
+                    case "Energy Up":
+                        shotProgressBar.timeToFillSeconds /= effect.value;
                         break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
