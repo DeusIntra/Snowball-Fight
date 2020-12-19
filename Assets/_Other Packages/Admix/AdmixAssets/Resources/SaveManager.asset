@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileCache:
     stamp: "by 5fde09b4fa6398000896b8ae at 19 \u0434\u0435\u043A\u0430\u0431\u0440\u044F
-      2020 \u0433. 19:47:36"
+      2020 \u0433. 19:56:59"
     appId: 5fde126268fa1700080c305a
     appName: Snowball-Fight
     versionId: 5fde126268fa1700080c305b
@@ -28,16 +28,16 @@ MonoBehaviour:
       pathsHistory:
       - Assets/Scenes/Menu.unity
       placementsList:
-      - isSavedPlacement: 1
-        invalidReason: 
-        modelKey: 5ee7e9587cea8d42a8b60ac3
-        idInFile: 247639853
+      - isSavedPlacement: 0
+        invalidReason: new
+        modelKey: 5ee7e8d47cea8d42a8b60ac0
+        idInFile: 29310028
         placementType: 0
-        placementId: 5fde12832ec65500082719af
-        placementName: N328BWFCjbIDqGbeeVs1
-        placementDisplayName: Banner_4x15
+        placementId: 5fde16b91b7cc500089164cb
+        placementName: ssEyFOtzKKFC3QzAsW54
+        placementDisplayName: Banner_6x5
         sceneId: 5fde127ffc9eb700087e4502
-        textureResolution: {x: 160, y: 600}
+        textureResolution: {x: 300, y: 250}
   projectScanCache:
     stamp: 
     appId: 5fde126268fa1700080c305a
@@ -46,7 +46,22 @@ MonoBehaviour:
     versionStatus: 0
     versionSeq: 0
     sdkRev: 2000
-    scenesList: []
+    scenesList:
+    - sceneName: Menu
+      id: 5fde127ffc9eb700087e4502
+      currentScenePath: Assets/Scenes/Menu.unity
+      pathsHistory: []
+      placementsList:
+      - isSavedPlacement: 0
+        invalidReason: new
+        modelKey: 5ee7e8d47cea8d42a8b60ac0
+        idInFile: 29310028
+        placementType: 0
+        placementId: 5fde16b91b7cc500089164cb
+        placementName: ssEyFOtzKKFC3QzAsW54
+        placementDisplayName: Banner_6x5
+        sceneId: 5fde127ffc9eb700087e4502
+        textureResolution: {x: 300, y: 250}
   remoteCache:
     stamp: 
     appId: 5fde126268fa1700080c305a
@@ -87,12 +102,12 @@ MonoBehaviour:
       placementsList:
       - isSavedPlacement: 0
         invalidReason: 
-        modelKey: 5ee7e9587cea8d42a8b60ac3
+        modelKey: 5ee7e8d47cea8d42a8b60ac0
         idInFile: 0
         placementType: 0
-        placementId: 5fde12832ec65500082719af
-        placementName: N328BWFCjbIDqGbeeVs1
-        placementDisplayName: Banner_4x15
+        placementId: 5fde16b91b7cc500089164cb
+        placementName: ssEyFOtzKKFC3QzAsW54
+        placementDisplayName: Banner_6x5
         sceneId: 5fde127ffc9eb700087e4502
         textureResolution: {x: 0, y: 0}
   placementsToHide: []
