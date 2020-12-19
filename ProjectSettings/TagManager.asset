@@ -9,6 +9,7 @@ TagManager:
   - Enemy Snowball
   - Boss Spawn Point
   - Spell Snowball
+  - Admix
   layers:
   - Default
   - TransparentFX
