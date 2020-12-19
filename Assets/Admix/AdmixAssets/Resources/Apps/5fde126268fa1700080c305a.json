@@ -1,0 +1,36 @@
+{
+    "stamp": "by 5fde09b4fa6398000896b8ae at 19 декабря 2020 г. 19:56:59",
+    "appId": "5fde126268fa1700080c305a",
+    "appName": "Snowball-Fight",
+    "versionId": "5fde126268fa1700080c305b",
+    "versionStatus": 0,
+    "versionSeq": 0,
+    "sdkRev": "2000",
+    "scenesList": [
+        {
+            "sceneName": "Menu",
+            "id": "5fde127ffc9eb700087e4502",
+            "currentScenePath": "Assets/Scenes/Menu.unity",
+            "pathsHistory": [
+                "Assets/Scenes/Menu.unity"
+            ],
+            "placementsList": [
+                {
+                    "isSavedPlacement": true,
+                    "invalidReason": "",
+                    "modelKey": "5ee7e9587cea8d42a8b60ac3",
+                    "idInFile": 247639853,
+                    "placementType": 0,
+                    "placementId": "5fde12832ec65500082719af",
+                    "placementName": "N328BWFCjbIDqGbeeVs1",
+                    "placementDisplayName": "Banner_4x15",
+                    "sceneId": "5fde127ffc9eb700087e4502",
+                    "textureResolution": {
+                        "x": 160.0,
+                        "y": 600.0
+                    }
+                }
+            ]
+        }
+    ]
+}

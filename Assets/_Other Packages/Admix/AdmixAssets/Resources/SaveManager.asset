@@ -14,100 +14,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileCache:
     stamp: "by 5fde09b4fa6398000896b8ae at 19 \u0434\u0435\u043A\u0430\u0431\u0440\u044F
-      2020 \u0433. 19:30:47"
-    appId: 5fde0bd07242480008bbbcf7
+      2020 \u0433. 19:47:36"
+    appId: 5fde126268fa1700080c305a
     appName: Snowball-Fight
-    versionId: 5fde0bd17242480008bbbcf8
+    versionId: 5fde126268fa1700080c305b
     versionStatus: 0
     versionSeq: 0
     sdkRev: 2000
     scenesList:
     - sceneName: Menu
-      id: 5fde0e9597e2de0008ff7baf
+      id: 5fde127ffc9eb700087e4502
       currentScenePath: Assets/Scenes/Menu.unity
       pathsHistory:
       - Assets/Scenes/Menu.unity
       placementsList:
       - isSavedPlacement: 1
         invalidReason: 
-        modelKey: 5ee7e8d47cea8d42a8b60ac0
-        idInFile: 943536447
+        modelKey: 5ee7e9587cea8d42a8b60ac3
+        idInFile: 247639853
         placementType: 0
-        placementId: 5fde0e98474e6d00081bb78d
-        placementName: FQ7NFcyd9O0HqlWUtCPG
-        placementDisplayName: Banner_6x5
-        sceneId: 5fde0e9597e2de0008ff7baf
-        textureResolution: {x: 300, y: 250}
+        placementId: 5fde12832ec65500082719af
+        placementName: N328BWFCjbIDqGbeeVs1
+        placementDisplayName: Banner_4x15
+        sceneId: 5fde127ffc9eb700087e4502
+        textureResolution: {x: 160, y: 600}
   projectScanCache:
     stamp: 
-    appId: 5fde0bd07242480008bbbcf7
+    appId: 5fde126268fa1700080c305a
     appName: Snowball-Fight
     versionId: 
     versionStatus: 0
     versionSeq: 0
     sdkRev: 2000
-    scenesList:
-    - sceneName: Menu
-      id: 5fde0e9597e2de0008ff7baf
-      currentScenePath: Assets/Scenes/Menu.unity
-      pathsHistory: []
-      placementsList:
-      - isSavedPlacement: 1
-        invalidReason: 
-        modelKey: 5ee7e8d47cea8d42a8b60ac0
-        idInFile: 943536447
-        placementType: 0
-        placementId: 5fde0e98474e6d00081bb78d
-        placementName: FQ7NFcyd9O0HqlWUtCPG
-        placementDisplayName: Banner_6x5
-        sceneId: 5fde0e9597e2de0008ff7baf
-        textureResolution: {x: 300, y: 250}
+    scenesList: []
   remoteCache:
     stamp: 
-    appId: 5fde0bd07242480008bbbcf7
+    appId: 5fde126268fa1700080c305a
     appName: Snowball-Fight
-    versionId: 5fde0bd17242480008bbbcf8
+    versionId: 5fde126268fa1700080c305b
     versionStatus: 0
     versionSeq: 0
     sdkRev: 
     scenesList:
     - sceneName: Menu
-      id: 5fde0e9597e2de0008ff7baf
+      id: 5fde127ffc9eb700087e4502
       currentScenePath: 
       pathsHistory: []
       placementsList:
       - isSavedPlacement: 0
         invalidReason: 
-        modelKey: 5ee7e8d47cea8d42a8b60ac0
+        modelKey: 5ee7e9587cea8d42a8b60ac3
         idInFile: 0
         placementType: 0
-        placementId: 5fde0e98474e6d00081bb78d
-        placementName: FQ7NFcyd9O0HqlWUtCPG
-        placementDisplayName: Banner_6x5
-        sceneId: 5fde0e9597e2de0008ff7baf
+        placementId: 5fde12832ec65500082719af
+        placementName: N328BWFCjbIDqGbeeVs1
+        placementDisplayName: Banner_4x15
+        sceneId: 5fde127ffc9eb700087e4502
         textureResolution: {x: 0, y: 0}
   remotePostSaveCache:
     stamp: 
-    appId: 5fde0bd07242480008bbbcf7
+    appId: 5fde126268fa1700080c305a
     appName: Snowball-Fight
-    versionId: 5fde0bd17242480008bbbcf8
+    versionId: 5fde126268fa1700080c305b
     versionStatus: 0
     versionSeq: 0
     sdkRev: 
     scenesList:
     - sceneName: Menu
-      id: 5fde0e9597e2de0008ff7baf
+      id: 5fde127ffc9eb700087e4502
       currentScenePath: 
       pathsHistory: []
       placementsList:
       - isSavedPlacement: 0
         invalidReason: 
-        modelKey: 5ee7e8d47cea8d42a8b60ac0
+        modelKey: 5ee7e9587cea8d42a8b60ac3
         idInFile: 0
         placementType: 0
-        placementId: 5fde0e98474e6d00081bb78d
-        placementName: FQ7NFcyd9O0HqlWUtCPG
-        placementDisplayName: Banner_6x5
-        sceneId: 5fde0e9597e2de0008ff7baf
+        placementId: 5fde12832ec65500082719af
+        placementName: N328BWFCjbIDqGbeeVs1
+        placementDisplayName: Banner_4x15
+        sceneId: 5fde127ffc9eb700087e4502
         textureResolution: {x: 0, y: 0}
   placementsToHide: []
