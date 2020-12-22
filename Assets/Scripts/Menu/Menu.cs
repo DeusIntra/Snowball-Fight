@@ -54,6 +54,7 @@ public class Menu : MonoBehaviour
     public void HideTitleAndShowButtons()
     {
         titlePanel.GetComponent<Button>().interactable = false;
+        titlePanel.GetComponent<AnimatedObject>().Animate();
 
         foreach (AnimatedObject button in menuButtons)
         {

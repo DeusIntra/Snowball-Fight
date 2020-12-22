@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LevelInitializer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LevelInitializer : MonoBehaviour
     public Transform enemyLines;
     public Inventory inventory;
     public ProgressBarTimed shotProgressBar;
+    public TextMeshProUGUI timerText;
 
     private List<Transform> _spawnPoints;
     private int _bossSpawnPointIndex = -1;
@@ -134,10 +136,15 @@ public class LevelInitializer : MonoBehaviour
         _enablerDisabler.DisableObjects();
         for (int i = seconds; i > 0; i--)
         {
-            Debug.Log(i);
+            timerText.text = i.ToString();
             yield return new WaitForSecondsRealtime(1f);
         }
+
+        timerText.text = "GO!";
+        yield return new WaitForSecondsRealtime(1f);
+
         Time.timeScale = 1;
         _enablerDisabler.EnableObjects();
+        timerText.gameObject.SetActive(false);
     }
 }

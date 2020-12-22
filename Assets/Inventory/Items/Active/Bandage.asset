@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1819ee2b9f9078d48ac4d3842f740aee, type: 3}
   m_Name: Bandage
   m_EditorClassIdentifier: 
-  name: 
-  price: 0
+  name: Bangage
+  price: 10
   image: {fileID: 0}
-  effects: []
-  healAmount: 0
-  duration: 0
+  effects:
+  - {fileID: 11400000, guid: adbff949737fd8b48ba1e1ae7d5783de, type: 2}

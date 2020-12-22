@@ -7,9 +7,9 @@ public class Inventory : ScriptableObject
 {
     public List<Item> stashedItems;
     public List<PassiveItem> passiveItems;
-    // public List<ActiveItem> activeItems;
+    public List<ActiveItem> activeItems;
     public int maxPassiveItemsCount = 3;
-    // public int maxActiveItemsCount = 3;
+    public int maxActiveItemsCount = 5;
 
     public void ClearPassiveItems()
     {

@@ -26,12 +26,11 @@ public class ScreenshotHandler : MonoBehaviour
     {
         instance = this;
         _camera = gameObject.GetComponent<Camera>();
-        
+        Debug.Log("screnshot camera");
     }
 
     private void OnPostRender() 
-    {
-        Debug.Log("here");
+    {        
         if (_takeScreenshotOnNextFrame) 
         {
             _takeScreenshotOnNextFrame = false;

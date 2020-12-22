@@ -1489,6 +1489,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6284480366092232249, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 445124655}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &445124669 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2804513246227817543, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 445124655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &509691599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4998326679312090, guid: 2b519101e10d4a74580d4c86ac9e03e6, type: 3}
@@ -3300,6 +3311,14 @@ PrefabInstance:
       propertyPath: objectsToHideOnPause.Array.data[4]
       value: 
       objectReference: {fileID: 445124663}
+    - target: {fileID: 6757219863420487994, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: shotProgressBar
+      value: 
+      objectReference: {fileID: 445124657}
+    - target: {fileID: 6757219863420487994, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 445124669}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level

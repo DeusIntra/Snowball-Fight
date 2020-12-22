@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Heal
   m_EditorClassIdentifier: 
   name: Heal
-  value: 0
+  value: 5

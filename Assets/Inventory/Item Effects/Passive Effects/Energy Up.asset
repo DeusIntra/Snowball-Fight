@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Energy Up
   m_EditorClassIdentifier: 
   name: Energy Up
-  value: 2
+  value: 1.1

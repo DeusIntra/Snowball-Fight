@@ -700,6 +700,8 @@ MonoBehaviour:
   levelDataHolder: {fileID: 11400000, guid: 904504cfd39ea8e4dacc00a308ebcf70, type: 2}
   enemyLines: {fileID: 1475214728807577019}
   inventory: {fileID: 11400000, guid: 381a540588d07f34cbb37a339fc1f5fd, type: 2}
+  shotProgressBar: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!114 &561990704
 MonoBehaviour:
   m_ObjectHideFlags: 0
