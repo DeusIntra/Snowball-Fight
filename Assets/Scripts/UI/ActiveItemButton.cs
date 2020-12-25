@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ActiveItemButton : MonoBehaviour
 {
@@ -8,8 +6,18 @@ public class ActiveItemButton : MonoBehaviour
     public int itemIndex;
     public Inventory inventory;
 
+    private InventoryButton inventoryButton;
+
     public void UseItem()
     {
+        inventoryButton = transform.parent.parent.GetComponentInChildren<InventoryButton>();
+
+        if (inventoryButton == null)
+        {
+            Debug.LogError("Inventory button was not found in hierarchy");
+            return;
+        }
+
         foreach (ItemEffect effect in activeItem.effects)
         {
             switch (effect.name)
@@ -24,6 +32,13 @@ public class ActiveItemButton : MonoBehaviour
         }
 
         inventory.activeItems.RemoveAt(itemIndex);
+
+        inventoryButton.OnPress();
+
+        foreach (Transform button in transform.parent)
+        {
+            Destroy(button.gameObject);
+        }
     }
 
     #region Active effects
