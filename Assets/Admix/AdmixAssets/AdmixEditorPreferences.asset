@@ -12,145 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 1566008119, guid: abf3c058d94959640bec02372a894b38, type: 3}
   m_Name: AdmixEditorPreferences
   m_EditorClassIdentifier: 
-  AccessToken: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldXNpbnRyYUB5YWhvby5jb20iLCJwZXJtaXNzaW9ucyI6WyJbMF0uWzFdIiwiWzBdLlsyXSIsIlswXS5bNF0iLCJbMF0uWzhdIiwiWzBdLlszMl0iLCJbMV0uWzFdIiwiWzFdLlsyXSIsIlsxXS5bNF0iLCJbMl0uWzFdIiwiWzJdLlsyXSIsIlsyXS5bNF0iLCJbNF0uWzFdIiwiWzVdLlsxXSJdLCJwZXJtcyI6Ii8zOEhBQUVCIiwicHVibGlzaGVySWQiOiI1ZmRlMDkwYjBiZWM2NTAwMDgxOGM0MTUiLCJyb2xlIjoiZnVsbCIsInVzZXJJZCI6IjVmZGUwOWI0ZmE2Mzk4MDAwODk2YjhhZSIsImlhdCI6MTYwODQ4OTc5MiwiZXhwIjoxNjEyMDg5NzkyfQ.EfeYnlto-4-0b42vv531PPX5ffrisesvPZwF7ANa_gKM5NrGTV5JFiXnb-eJz4fsxjJ7-_gfyQBCHZ1YU92Zo2OSMgeTEPkXawLzKwmH_bWrQ9gYjvsfsaMLkNwHULtF7qyMiEL0ZUMQN3HFENt5nSmkUTX068ISZ2yrzAYv6OXzx6guwuUB25O6F30wOM2mOGLgnxIb_B5xFsTwTG8Dk5GBB6XiSJ49z1Zy4QeewFsAFVryXX-_DlCZKoNDoNpB0Lah9-6JJ8DQVRkrwRVk1Jqg9D_3RgyK5xh0zceMGEqSARPEE2pUlkUJJVameW576FDjAL59ikQifcXXpJsQ99f9OiLYXjoizsyWasgGPFR48EVzVXQjxCUPsaF7MgnBsgs1KfIcc4Z4UgBqyJt_fpwpU2EON92Meczf7ATGhl0gFnHugcF_q2OvlbjewNiEg1dI9H4ieumw4jMnvbeXE_z_SWfy3hMAo8yrD6feHHlqQbLirS7FbVs5_Gl_ffmOEe4CyGg94dauCpgj2b3EBmAOlYd2wX-8yMg09_bsmOhB8cXIvpLbtiCz6NtRaBT5RpBpoJI_EMjowrRsFvwgLE4vQI3n6u6tWz4OwHE9Wz_H9TnHRkzYoI9cia6MqGoXZi277ONEuZIcozlNqya3aZLZmd_i9CWO4EvfASjPbYM
-  userId: 5fde09b4fa6398000896b8ae
-  RefreshToken: 2998e52a9ccfaa4ab0892befee4d1d23f881c888c781a50fd71d55d265288bcb
-  _userLogin: deusintra@yahoo.com
-  ApplicationName: Snowball-Fight
-  ApplicationIdentifier: 5fde126268fa1700080c305a
+  AccessToken: 
+  userId: 
+  RefreshToken: 
+  _userLogin: 
+  ApplicationName: 
+  ApplicationIdentifier: 
   _applicationToken: 
-  _profileStatus: 1000
+  _profileStatus: 0
   _v3Settings:
     v3url_dashboard: https://app.admixplay.com/
     v3url_docs: https://docs.admix.in/docs/getting-started/admix-quickstart
     v3url_login: https://services.admixplay.com/auth-v1/users/tokens
-    v3url_getAllRatios: https://services.admixplay.com/inventory-v1/placement/ratio
-    v3url_createApp: https://services.admixplay.com/sdk-v1/sdk/app
-    v3url_renameApp: https://services.admixplay.com/sdk-v1/sdk/app/rename
-    v3url_createScenes: https://services.admixplay.com/sdk-v1/sdk/scene
-    v3url_createPlacements: https://services.admixplay.com/sdk-v1/sdk/placement
-    v3url_renamePlacements: https://services.admixplay.com/sdk-v1/sdk/placement/rename
-    v3url_deletePlacements: https://services.admixplay.com/sdk-v1/sdk/placement/delete
-    v3url_getAppData: https://services.admixplay.com/sdk-v1/sdk/app
-    v3url_getMyApps: https://services.admixplay.com/sdk-v1/sdk/app/mine
-    placementRatios:
-    - id: 5ee7e9e47cea8d42a8b60ac6
-      placementMode: 1
-      uiDisplayStr: 4x3
-      defaultGameobjectName: Video_4x3
-      resolutionKey: 640x480
-      referenceAspectCoeff: 1.333
-      defaultScale: {x: 4, y: 3, z: 1}
-      textureName: Info_4x3
-      uiPriority: 1000
-      uiColor:
-        serializedVersion: 2
-        rgba: 4284441840
-      uiRectX: 70
-      uiRectY: 52
-      placementTextureResolution: {x: 640, y: 480}
-    - id: 5ee7e9fb7cea8d42a8b60ac7
-      placementMode: 1
-      uiDisplayStr: 16x9
-      defaultGameobjectName: Video_16x9
-      resolutionKey: 640x360
-      referenceAspectCoeff: 1.778
-      defaultScale: {x: 5, y: 2.8125, z: 1}
-      textureName: Info_16x9
-      uiPriority: 1010
-      uiColor:
-        serializedVersion: 2
-        rgba: 4284441840
-      uiRectX: 70
-      uiRectY: 40
-      placementTextureResolution: {x: 640, y: 360}
-    - id: 5ee7e8d47cea8d42a8b60ac0
-      placementMode: 0
-      uiDisplayStr: 6x5
-      defaultGameobjectName: Banner_6x5
-      resolutionKey: 300x250
-      referenceAspectCoeff: 1.2
-      defaultScale: {x: 6, y: 5, z: 1}
-      textureName: Info_6x5
-      uiPriority: 2000
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 60
-      uiRectY: 50
-      placementTextureResolution: {x: 300, y: 250}
-    - id: 5ee7e90e7cea8d42a8b60ac1
-      placementMode: 0
-      uiDisplayStr: 32x5
-      defaultGameobjectName: Banner_32x5
-      resolutionKey: 320x050
-      referenceAspectCoeff: 6.4
-      defaultScale: {x: 6.4, y: 1, z: 1}
-      textureName: Info_32x5
-      uiPriority: 2010
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 64
-      uiRectY: 10
-      placementTextureResolution: {x: 320, y: 50}
-    - id: 5ee7e9437cea8d42a8b60ac2
-      placementMode: 0
-      uiDisplayStr: 364x45
-      defaultGameobjectName: Banner_364x45
-      resolutionKey: 728x090
-      referenceAspectCoeff: 8.089
-      defaultScale: {x: 8.09, y: 1, z: 1}
-      textureName: Info_97x25
-      uiPriority: 2020
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 74
-      uiRectY: 10
-      placementTextureResolution: {x: 728, y: 90}
-    - id: 5ee7e9587cea8d42a8b60ac3
-      placementMode: 0
-      uiDisplayStr: 4x15
-      defaultGameobjectName: Banner_4x15
-      resolutionKey: 160x600
-      referenceAspectCoeff: 0.267
-      defaultScale: {x: 2, y: 7.5, z: 1}
-      textureName: Info_4x15
-      uiPriority: 2030
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 16
-      uiRectY: 60
-      placementTextureResolution: {x: 160, y: 600}
-    - id: 5ee7e9657cea8d42a8b60ac4
-      placementMode: 0
-      uiDisplayStr: 1x2
-      defaultGameobjectName: Banner_1x2
-      resolutionKey: 300x600
-      referenceAspectCoeff: 0.5
-      defaultScale: {x: 2.5, y: 5, z: 1}
-      textureName: Info_1x2
-      uiPriority: 2040
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 30
-      uiRectY: 60
-      placementTextureResolution: {x: 300, y: 600}
-    - id: 5ee7e9757cea8d42a8b60ac5
-      placementMode: 0
-      uiDisplayStr: 97x25
-      defaultGameobjectName: Banner_97x25
-      resolutionKey: 970x250
-      referenceAspectCoeff: 3.88
-      defaultScale: {x: 7.76, y: 2, z: 1}
-      textureName: Info_97x25
-      uiPriority: 2040
-      uiColor:
-        serializedVersion: 2
-        rgba: 4290689300
-      uiRectX: 66
-      uiRectY: 18
-      placementTextureResolution: {x: 970, y: 250}
+    v3url_getAllRatios: 
+    v3url_createApp: 
+    v3url_renameApp: 
+    v3url_createScenes: 
+    v3url_createPlacements: 
+    v3url_renamePlacements: 
+    v3url_deletePlacements: 
+    v3url_getAppData: 
+    v3url_getMyApps: 
+    placementRatios: []
