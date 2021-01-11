@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(AudioSource))]
 public class Shooter : MonoBehaviour
@@ -6,6 +7,7 @@ public class Shooter : MonoBehaviour
     public Transform snowballSpawn;
     public GameObject snowballPrefab;
     public AudioClip throwSound;
+    public AudioMixerGroup throwMixer;
 
     private AudioSource _audioSource;
 
@@ -24,7 +26,13 @@ public class Shooter : MonoBehaviour
 
         snowballRB.AddForce(forwardVelocity + sideVelocity, ForceMode.Impulse);
 
+        PlayThrowSound();
+    }
+
+    private void PlayThrowSound()
+    {
         _audioSource.clip = throwSound;
+        _audioSource.outputAudioMixerGroup = throwMixer;
         _audioSource.Play();
     }
 }

@@ -3406,6 +3406,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 376847793}
     - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: stormSpawner
+      value: 
+      objectReference: {fileID: 561990703}
+    - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: snowballSpawner
       value: 
       objectReference: {fileID: 507804451}
@@ -3413,10 +3417,6 @@ PrefabInstance:
       propertyPath: icebergSpawner
       value: 
       objectReference: {fileID: 682684176}
-    - target: {fileID: 2079463622, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: stormSpawner
-      value: 
-      objectReference: {fileID: 561990703}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: healthBar
       value: 
@@ -3433,10 +3433,6 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1326483327}
-    - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: doStep
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: progressBar
       value: 

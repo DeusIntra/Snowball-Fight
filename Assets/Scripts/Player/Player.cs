@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.OnScreen;
 
@@ -14,6 +15,9 @@ public class Player : MonoBehaviour
 
     public OnScreenButton shootButton;
 
+    public AudioClip playerDeathSound;
+    public AudioMixerGroup playerDeathMixer;
+
     private bool _isSwinging = false;
 
     private PlayerShooter _shooter;
@@ -22,6 +26,7 @@ public class Player : MonoBehaviour
     private ProgressBarTimed _shotProgressBar;
     private Health _health;
     private Mana _mana;
+    private AudioSource _audioSource;
 
     private GameControls _gameControls;
 
@@ -33,6 +38,7 @@ public class Player : MonoBehaviour
         _shotProgressBar = _shooter.progressBar;
         _health = GetComponent<Health>();
         _mana = GetComponent<Mana>();
+        _audioSource = GetComponent<AudioSource>();
 
         _gameControls = new GameControls();
         ReadShootInput();
@@ -117,7 +123,18 @@ public class Player : MonoBehaviour
         _mover.joystick.gameObject.SetActive(false);
         _shotProgressBar.enabled = false;
 
+        GetComponent<Collider>().enabled = false;
+
         shootButton.gameObject.SetActive(false);
         spellBar.gameObject.SetActive(false);
+
+        PlayDeathSound();
+    }
+
+    private void PlayDeathSound()
+    {
+        _audioSource.clip = playerDeathSound;
+        _audioSource.outputAudioMixerGroup = playerDeathMixer;
+        _audioSource.Play();
     }
 }

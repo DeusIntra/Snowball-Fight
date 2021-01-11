@@ -75,6 +75,14 @@ PrefabInstance:
       propertyPath: meshes.Array.data[0]
       value: 
       objectReference: {fileID: -2432090755550338912, guid: b462f66eb1cabd841aee14418c4fa78f, type: 3}
+    - target: {fileID: 7695807918632469614, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b396ca04b16d91c4fab902991c87b122, type: 3}
+    - target: {fileID: 7695807918632469614, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: deathMixer
+      value: 
+      objectReference: {fileID: -5147655468538275948, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
     - target: {fileID: 7695807918632469615, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: speed
       value: 3

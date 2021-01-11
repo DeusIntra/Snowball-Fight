@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 644458750446243344, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
+      propertyPath: breakSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 438c73f0220707a49a560a59f7d350e5, type: 3}
     - target: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
       propertyPath: m_Name
       value: Enemy Snowball

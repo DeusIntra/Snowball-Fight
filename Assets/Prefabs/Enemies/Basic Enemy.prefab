@@ -296,7 +296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 7695807918820735178}
   snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
-  throwSound: {fileID: 8300000, guid: 86242382465d14840be5d3fff02b79f3, type: 3}
+  throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
+  throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &3925469274262616083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,9 +376,6 @@ MonoBehaviour:
   jumpingDistance: 2.5
   jumpingTime: 0.4
   jumpingHeight: 1
-  jumpSounds:
-  - {fileID: 8300000, guid: 3dbe23786c8df0643bdaa16c9a683626, type: 3}
-  - {fileID: 8300000, guid: e0651276349612f4b944ac6c842464f0, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
@@ -562,6 +560,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2130536100728471696}
+  deathSound: {fileID: 8300000, guid: 5773da39f567d2a47989024fb484f10c, type: 3}
+  deathMixer: {fileID: 1330469440606736613, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!82 &634938514605529678
 AudioSource:
   m_ObjectHideFlags: 0

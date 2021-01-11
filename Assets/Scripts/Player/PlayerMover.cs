@@ -15,7 +15,6 @@ public class PlayerMover : MonoBehaviour
     public Transform leftFoot;
     public Transform rightFoot;
     public ParticleSystem particlesPrefab;
-    public AudioClip stepSound;
 
     private float _horizontalMovement;
     private float _timeToStep;
@@ -23,13 +22,11 @@ public class PlayerMover : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private PlayerAnimator _playerAnimator;
-    private AudioSource _audioSource;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -91,9 +88,6 @@ public class PlayerMover : MonoBehaviour
 
             ParticleSystem particles = Instantiate(particlesPrefab, spawnPoint, particlesPrefab.transform.rotation);
             Destroy(particles.gameObject, stepTime);
-
-            _audioSource.clip = stepSound;
-            _audioSource.Play();
         }
     }
 }

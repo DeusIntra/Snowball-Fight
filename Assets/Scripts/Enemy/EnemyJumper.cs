@@ -16,8 +16,6 @@ public class EnemyJumper : MonoBehaviour
     public float jumpingTime = 0.4f;
     public float jumpingHeight = 1f;
 
-    public List<AudioClip> jumpSounds;
-
     public AnimationCurve curve;
 
     public UnityEvent onJump;
@@ -54,16 +52,6 @@ public class EnemyJumper : MonoBehaviour
             _coroutine = StartCoroutine(Jump());
             resetJumpTime();
             _timeToNextJump += jumpingTime;
-
-            if (jumpSounds.Count > 0)
-            {
-                _audioSource.clip = jumpSounds[Random.Range(0, jumpSounds.Count)];
-                _audioSource.Play();
-            }
-            else
-            {
-                Debug.LogWarning("No jump sounds to play");
-            }
         }
 
     }
