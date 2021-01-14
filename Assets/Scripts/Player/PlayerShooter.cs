@@ -7,8 +7,10 @@ public class PlayerShooter : MonoBehaviour
     public float maxShootForce = 15f;
     public float minShootForceFraction = 0.4f;
     public float snowballSideVelocityMultiplier = 1f;
+    public float snowballScale = 1f;
 
     public ProgressBarTimed progressBar;
+    public GameObject snowballPrefab;
 
     private Shooter _shooter;
     private Rigidbody _rigidbody;    
@@ -28,7 +30,8 @@ public class PlayerShooter : MonoBehaviour
 
         float sideForce = _rigidbody.velocity.x * snowballSideVelocityMultiplier;
 
-        _shooter.Shoot(force, sideForce);
+        GameObject snowball = _shooter.Shoot(force, snowballPrefab, sideForce);
+        snowball.transform.localScale = snowball.transform.lossyScale * snowballScale;
 
         progressBar.StopAndReset();
     }

@@ -1993,6 +1993,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+--- !u!114 &624444999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404418940283072244, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+  m_PrefabInstance: {fileID: 624444998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c487e35c03cff4ab19c37e71ea9103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &646160179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3429,6 +3440,10 @@ PrefabInstance:
       propertyPath: shootButton
       value: 
       objectReference: {fileID: 330715681}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: healthBar6
+      value: 
+      objectReference: {fileID: 624444999}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 
@@ -3437,6 +3452,10 @@ PrefabInstance:
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1895315334}
+    - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: snowballScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322643, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_Name
       value: Player

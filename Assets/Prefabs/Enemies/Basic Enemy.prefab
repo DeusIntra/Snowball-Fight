@@ -295,7 +295,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 7695807918820735178}
-  snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
   throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
   throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &3925469274262616083
@@ -312,7 +311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minShootTimeSeconds: 3
   maxShootTimeSeconds: 8
-  _snowballSpawn: {fileID: 7695807918820735178}
+  snowballSpawn: {fileID: 7695807918820735178}
+  snowballPrefab: {fileID: 6771318196017452913, guid: 8b775834695506844baec9ed1fb9490a, type: 3}
   onShoot:
     m_PersistentCalls:
       m_Calls:

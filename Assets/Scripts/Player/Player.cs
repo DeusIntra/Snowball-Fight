@@ -11,6 +11,7 @@ using UnityEngine.InputSystem.OnScreen;
 public class Player : MonoBehaviour
 {
     public HeartsHealthBar healthBar;
+    public HeartsHealthBar healthBar6;
     public ProgressBar spellBar;
 
     public OnScreenButton shootButton;

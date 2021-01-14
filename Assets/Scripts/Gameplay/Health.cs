@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        _current = max;
+        ResetCurrent();
         isAlive = true;
     }
 
@@ -28,6 +28,11 @@ public class Health : MonoBehaviour
         if (_current <= 0) isAlive = false;
 
         onChange.Invoke();
+    }
+
+    public void ResetCurrent()
+    {
+        _current = max;
     }
 
     private void OnTriggerEnter(Collider other)

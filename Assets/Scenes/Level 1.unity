@@ -6466,6 +6466,10 @@ PrefabInstance:
       propertyPath: shootButton
       value: 
       objectReference: {fileID: 2007839439}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: healthBar6
+      value: 
+      objectReference: {fileID: 3136350148913186789}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 
@@ -11584,6 +11588,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+--- !u!114 &3136350148913186789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404418940283072244, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+  m_PrefabInstance: {fileID: 3136350148913186788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c487e35c03cff4ab19c37e71ea9103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6757219863655331220
 PrefabInstance:
   m_ObjectHideFlags: 0

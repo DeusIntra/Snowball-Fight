@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 public class Shooter : MonoBehaviour
 {
     public Transform snowballSpawn;
-    public GameObject snowballPrefab;
     public AudioClip throwSound;
     public AudioMixerGroup throwMixer;
 
@@ -16,7 +15,7 @@ public class Shooter : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    public void Shoot(float force, float sideForce = 0f)
+    public GameObject Shoot(float force, GameObject snowballPrefab, float sideForce = 0f)
     {
         GameObject snowball = Instantiate(snowballPrefab, snowballSpawn.position, snowballSpawn.rotation);
         Rigidbody snowballRB = snowball.GetComponent<Rigidbody>();
@@ -27,6 +26,8 @@ public class Shooter : MonoBehaviour
         snowballRB.AddForce(forwardVelocity + sideVelocity, ForceMode.Impulse);
 
         PlayThrowSound();
+
+        return snowball;
     }
 
     private void PlayThrowSound()

@@ -87,6 +87,12 @@ public class LevelInitializer : MonoBehaviour
                     case "Energy Up":
                         shotProgressBar.timeToFillSeconds /= effect.value;
                         break;
+                    case "Snowball Scale Up":
+                        _player.GetComponent<PlayerShooter>().snowballScale = effect.value;
+                        break;
+                    case "Health Up":
+                        HealthUp();
+                        break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
                         break;
@@ -127,6 +133,17 @@ public class LevelInitializer : MonoBehaviour
     {
         PlayerMover playerMover = _player.GetComponent<PlayerMover>();
         playerMover.speedMultiplier = value;
+    }
+
+    private void HealthUp()
+    {
+        Health playerHealth = _player.GetComponent<Health>();
+        playerHealth.max = 24;
+        playerHealth.ResetCurrent();
+        Player p = _player.GetComponent<Player>();
+        p.healthBar.gameObject.SetActive(false);
+        p.healthBar = p.healthBar6;
+        p.healthBar.gameObject.SetActive(true);
     }
     #endregion
 

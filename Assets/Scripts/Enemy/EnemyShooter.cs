@@ -8,7 +8,8 @@ public class EnemyShooter : MonoBehaviour
     public float minShootTimeSeconds = 3f;
     public float maxShootTimeSeconds = 8f;
 
-    public Transform _snowballSpawn;
+    public Transform snowballSpawn;
+    public GameObject snowballPrefab;
 
     public UnityEvent onShoot;
 
@@ -62,13 +63,13 @@ public class EnemyShooter : MonoBehaviour
     {
         // v = sqrt( dist * g / sin( 2 * angle ) )
         // assuming target and spawn point have equal height
-        float dist = Vector3.Distance(_snowballSpawn.position, _target.position);
+        float dist = Vector3.Distance(snowballSpawn.position, _target.position);
 
-        _snowballSpawn.LookAt(_target);
-        _snowballSpawn.Rotate(-angle, 0, 0);
+        snowballSpawn.LookAt(_target);
+        snowballSpawn.Rotate(-angle, 0, 0);
 
         float snowballVelocityMultiplier = Mathf.Sqrt(dist * g / Mathf.Sin(2 * angle)) * hack;
-        _shooter.Shoot(snowballVelocityMultiplier);
+        _shooter.Shoot(snowballVelocityMultiplier, snowballPrefab);
     }
 
     private void resetShootTime()

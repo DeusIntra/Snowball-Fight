@@ -4,13 +4,11 @@ using UnityEngine;
 public class HeartsHealthBar : MonoBehaviour
 {
     public int value = 20;
-
     public List<Heart> hearts;
-
 
     public void onChange()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < hearts.Count; i++)
         {
             int n = value - ((i+1) * 4);
             if (n >= 0) hearts[i].value = 4;

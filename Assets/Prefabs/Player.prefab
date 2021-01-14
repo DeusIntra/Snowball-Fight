@@ -517,7 +517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowballSpawn: {fileID: 484951766}
-  snowballPrefab: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
   throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
   throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &8590910627596644898
@@ -535,7 +534,9 @@ MonoBehaviour:
   maxShootForce: 34
   minShootForceFraction: 0.4
   snowballSideVelocityMultiplier: 1
+  snowballScale: 1
   progressBar: {fileID: 0}
+  snowballPrefab: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
 --- !u!114 &6718269652752470965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,6 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  healthBar6: {fileID: 0}
   spellBar: {fileID: 0}
   shootButton: {fileID: 0}
   playerDeathSound: {fileID: 8300000, guid: b179006579797f044aba18ced4be05d3, type: 3}
@@ -601,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 20
+  max: 4
   enemyProjectileTag: Enemy Snowball
   onChange:
     m_PersistentCalls:

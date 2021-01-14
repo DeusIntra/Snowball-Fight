@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   stashedItems: []
-  passiveItems:
-  - {fileID: 11400000, guid: 9ab15443f1a26c04e82484e9118bcbe6, type: 2}
-  - {fileID: 11400000, guid: bd31e2ec25c75b44485d04eb44fa67f4, type: 2}
+  passiveItems: []
   activeItems:
   - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
   - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
