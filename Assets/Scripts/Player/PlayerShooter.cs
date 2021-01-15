@@ -11,7 +11,7 @@ public class PlayerShooter : MonoBehaviour
 
     public ProgressBarTimed progressBar;
     public GameObject snowballPrefab;
-    public GameObject nextSnowballPrefab = null;
+    [HideInInspector] public GameObject nextSnowballPrefab = null;
 
     private Shooter _shooter;
     private Rigidbody _rigidbody;    
