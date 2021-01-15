@@ -31,6 +31,8 @@ public class ActiveItemButton : MonoBehaviour
             }
         }
 
+
+
         inventory.activeItems.RemoveAt(itemIndex);
 
         inventoryButton.OnPress();
