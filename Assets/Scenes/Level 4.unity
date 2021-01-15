@@ -1709,6 +1709,10 @@ PrefabInstance:
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1895315334}
+    - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: nextSnowballPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322643, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_Name
       value: Player

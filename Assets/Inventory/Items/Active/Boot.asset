@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57ee3e093037a9409e7f1c67b2ecad4, type: 3}
   m_Name: Boot
   m_EditorClassIdentifier: 
-  name: 
+  name: Boot
   price: 0
   image: {fileID: 0}
   effects: []
   damage: 0
-  prefab: {fileID: 0}
+  prefab: {fileID: 3277239919051144637, guid: 2b8982a7f24f27c46a5e61fba6fa715f, type: 3}

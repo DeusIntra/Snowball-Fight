@@ -2,6 +2,7 @@
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(Rigidbody))]
 public class Snowball : MonoBehaviour
 {
     public float lifetime = 2f;

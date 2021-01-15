@@ -11,6 +11,7 @@ public class PlayerShooter : MonoBehaviour
 
     public ProgressBarTimed progressBar;
     public GameObject snowballPrefab;
+    public GameObject nextSnowballPrefab = null;
 
     private Shooter _shooter;
     private Rigidbody _rigidbody;    
@@ -30,7 +31,14 @@ public class PlayerShooter : MonoBehaviour
 
         float sideForce = _rigidbody.velocity.x * snowballSideVelocityMultiplier;
 
-        GameObject snowball = _shooter.Shoot(force, snowballPrefab, sideForce);
+        GameObject sbPrefab;
+        if (nextSnowballPrefab != null)
+        {
+            sbPrefab = nextSnowballPrefab;
+            nextSnowballPrefab = null;
+        }
+        else sbPrefab = snowballPrefab;
+        GameObject snowball = _shooter.Shoot(force, sbPrefab, sideForce);
         snowball.transform.localScale = snowball.transform.lossyScale * snowballScale;
 
         progressBar.StopAndReset();
