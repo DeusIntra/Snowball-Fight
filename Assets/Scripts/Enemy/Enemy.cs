@@ -37,13 +37,6 @@ public class Enemy : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-
-    private void Start()
-    {        
-        _enemyHolder.enemies.Add(gameObject);
-    }
-
-
     public void OnZeroHealth()
     {
         if (!_health.isAlive) Die();

@@ -50,6 +50,8 @@ public class Snowball : MonoBehaviour
 
         _meshRenderer.enabled = false;
 
+        GetComponent<Collider>().enabled = false;
+
         Destroy(gameObject, 1f);
     }
 }

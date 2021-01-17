@@ -12,7 +12,7 @@ public class ManaGiver : MonoBehaviour
     private void Awake()
     {
         _health = GetComponent<Health>();
-        _playerMana = GameObject.FindWithTag("Player").GetComponent<Mana>();
+        _playerMana = FindObjectOfType<Player>().GetComponent<Mana>();
     }
 
     public void onHit()

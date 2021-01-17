@@ -30,6 +30,20 @@ public class Health : MonoBehaviour
         onChange.Invoke();
     }
 
+    public void Add(int amount)
+    {
+        int healthAfter = _current + amount;
+
+        if (healthAfter > max) healthAfter = max;
+
+        if (healthAfter != _current)
+        {
+            Debug.Log(_current + " -> " + healthAfter);
+            _current = healthAfter;
+            onChange.Invoke();
+        }
+    }
+
     public void ResetCurrent()
     {
         _current = max;

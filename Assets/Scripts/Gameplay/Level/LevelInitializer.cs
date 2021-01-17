@@ -18,6 +18,7 @@ public class LevelInitializer : MonoBehaviour
 
     private GameObject _player;
     private EnablerDisabler _enablerDisabler;
+    private EnemyHolder _enemyHolder;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class LevelInitializer : MonoBehaviour
         _player = FindObjectOfType<Player>().gameObject;
 
         _enablerDisabler = GetComponent<EnablerDisabler>();
+        _enemyHolder = GetComponent<EnemyHolder>();
     }
 
 
@@ -57,15 +59,16 @@ public class LevelInitializer : MonoBehaviour
             Transform spawnPoint = _spawnPoints[_bossSpawnPointIndex];
             _spawnPoints.RemoveAt(_bossSpawnPointIndex);
 
-            Instantiate(_levelData.bossPrefab, spawnPoint.position, Quaternion.identity);
+            GameObject enemy = Instantiate(_levelData.bossPrefab, spawnPoint.position, Quaternion.identity);
+            _enemyHolder.enemies.Add(enemy);
 
             _enemyCount++;
         }
 
         if (_levelData.minion1Count > 0)
-            SpawnEnemy(_levelData.minion1Prefab, _levelData.minion1Count);
+            SpawnEnemies(_levelData.minion1Prefab, _levelData.minion1Count);
         if (_levelData.minion2Count > 0)
-            SpawnEnemy(_levelData.minion2Prefab, _levelData.minion2Count);
+            SpawnEnemies(_levelData.minion2Prefab, _levelData.minion2Count);
         #endregion
 
         #region Passive items buffs
@@ -82,16 +85,19 @@ public class LevelInitializer : MonoBehaviour
                 switch (effect.name)
                 {
                     case "Speed Multiplier":
-                        MultiplyPlayerSpeed(effect.value);
+                        SpeedMultiplier(effect.value);
                         break;
                     case "Energy Up":
-                        shotProgressBar.timeToFillSeconds /= effect.value;
+                        EnergyUp(effect.value);
                         break;
                     case "Snowball Scale Up":
-                        _player.GetComponent<PlayerShooter>().snowballScale = effect.value;
+                        SnowballScaleUp(effect.value);
                         break;
                     case "Health Up":
                         HealthUp();
+                        break;
+                    case "Vampirism":
+                        Vampirism();
                         break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
@@ -101,13 +107,14 @@ public class LevelInitializer : MonoBehaviour
 
         }
 
-        // inventory.ClearPassiveItems();
+        //inventory.ClearPassiveItems();
+        Debug.Log("TODO: uncomment me");
         #endregion
 
         StartCoroutine(CountdownCoroutine());
     }
 
-    private void SpawnEnemy(GameObject prefab, int count)
+    private void SpawnEnemies(GameObject prefab, int count)
     {
         for (int i = 0; i < count; i++)
         {
@@ -122,17 +129,28 @@ public class LevelInitializer : MonoBehaviour
             _spawnPoints.RemoveAt(spawnPointIndex);
 
             Vector3 offsetZ = new Vector3(0, 0, _enemyCount * 0.05f);
-            Instantiate(prefab, spawnPoint.position + offsetZ, Quaternion.identity);
+            GameObject enemy = Instantiate(prefab, spawnPoint.position + offsetZ, Quaternion.identity);
+            _enemyHolder.enemies.Add(enemy);
 
             _enemyCount++;
         }
     }
 
     #region Passive item effects
-    private void MultiplyPlayerSpeed(float value)
+    private void SpeedMultiplier(float value)
     {
         PlayerMover playerMover = _player.GetComponent<PlayerMover>();
         playerMover.speedMultiplier = value;
+    }
+
+    private void EnergyUp(float value)
+    {
+        shotProgressBar.timeToFillSeconds /= value;
+    }
+
+    private void SnowballScaleUp(float value)
+    {
+        _player.GetComponent<PlayerShooter>().snowballScale = value;
     }
 
     private void HealthUp()
@@ -144,6 +162,14 @@ public class LevelInitializer : MonoBehaviour
         p.healthBar.gameObject.SetActive(false);
         p.healthBar = p.healthBar6;
         p.healthBar.gameObject.SetActive(true);
+    }
+
+    private void Vampirism()
+    {
+        foreach (GameObject enemy in _enemyHolder.enemies)
+        {
+            enemy.GetComponent<HealthGiver>().isEnabled = true;
+        }
     }
     #endregion
 

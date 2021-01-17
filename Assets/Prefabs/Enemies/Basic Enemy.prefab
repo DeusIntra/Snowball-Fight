@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 5982334854970141517}
   - component: {fileID: 7702308527376925847}
   - component: {fileID: 6332574273900030559}
+  - component: {fileID: 9083715412884696815}
   - component: {fileID: 5638602311746608654}
   - component: {fileID: 1047307387874480603}
   - component: {fileID: 7695807918632469614}
@@ -505,6 +506,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9083715412884696815}
+        m_TargetAssemblyTypeName: HealthGiver, Assembly-CSharp
+        m_MethodName: onHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6332574273900030559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +532,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAmount: 1
   onKillAmount: 2
+--- !u!114 &9083715412884696815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695807918632469623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4badafb70704c498da7f8e0f599d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnabled: 0
+  onHitAmount: 0
+  onKillAmount: 1
 --- !u!114 &5638602311746608654
 MonoBehaviour:
   m_ObjectHideFlags: 0

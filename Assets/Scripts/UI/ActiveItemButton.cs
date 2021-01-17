@@ -54,5 +54,4 @@ public class ActiveItemButton : MonoBehaviour
         Debug.Log("heal " + value);
     }
     #endregion
-
 }

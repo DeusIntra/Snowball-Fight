@@ -10,6 +10,7 @@ public class HeartsHealthBar : MonoBehaviour
     {
         for (int i = 0; i < hearts.Count; i++)
         {
+            // wtf did i make
             int n = value - ((i+1) * 4);
             if (n >= 0) hearts[i].value = 4;
             else if (n < -4) hearts[i].value = 0;
