@@ -15,6 +15,7 @@ MonoBehaviour:
   stashedItems: []
   passiveItems:
   - {fileID: 11400000, guid: 267a9a1e9b565624bb35c301366c25f1, type: 2}
+  - {fileID: 11400000, guid: 3f7daf804aec41147919aa0fdd0d5892, type: 2}
   activeItems:
   - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
   - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}

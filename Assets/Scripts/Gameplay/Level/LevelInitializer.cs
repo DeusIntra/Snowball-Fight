@@ -99,6 +99,9 @@ public class LevelInitializer : MonoBehaviour
                     case "Vampirism":
                         Vampirism();
                         break;
+                    case "Mana Up":
+                        ManaUp(effect.value);
+                        break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
                         break;
@@ -169,6 +172,16 @@ public class LevelInitializer : MonoBehaviour
         foreach (GameObject enemy in _enemyHolder.enemies)
         {
             enemy.GetComponent<HealthGiver>().isEnabled = true;
+        }
+    }
+
+    private void ManaUp(float value)
+    {
+        foreach (GameObject enemy in _enemyHolder.enemies)
+        {
+            ManaGiver manaGiver = enemy.GetComponent<ManaGiver>();
+            manaGiver.onHitAmount *= value;
+            manaGiver.onKillAmount *= value;
         }
     }
     #endregion

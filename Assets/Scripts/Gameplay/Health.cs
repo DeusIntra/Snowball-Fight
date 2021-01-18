@@ -38,7 +38,6 @@ public class Health : MonoBehaviour
 
         if (healthAfter != _current)
         {
-            Debug.Log(_current + " -> " + healthAfter);
             _current = healthAfter;
             onChange.Invoke();
         }

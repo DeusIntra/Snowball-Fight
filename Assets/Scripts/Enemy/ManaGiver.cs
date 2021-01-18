@@ -3,8 +3,8 @@
 [RequireComponent(typeof(Health))]
 public class ManaGiver : MonoBehaviour
 {
-    public int onHitAmount = 1;
-    public int onKillAmount = 2;
+    public float onHitAmount = 10;
+    public float onKillAmount = 20;
 
     private Health _health;
     private Mana _playerMana;

@@ -3,14 +3,14 @@ using UnityEngine.Events;
 
 public class Mana : MonoBehaviour
 {
-    public int max = 12;
+    public float max = 120;
     public UnityEvent onChange;
 
-    private int current = 0;
+    private float current = 0;
 
-    public float currentFraction => (float) current / (float) max;
+    public float currentFraction => current / max;
 
-    public void Add(int amount)
+    public void Add(float amount)
     {
         current += amount;
 
@@ -18,7 +18,7 @@ public class Mana : MonoBehaviour
         onChange.Invoke();
     }
 
-    public void Sub(int amount)
+    public void Sub(float amount)
     {
         current -= amount;
 
