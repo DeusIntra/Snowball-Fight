@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Rigidbody))]
 public class Snowball : MonoBehaviour
 {
@@ -24,13 +22,13 @@ public class Snowball : MonoBehaviour
 
     private void OnTriggerEnter(Collider otherCollider)
     {
-        Snowball other = otherCollider.GetComponent<Snowball>();
-        if (other != null)
+        Snowball otherSnowball = otherCollider.GetComponent<Snowball>();
+        if (otherSnowball != null)
         {
             float p = 1 - Mathf.Sqrt(1 - destructionChance);
             if (Random.Range(0f, 1f) < p)
             {
-                other.Break();
+                otherSnowball.Break();
                 Break();
             }
         }
@@ -42,13 +40,22 @@ public class Snowball : MonoBehaviour
 
     public void Break()
     {
-        ParticleSystem particles = Instantiate(particlesPrefab, transform.position, particlesPrefab.transform.rotation);
-        Destroy(particles.gameObject, 0.5f);
+        Instantiate(particlesPrefab, transform.position, particlesPrefab.transform.rotation);
 
-        _audioSource.clip = breakSound;
-        _audioSource.Play();
+        if (_audioSource != null)
+        {
+            _audioSource.clip = breakSound;
+            _audioSource.Play();
+        }
 
-        _meshRenderer.enabled = false;
+        if (_meshRenderer != null)
+        {
+            _meshRenderer.enabled = false;
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
 
         GetComponent<Collider>().enabled = false;
 

@@ -1677,6 +1677,10 @@ PrefabInstance:
       propertyPath: stormSpawner
       value: 
       objectReference: {fileID: 1289611409}
+    - target: {fileID: 1963666284459681614, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_Center.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2433762165267994096, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: max
       value: 120
@@ -1717,6 +1721,10 @@ PrefabInstance:
       propertyPath: nextSnowballPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: snowballPrefab
+      value: 
+      objectReference: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
     - target: {fileID: 8668231041199322643, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1727,7 +1735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_LocalPosition.z

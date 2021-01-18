@@ -3433,6 +3433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1862210720}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: healthBar6
+      value: 
+      objectReference: {fileID: 624444999}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: spellBar
       value: 
       objectReference: {fileID: 879547047}
@@ -3440,10 +3444,6 @@ PrefabInstance:
       propertyPath: shootButton
       value: 
       objectReference: {fileID: 330715681}
-    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: healthBar6
-      value: 
-      objectReference: {fileID: 624444999}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 
@@ -3452,10 +3452,6 @@ PrefabInstance:
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1895315334}
-    - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: snowballScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322643, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3466,7 +3462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8668231041199322646, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: m_LocalPosition.z
