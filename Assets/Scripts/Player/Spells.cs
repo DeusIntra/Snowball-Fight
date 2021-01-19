@@ -58,7 +58,7 @@ public class Spells : MonoBehaviour
 
     public void CastStorm()
     {
-        _mana.Sub(_mana.max / 4);
+        _mana.Sub(_mana.max * 0.33f);
         stormSpawner.Cast(stormDurationSeconds);
         StartCoroutine(StormCoroutine());
     }
@@ -66,7 +66,7 @@ public class Spells : MonoBehaviour
 
     public void CastIceberg()
     {
-        _mana.Sub(_mana.max / 2);
+        _mana.Sub(_mana.max * 0.66f);
         icebergSpawner.Cast();
         StartCoroutine(IcebergCoroutine());
     }
