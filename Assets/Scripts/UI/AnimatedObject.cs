@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimatedObject : MonoBehaviour
 {
     public bool animateOnStart = false;
+    public bool destroyOnComplete = false;
     public List<UIAnimationData> animations;
 
     private RectTransform _rectTransform;
@@ -58,6 +59,11 @@ public class AnimatedObject : MonoBehaviour
         if (animations[i].setAnchorsAfterAnimation)
         {
             SetAnchors(animations[i].min, animations[i].max);
+        }
+
+        if (destroyOnComplete)
+        {
+            Destroy(gameObject);
         }
     }
 

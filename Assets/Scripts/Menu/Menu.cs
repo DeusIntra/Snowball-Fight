@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public LevelDataHolder levelDataHolder;
+    public GameParametersSingleton parameters;
 
     public GameObject LocationButtons;
     public GameObject LevelButtons;
@@ -36,6 +37,15 @@ public class Menu : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
+
+        if (!parameters.showTitle)
+        {
+            Destroy(titlePanel);
+            foreach (AnimatedObject button in menuButtons)
+            {
+                button.Animate();
+            }
+        }
     }
 
     public void ChooseLocation(int index)
@@ -60,5 +70,7 @@ public class Menu : MonoBehaviour
         {
             button.Animate();
         }
+
+        parameters.showTitle = false;
     }
 }

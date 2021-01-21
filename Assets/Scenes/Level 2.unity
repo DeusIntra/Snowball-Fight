@@ -3448,6 +3448,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1326483327}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: max
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: progressBar
       value: 

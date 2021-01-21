@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cd528e140991f4096652bb41176f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max: 4
+  max: 20
   enemyProjectileTag: Enemy Snowball
   onChange:
     m_PersistentCalls:
@@ -618,6 +618,7 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls: []
+  _current: 0
 --- !u!114 &2433762165267994096
 MonoBehaviour:
   m_ObjectHideFlags: 0
