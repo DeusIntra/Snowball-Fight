@@ -11,6 +11,11 @@ public class Inventory : ScriptableObject
     public int maxPassiveItemsCount = 3;
     public int maxActiveItemsCount = 5;
 
+    public void OnEnable()
+    {
+        
+    }
+
     public void ClearPassiveItems()
     {
         passiveItems = new List<PassiveItem>();
