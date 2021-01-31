@@ -46,21 +46,21 @@ public class Music : MonoBehaviour
 
     private IEnumerator PlayCoroutine()
     {
-        float startLength = start.length;
+        //float startLength = start.length;
         float loopLength = loop.length;
 
         source1.clip = loop;
         source1.loop = false;
-        source2.clip = start;
-        source2.PlayDelayed(0.001f);
-        yield return new WaitForSecondsRealtime(startLength);
-        source2.clip = ending;
-        source1.Play();
+        //source2.clip = start;
+        //source2.PlayDelayed(0.001f);
+        //yield return new WaitForSecondsRealtime(startLength);
+        //source2.clip = ending;
+        source1.PlayOneShot(loop);
 
         while(true)
         {
-            source1.Play();
-            source2.PlayDelayed(0.01f);
+            source1.PlayOneShot(loop);
+            //source2.PlayDelayed(0.01f);
             Debug.Log(correction);
             yield return new WaitForSecondsRealtime(loopLength + correction);
         }
