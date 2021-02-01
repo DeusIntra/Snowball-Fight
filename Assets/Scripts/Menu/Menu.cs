@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 {
     public LevelDataHolder levelDataHolder;
     public GameParametersSingleton parameters;
+    public Inventory inventory; // used in BuyItemButton.cs
 
     public GameObject LocationButtons;
     public GameObject LevelButtons;

@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5cb102381c1cf4e9d931d83f30003a, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  stashedItems: []
-  passiveItems:
-  - {fileID: 11400000, guid: 267a9a1e9b565624bb35c301366c25f1, type: 2}
-  - {fileID: 11400000, guid: 3f7daf804aec41147919aa0fdd0d5892, type: 2}
+  stashedActiveItems:
+  - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
+  - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
+  stashedPassiveItems: []
   activeItems:
   - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
   - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
   - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
-  maxPassiveItemsCount: 3
+  passiveItems:
+  - {fileID: 11400000, guid: 267a9a1e9b565624bb35c301366c25f1, type: 2}
+  - {fileID: 11400000, guid: 3f7daf804aec41147919aa0fdd0d5892, type: 2}
   maxActiveItemsCount: 5
+  maxPassiveItemsCount: 3
