@@ -12,6 +12,11 @@ public class GameParametersSingleton : ScriptableObject
     public int openedLevelsOnLocation3 = 0;
     public int openedLevelsOnLocation4 = 0;
 
+    private void OnEnable()
+    {
+        showTitle = true;
+    }
+
     public void Save()
     {
         Debug.Log("Not implemented yet");

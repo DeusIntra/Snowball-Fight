@@ -3,11 +3,14 @@ using TMPro;
 
 public class BuyItemButton : MonoBehaviour
 {
-    public Inventory inventory;
+    
     public Item item;
 
     public TextMeshProUGUI buttonText;
     public GameObject badge;
+
+    private Inventory _inventory;
+    private GameParametersSingleton _parameters;
 
     private TextMeshProUGUI _badgeText;
 
@@ -15,6 +18,10 @@ public class BuyItemButton : MonoBehaviour
 
     private void Awake()
     {
+        Menu menu = FindObjectOfType<Menu>();
+        _inventory = menu.inventory;
+        _parameters = menu.parameters;
+
         _badgeText = badge.GetComponentInChildren<TextMeshProUGUI>();
     }
 
@@ -23,14 +30,14 @@ public class BuyItemButton : MonoBehaviour
         counter = 0;
         if (item is ActiveItem)
         {
-            foreach (ActiveItem stashedItem in inventory.stashedActiveItems)
+            foreach (ActiveItem stashedItem in _inventory.stashedActiveItems)
             {
                 if (item == stashedItem) counter++;
             }
         }
         else if (item is PassiveItem)
         {
-            foreach (PassiveItem stashedItem in inventory.stashedPassiveItems)
+            foreach (PassiveItem stashedItem in _inventory.stashedPassiveItems)
             {
                 if (item == stashedItem) counter++;
             }
@@ -44,7 +51,7 @@ public class BuyItemButton : MonoBehaviour
 
     public void Buy()
     {
-        Debug.Log("TODO: remove money");
+        _parameters.goldAmount -= item.price;
 
         if (counter == 0)
         {
@@ -53,13 +60,8 @@ public class BuyItemButton : MonoBehaviour
         counter++;
         _badgeText.text = counter.ToString();
 
-        if (item is ActiveItem)
-        {
-            inventory.stashedActiveItems.Add((ActiveItem)item);
-        }
-        else if (item is PassiveItem)
-        {
-            inventory.stashedPassiveItems.Add((PassiveItem)item);
-        }
+        _inventory.StashItem(item);
+
+        _parameters.Save();
     }
 }
