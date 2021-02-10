@@ -29,7 +29,7 @@ public class EnemyDebuff : MonoBehaviour
         _pausable.PauseJumper(seconds);
 
         GameObject stunParticles = Instantiate(stunParticlesPrefab, stunParticlesSpawnPoint);
-        Destroy(stunParticles, seconds);        
+        Destroy(stunParticles, seconds);
     }
 
     public void Freeze(float seconds)

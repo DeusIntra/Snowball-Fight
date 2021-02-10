@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Car : MonoBehaviour
 {
     public float fadeTimeSeconds = 0f;
     public float pauseBeforeFadeSeconds = 0f;
     public float speedMultiplier = 1f;
+    public UnityEvent OnReachDestination;
 
     private Vector3 _startPosition;
     private Vector3 _endPosition;
@@ -14,13 +16,11 @@ public class Car : MonoBehaviour
     private Material _material;
     private float _startAlpha;
 
-
     private void Awake()
     {
         Renderer renderer = GetComponentInChildren<Renderer>();
         if (renderer != null) _material = renderer.material;
     }
-
 
     public void SetDestination(Vector3 destination, float speed = 1f, float t = 0)
     {
@@ -31,7 +31,6 @@ public class Car : MonoBehaviour
 
         StartCoroutine(DriveCoroutine(t));
     }
-
 
     private IEnumerator DriveCoroutine(float t)
     {
@@ -50,6 +49,8 @@ public class Car : MonoBehaviour
 
             yield return null;
         }
+
+        OnReachDestination.Invoke();
 
         if (_material != null)
         {

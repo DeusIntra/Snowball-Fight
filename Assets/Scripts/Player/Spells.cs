@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Mana))]
@@ -22,6 +23,7 @@ public class Spells : MonoBehaviour
     public IcebergSpawner icebergSpawner;
     public GameObject iceDestructionPrefab;
     public AudioClip stunSound;
+    public AudioMixerGroup stunAudioMixer;
 
     private EnemyHolder _enemyHolder;
     private Mana _mana;
@@ -55,14 +57,12 @@ public class Spells : MonoBehaviour
         }
     }
 
-
     public void CastStorm()
     {
         _mana.Sub(_mana.max * 0.33f);
         stormSpawner.Cast(stormDurationSeconds);
         StartCoroutine(StormCoroutine());
     }
-
 
     public void CastIceberg()
     {
@@ -71,7 +71,6 @@ public class Spells : MonoBehaviour
         StartCoroutine(IcebergCoroutine());
     }
 
-
     public void CastHail()
     {
         _mana.Zero();
@@ -79,7 +78,6 @@ public class Spells : MonoBehaviour
         snowballSpawner.Cast(hailDurationSeconds);
         StartCoroutine(HailCoroutine());
     }
-
 
     private IEnumerator StormCoroutine()
     {
@@ -108,6 +106,7 @@ public class Spells : MonoBehaviour
         if (_enemiesStunned)
         {
             _audioSource.clip = stunSound;
+            _audioSource.outputAudioMixerGroup = stunAudioMixer;
             _audioSource.Play();
             _enemiesStunned = false;
         }
@@ -123,7 +122,6 @@ public class Spells : MonoBehaviour
             }
         }
     }
-
 
     private IEnumerator IcebergCoroutine()
     {
@@ -154,7 +152,6 @@ public class Spells : MonoBehaviour
         }
     }
 
-
     private IEnumerator HailCoroutine()
     {
         yield return new WaitForSeconds(hailDurationSeconds);
@@ -173,7 +170,6 @@ public class Spells : MonoBehaviour
         }
     }
 
-
     public void CastSpell()
     {
         _mana.Zero();
@@ -181,11 +177,5 @@ public class Spells : MonoBehaviour
         spell1Button.interactable = false;
         spell2Button.interactable = false;
         spell3Button.interactable = false;
-    }
-
-
-    private IEnumerator CastSpellCoroutine()
-    {
-        yield return new WaitForSecondsRealtime(1f);
     }
 }
