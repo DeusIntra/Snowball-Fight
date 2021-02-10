@@ -16,14 +16,10 @@ public class Inventory : ScriptableObject
 
     public void OnEnable()
     {
-        if (stashedPassiveItems is null)
-        {
-            stashedPassiveItems = new List<PassiveItem>();
-        }
-        if (stashedActiveItems is null)
-        {
-            stashedActiveItems = new List<ActiveItem>();
-        }
+        if (stashedPassiveItems is null) stashedPassiveItems = new List<PassiveItem>();
+        if (stashedActiveItems is null) stashedActiveItems = new List<ActiveItem>();
+        if (activeItems is null) activeItems = new List<ActiveItem>();
+        if (passiveItems is null) passiveItems = new List<PassiveItem>();
     }
 
     public void ClearPassiveItems()
@@ -31,11 +27,20 @@ public class Inventory : ScriptableObject
         passiveItems = new List<PassiveItem>();
     }
 
-    public void AddPassiveItem()
+    public void StashItem(Item item)
     {
-        if (passiveItems == null)        
-            passiveItems = new List<PassiveItem>();
+        if (item is ActiveItem)
+        {
+            stashedActiveItems.Add((ActiveItem)item);
+        }
+        else if (item is PassiveItem)
+        {
+            stashedPassiveItems.Add((PassiveItem)item);
+        }            
+    }
 
-        // TODO: add item        
+    public void EquipItem(Item item)
+    {
+
     }
 }
