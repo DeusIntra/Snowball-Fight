@@ -11415,6 +11415,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6757219863655331221}
+    - target: {fileID: 1855538652741451156, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b56cfd856b908c46924598511a34df4, type: 3}
     - target: {fileID: 1855538653209544843, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_Name
       value: UI Canvas
@@ -11503,6 +11507,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1855538653353405837, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 42fc6c01ddb6b344fb13c0c2ae01d60a, type: 3}
     - target: {fileID: 5150728573101580727, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
