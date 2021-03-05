@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Level Data 2-06 (super pa)
   m_EditorClassIdentifier: 
   minion1Count: 1
-  minion2Count: 2
-  hasBoss: 0
+  minion2Count: 0
+  hasBoss: 1
   minion1Prefab: {fileID: 206250079112619276, guid: d4c31ed94b254c74094bfc75dd15c49f, type: 3}
   minion2Prefab: {fileID: 1297291770116077250, guid: 452adb0e2be1bf44c84d098bccb12845, type: 3}
-  bossPrefab: {fileID: 0}
+  bossPrefab: {fileID: 5846675048395311918, guid: 5eea9c00d21ec8a4bbda0f1336009bce, type: 3}
