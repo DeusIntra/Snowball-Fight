@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyHolder : MonoBehaviour
 {
+    public UnityEvent onZeroEnemies;
     [HideInInspector] public List<GameObject> enemies;
 
     public void Remove(GameObject gameObject)
@@ -12,6 +14,7 @@ public class EnemyHolder : MonoBehaviour
         if (enemies.Count == 0)
         {
             Debug.Log("Win");
+            onZeroEnemies.Invoke();
         }
     }
 }
