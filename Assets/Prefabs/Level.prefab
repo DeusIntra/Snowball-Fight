@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 561990704}
   - component: {fileID: 1223013593}
   - component: {fileID: 377313910}
+  - component: {fileID: 6757219863655331223}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -714,6 +715,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d86ee7fab5af14a8cff5b55e9dbdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onZeroEnemies:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6757219863655331223}
+        m_TargetAssemblyTypeName: LevelEnd, Assembly-CSharp
+        m_MethodName: Win
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   enemies: []
 --- !u!114 &1223013593
 MonoBehaviour:
@@ -749,6 +765,23 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &6757219863655331223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757219863420487993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17541837d23dc3644ad15e05e9eeb439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTimeBeforeWin: 1
+  spinsAmount: 5
+  spinTime: 1
+  jumpHeight: 0.5
+  winPanel: {fileID: 0}
 --- !u!1 &6757219864067537706
 GameObject:
   m_ObjectHideFlags: 0

@@ -357,6 +357,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4632176470643508, guid: 08b7d3dcb8d6b9247b1800cd79905e16, type: 3}
   m_PrefabInstance: {fileID: 51074425}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &60926668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+  m_PrefabInstance: {fileID: 561990702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17541837d23dc3644ad15e05e9eeb439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &81546576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1744,7 +1755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -1753,14 +1764,14 @@ PrefabInstance:
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1586202489}
+      objectReference: {fileID: 60926668}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: LevelEnd, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1768,7 +1779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.size
@@ -1818,6 +1829,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1586202488}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: winPanel
+      value: 
+      objectReference: {fileID: 1586202489}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level

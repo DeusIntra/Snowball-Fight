@@ -3301,7 +3301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3310,14 +3310,14 @@ PrefabInstance:
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 445124670}
+      objectReference: {fileID: 1097420060}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: LevelEnd, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3325,7 +3325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.size
@@ -3367,6 +3367,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 445124669}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: winPanel
+      value: 
+      objectReference: {fileID: 445124670}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level
@@ -3459,6 +3463,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8380092ea624e74ba8a978a6e22320d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1097420060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+  m_PrefabInstance: {fileID: 1097420055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17541837d23dc3644ad15e05e9eeb439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1225894673
