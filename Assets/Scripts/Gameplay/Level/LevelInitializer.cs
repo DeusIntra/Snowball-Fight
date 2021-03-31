@@ -10,6 +10,7 @@ public class LevelInitializer : MonoBehaviour
     public Inventory inventory;
     public ProgressBarTimed shotProgressBar;
     public TextMeshProUGUI timerText;
+    public EnablerDisabler enableOnCountdown;
 
     private List<Transform> _spawnPoints;
     private int _bossSpawnPointIndex = -1;
@@ -17,7 +18,6 @@ public class LevelInitializer : MonoBehaviour
     private LevelDataObject _levelData;
 
     private GameObject _player;
-    private EnablerDisabler _enablerDisabler;
     private EnemyHolder _enemyHolder;
 
     private void Awake()
@@ -40,7 +40,6 @@ public class LevelInitializer : MonoBehaviour
 
         _player = FindObjectOfType<Player>().gameObject;
 
-        _enablerDisabler = GetComponent<EnablerDisabler>();
         _enemyHolder = GetComponent<EnemyHolder>();
     }
 
@@ -189,7 +188,7 @@ public class LevelInitializer : MonoBehaviour
     private IEnumerator CountdownCoroutine(int seconds = 3)
     {
         Time.timeScale = 0;
-        _enablerDisabler.DisableObjects();
+        enableOnCountdown.DisableObjects();
         for (int i = seconds; i > 0; i--)
         {
             timerText.text = i.ToString();
@@ -200,7 +199,7 @@ public class LevelInitializer : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         Time.timeScale = 1;
-        _enablerDisabler.EnableObjects();
+        enableOnCountdown.EnableObjects();
         timerText.gameObject.SetActive(false);
     }
 }

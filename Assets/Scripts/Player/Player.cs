@@ -115,27 +115,20 @@ public class Player : MonoBehaviour
         spellBar.SetFill(_mana.currentFraction);
     }
 
+    public void PlayDeathSound()
+    {
+        _audioSource.clip = playerDeathSound;
+        _audioSource.outputAudioMixerGroup = playerDeathMixer;
+        _audioSource.Play();
+    }
+
     private void Die()
     {
-        _playerAnimator.Die();
-
         _shooter.enabled = false;
         _mover.enabled = false;
         _mover.joystick.gameObject.SetActive(false);
         _shotProgressBar.enabled = false;
 
         GetComponent<Collider>().enabled = false;
-
-        shootButton.gameObject.SetActive(false);
-        spellBar.gameObject.SetActive(false);
-
-        PlayDeathSound();
-    }
-
-    private void PlayDeathSound()
-    {
-        _audioSource.clip = playerDeathSound;
-        _audioSource.outputAudioMixerGroup = playerDeathMixer;
-        _audioSource.Play();
-    }
+    }    
 }

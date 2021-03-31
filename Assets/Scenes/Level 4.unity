@@ -133,6 +133,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4297669019557646, guid: b66cb895d42bd2641a582ab3b739c289, type: 3}
   m_PrefabInstance: {fileID: 1441287683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &65489367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8200954165326026130, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 1586202481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71881019
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,58 +907,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 470659328}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[1]
       value: 
       objectReference: {fileID: 1528396014}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[2]
       value: 
       objectReference: {fileID: 1035847293}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[3]
       value: 
       objectReference: {fileID: 1501901395}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 1586202485}
+    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 1586202482}
+    - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 470659328}
+    - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1528396014}
+    - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1035847293}
+    - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: gameObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1501901395}
+    - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[4]
       value: 
       objectReference: {fileID: 128467370}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 993409470}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelEnd, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Win
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 561990704, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: onZeroEnemies.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[0]
       value: 
@@ -974,6 +971,10 @@ PrefabInstance:
       propertyPath: winPanel
       value: 
       objectReference: {fileID: 1586202484}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: losePanel
+      value: 
+      objectReference: {fileID: 65489367}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level
@@ -1757,8 +1758,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: max
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LevelEnd, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 993409470}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: LoseOnZeroHealth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8590910627596644898, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: progressBar
@@ -2784,6 +2813,11 @@ MonoBehaviour:
 --- !u!1 &1586202484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4382353909838425591, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 1586202481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1586202485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2756606273500349912, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 1586202481}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1598947486

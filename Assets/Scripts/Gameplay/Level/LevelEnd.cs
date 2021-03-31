@@ -4,10 +4,13 @@ using UnityEngine;
 public class LevelEnd : MonoBehaviour
 {
     public float waitTimeBeforeWin = 1f;
+    public float waitTimeBeforeLose = 1f;
     public int spinsAmount = 5;
     public float spinTime = 1f;
     public float jumpHeight = 0.5f;
     public GameObject winPanel;
+    public GameObject losePanel;
+    public EnablerDisabler disableOnEndGame;
 
     private Transform _player;
 
@@ -21,31 +24,21 @@ public class LevelEnd : MonoBehaviour
         StartCoroutine(WinCoroutine());
     }
 
-    public void Lose()
+    public void LoseOnZeroHealth()
     {
-        StartCoroutine(LoseCoroutine());
+        if (!_player.GetComponent<Health>().isAlive)
+            StartCoroutine(LoseCoroutine());
     }
 
     private IEnumerator WinCoroutine()
     {
-        // disable all ui except win panel
-        Debug.Log("TODO this");
+        DisableUI();
 
-        // wait
-        while (waitTimeBeforeWin > 0)
-        {
-            waitTimeBeforeWin -= Time.deltaTime;
-            yield return null;
-        }
+        DestroySnowballs();
 
-        // destroy snowballs
-        Snowball[] snowballs = FindObjectsOfType<Snowball>();
-        foreach (Snowball snowball in snowballs)
-        {
-            snowball.Break();
-        }
+        yield return new WaitForSecondsRealtime(waitTimeBeforeWin);
 
-        // spin player + jump
+        // spin player and jump
         float t = 0;
 
         float playerStartRotationY = _player.rotation.y;
@@ -69,12 +62,42 @@ public class LevelEnd : MonoBehaviour
         _player.position = pos;
 
         // show score
+        // TODO: animations and score
         winPanel.SetActive(true);
         yield return null;
     }
 
     private IEnumerator LoseCoroutine()
     {
+        DisableUI();
+
+        Time.timeScale = 0f;
+
+        DestroySnowballs();
+
+        yield return new WaitForSecondsRealtime(waitTimeBeforeLose);
+
+        // animate death
+        PlayerAnimator playerAnimator = _player.GetComponent<PlayerAnimator>();
+        playerAnimator.Die();
+        _player.GetComponent<Player>().PlayDeathSound();
+
+        // show score
+
         yield return null;
+    }
+
+    private void DisableUI()
+    {
+        disableOnEndGame.DisableObjects();
+    }
+
+    private void DestroySnowballs()
+    {
+        Snowball[] snowballs = FindObjectsOfType<Snowball>();
+        foreach (Snowball snowball in snowballs)
+        {
+            snowball.Break();
+        }
     }
 }
