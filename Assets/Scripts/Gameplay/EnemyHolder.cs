@@ -13,7 +13,6 @@ public class EnemyHolder : MonoBehaviour
 
         if (enemies.Count == 0)
         {
-            Debug.Log("Win");
             onZeroEnemies.Invoke();
         }
     }

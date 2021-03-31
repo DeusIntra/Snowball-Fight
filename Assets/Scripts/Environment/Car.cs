@@ -39,11 +39,7 @@ public class Car : MonoBehaviour
         {
             t = _time * _speed;
 
-            float x = Mathf.Lerp(_startPosition.x, _endPosition.x, t);
-            float y = Mathf.Lerp(_startPosition.y, _endPosition.y, t);
-            float z = Mathf.Lerp(_startPosition.z, _endPosition.z, t);
-
-            transform.position = new Vector3(x, y, z);
+            transform.position = Vector3.Lerp(_startPosition, _endPosition, t);
 
             _time += Time.deltaTime;
 

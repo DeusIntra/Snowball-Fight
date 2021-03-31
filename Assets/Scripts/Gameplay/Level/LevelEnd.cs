@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelEnd : MonoBehaviour
@@ -10,11 +9,11 @@ public class LevelEnd : MonoBehaviour
     public float jumpHeight = 0.5f;
     public GameObject winPanel;
 
-    private Player _player;
+    private Transform _player;
 
     private void Start()
     {
-        _player = FindObjectOfType<Player>();
+        _player = FindObjectOfType<Player>().transform;
     }
 
     public void Win()
@@ -49,26 +48,25 @@ public class LevelEnd : MonoBehaviour
         // spin player + jump
         float t = 0;
 
-        float playerStartRotationY = _player.transform.rotation.y;
-        float rotationX = _player.transform.rotation.x;
-        float rotationZ = _player.transform.rotation.z;
-
-        float playerStartPositionY = _player.transform.position.y;
-
-        float playerEndRotationY = playerStartPositionY + 360 * spinsAmount + 180;
+        float playerStartRotationY = _player.rotation.y;
+        float playerEndRotationY = playerStartRotationY + 360 * spinsAmount + 180;
+        Vector3 rot = _player.rotation.eulerAngles;
+        Vector3 pos = _player.position;
 
         while (t < 1f)
         {
             float rotationY = Mathf.Lerp(playerStartRotationY, playerEndRotationY, t);
-            // TODO: jump
+            float sqrtHeight = Mathf.Sqrt(jumpHeight);
+            float positionY = Mathf.Lerp(-sqrtHeight, sqrtHeight, t);
 
-            _player.transform.rotation = Quaternion.Euler(new Vector3(rotationX, rotationY, rotationZ));
+            _player.rotation = Quaternion.Euler(new Vector3(rot.x, rotationY, rot.z));
+            _player.position = new Vector3(pos.x, jumpHeight - Mathf.Pow(positionY, 2), pos.z);
 
             t += Time.deltaTime / spinTime;
             yield return null;
         }
-        _player.transform.rotation = Quaternion.Euler(new Vector3(rotationX, playerEndRotationY, rotationZ));
-        // TODO: jump
+        _player.rotation = Quaternion.Euler(new Vector3(rot.x, playerEndRotationY, rot.z));
+        _player.position = pos;
 
         // show score
         winPanel.SetActive(true);
