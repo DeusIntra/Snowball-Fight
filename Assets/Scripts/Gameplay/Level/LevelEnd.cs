@@ -83,6 +83,8 @@ public class LevelEnd : MonoBehaviour
         _player.GetComponent<Player>().PlayDeathSound();
 
         // show score
+        // TODO: animations and score
+        losePanel.SetActive(true);
 
         yield return null;
     }
