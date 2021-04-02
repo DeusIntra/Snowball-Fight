@@ -39,27 +39,7 @@ public class LevelEnd : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitTimeBeforeWin);
 
         // spin player and jump
-        float t = 0;
-
-        float playerStartRotationY = _player.rotation.y;
-        float playerEndRotationY = playerStartRotationY + 360 * spinsAmount + 180;
-        Vector3 rot = _player.rotation.eulerAngles;
-        Vector3 pos = _player.position;
-
-        while (t < 1f)
-        {
-            float rotationY = Mathf.Lerp(playerStartRotationY, playerEndRotationY, t);
-            float sqrtHeight = Mathf.Sqrt(jumpHeight);
-            float positionY = Mathf.Lerp(-sqrtHeight, sqrtHeight, t);
-
-            _player.rotation = Quaternion.Euler(new Vector3(rot.x, rotationY, rot.z));
-            _player.position = new Vector3(pos.x, jumpHeight - Mathf.Pow(positionY, 2), pos.z);
-
-            t += Time.deltaTime / spinTime;
-            yield return null;
-        }
-        _player.rotation = Quaternion.Euler(new Vector3(rot.x, playerEndRotationY, rot.z));
-        _player.position = pos;
+        yield return SpinAndJump(spinsAmount, spinTime, jumpHeight);
 
         // show score
         // TODO: animations and score
@@ -75,7 +55,7 @@ public class LevelEnd : MonoBehaviour
 
         DestroySnowballs();
 
-        yield return new WaitForSecondsRealtime(waitTimeBeforeLose);
+        yield return SpinAndJump(spinsAmount, waitTimeBeforeLose, 0);
 
         // animate death
         PlayerAnimator playerAnimator = _player.GetComponent<PlayerAnimator>();
@@ -101,5 +81,30 @@ public class LevelEnd : MonoBehaviour
         {
             snowball.Break();
         }
+    }
+
+    private IEnumerator SpinAndJump(int spinsAmount, float spinTime, float jumpHeight)
+    {
+        float t = 0;
+
+        float playerStartRotationY = _player.rotation.y;
+        float playerEndRotationY = playerStartRotationY + 360 * spinsAmount + 180;
+        Vector3 rot = _player.rotation.eulerAngles;
+        Vector3 pos = _player.position;
+
+        while (t < 1f)
+        {
+            float rotationY = Mathf.Lerp(playerStartRotationY, playerEndRotationY, t);
+            float sqrtHeight = Mathf.Sqrt(jumpHeight);
+            float positionY = Mathf.Lerp(-sqrtHeight, sqrtHeight, t);
+
+            _player.rotation = Quaternion.Euler(new Vector3(rot.x, rotationY, rot.z));
+            _player.position = new Vector3(pos.x, jumpHeight - Mathf.Pow(positionY, 2), pos.z);
+
+            t += Time.unscaledDeltaTime / spinTime;
+            yield return null;
+        }
+        _player.rotation = Quaternion.Euler(new Vector3(rot.x, playerEndRotationY, rot.z));
+        _player.position = pos;
     }
 }
