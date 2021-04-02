@@ -4,5 +4,4 @@
 public class ThrowableItem : ActiveItem
 {
     public int damage;
-    public GameObject prefab;
 }

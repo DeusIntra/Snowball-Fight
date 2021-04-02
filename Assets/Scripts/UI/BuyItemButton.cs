@@ -2,12 +2,13 @@
 using TMPro;
 
 public class BuyItemButton : MonoBehaviour
-{
-    
+{    
     public Item item;
 
     public TextMeshProUGUI buttonText;
     public GameObject badge;
+
+    public float itemYRotation = 100f;
 
     private Inventory _inventory;
     private GameParametersSingleton _parameters;
@@ -47,6 +48,15 @@ public class BuyItemButton : MonoBehaviour
         else _badgeText.text = counter.ToString();
 
         buttonText.text = item.name;
+
+        // create 3d item
+        GameObject itemGO = Instantiate(item.prefab);
+
+        PositionBinder binder = itemGO.AddComponent<PositionBinder>();
+        binder.objectToBind = transform;
+
+        Rotator rotator = itemGO.AddComponent<Rotator>();
+        rotator.rotation = new Vector3(0, itemYRotation, 0);
     }
 
     public void Buy()

@@ -6,7 +6,7 @@ public class Item : ScriptableObject
 {
     public new string name;
     public int price;
-    public Image image;
+    public GameObject prefab;
     public List<ItemEffect> effects;
 }
 
