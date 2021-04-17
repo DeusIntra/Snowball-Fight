@@ -93,7 +93,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -4181373583424829134}
   - {fileID: -5690742119704298465}
-  m_RendererFeatureMap: 32c9c236e1c6f8c51ffcab66316c06b1
+  - {fileID: 5869561882999847981}
+  m_RendererFeatureMap: 32c9c236e1c6f8c51ffcab66316c06b12dfc602f6fdf7451
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -106,7 +107,7 @@ MonoBehaviour:
     m_Bits: 16183
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 32567
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -115,3 +116,42 @@ MonoBehaviour:
     failOperation: 0
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
+--- !u!114 &5869561882999847981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: See Through Transparent
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: See Through Transparent
+    Event: 250
+    filterSettings:
+      RenderQueueType: 1
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 32768
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 1
+      stencilReference: 1
+      stencilCompareFunction: 3
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60

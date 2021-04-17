@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   price: 0
-  image: {fileID: 0}
+  prefab: {fileID: 3251315773040284289, guid: b991ab0c8c57edf46bf1176a15f6881f, type: 3}
   effects: []
   damage: 0
-  prefab: {fileID: 0}
