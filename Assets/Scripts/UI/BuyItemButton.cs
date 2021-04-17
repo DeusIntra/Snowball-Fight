@@ -15,6 +15,8 @@ public class BuyItemButton : MonoBehaviour
 
     private TextMeshProUGUI _badgeText;
 
+    private float itemOffsetZ = -10f;
+
     private int counter;
 
     private void Awake()
@@ -50,10 +52,8 @@ public class BuyItemButton : MonoBehaviour
         buttonText.text = item.name;
 
         // create 3d item
-        GameObject itemGO = Instantiate(item.prefab);
-
-        PositionBinder binder = itemGO.AddComponent<PositionBinder>();
-        binder.objectToBind = transform;
+        GameObject itemGO = Instantiate(item.prefab, transform);
+        itemGO.transform.position += new Vector3(0, 0, itemOffsetZ);
 
         Rotator rotator = itemGO.AddComponent<Rotator>();
         rotator.rotation = new Vector3(0, itemYRotation, 0);
