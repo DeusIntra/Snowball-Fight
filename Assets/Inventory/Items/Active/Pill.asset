@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Pill
   m_EditorClassIdentifier: 
   name: 
-  price: 0
-  image: {fileID: 0}
+  price: 20
+  prefab: {fileID: 0}
   effects: []
-  healAmount: 0
-  duration: 0

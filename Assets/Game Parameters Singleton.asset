@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Game Parameters Singleton
   m_EditorClassIdentifier: 
   showTitle: 0
-  goldAmount: 6969
+  goldAmount: 69
   openedLevelsOnLocation1: 1
   openedLevelsOnLocation2: 0
   openedLevelsOnLocation3: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   name: 
-  price: 0
+  price: 12
   prefab: {fileID: 2162560234730229070, guid: d9a3f399cbbef334dadbfc07d7a239aa, type: 3}
   effects: []
   damage: 0

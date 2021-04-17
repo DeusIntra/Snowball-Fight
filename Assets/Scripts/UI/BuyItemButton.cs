@@ -14,6 +14,7 @@ public class BuyItemButton : MonoBehaviour
     private GameParametersSingleton _parameters;
 
     private TextMeshProUGUI _badgeText;
+    private TextMeshProUGUI _moneyAmountText;
 
     private float itemOffsetZ = -10f;
 
@@ -26,6 +27,9 @@ public class BuyItemButton : MonoBehaviour
         _parameters = menu.parameters;
 
         _badgeText = badge.GetComponentInChildren<TextMeshProUGUI>();
+
+        ShopPanel shopPanel = GetComponentInParent<ShopPanel>();
+        _moneyAmountText = shopPanel.moneyText;
     }
 
     private void Start()
@@ -61,7 +65,10 @@ public class BuyItemButton : MonoBehaviour
 
     public void Buy()
     {
+        if (_parameters.goldAmount <= item.price) return;
+
         _parameters.goldAmount -= item.price;
+        _moneyAmountText.text = _parameters.goldAmount.ToString();
 
         if (counter == 0)
         {

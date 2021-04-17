@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5cb102381c1cf4e9d931d83f30003a, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  stashedActiveItems:
-  - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
-  - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
+  stashedActiveItems: []
   stashedPassiveItems: []
   activeItems:
   - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
