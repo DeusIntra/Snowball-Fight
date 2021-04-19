@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!28 &-18186531100625434
+--- !u!28 &-2356578175680841328
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ConcertOne General Atlas
+  m_Name: ConcertOne-Regular SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -55,11 +55,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: ConcertOne General
+  m_Name: ConcertOne-Regular SDF
   m_EditorClassIdentifier: 
-  hashCode: -1141236784
-  material: {fileID: 1016868776489408398}
-  materialHashCode: 1843340784
+  hashCode: -740054400
+  material: {fileID: 3878881315123022922}
+  materialHashCode: -140024288
   m_Version: 1.1.0
   m_SourceFontFileGUID: 53fb2ddaa771ff344baa5544ef7b0ca5
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 53fb2ddaa771ff344baa5544ef7b0ca5, type: 3}
@@ -1820,7 +1820,7 @@ MonoBehaviour:
     m_GlyphIndex: 221
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: -18186531100625434}
+  - {fileID: -2356578175680841328}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_UsedGlyphRects:
@@ -2580,14 +2580,14 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
---- !u!21 &1016868776489408398
+--- !u!21 &3878881315123022922
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ConcertOne General Material
+  m_Name: ConcertOne-Regular SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -2612,7 +2612,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: -18186531100625434}
+        m_Texture: {fileID: -2356578175680841328}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -2645,7 +2645,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.175
+    - _OutlineWidth: 0.232
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
@@ -2674,10 +2674,10 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FaceColor: {r: 0.92982376, g: 0.9753805, b: 0.990566, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.23455065, g: 0.34191445, b: 0.03433981, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
