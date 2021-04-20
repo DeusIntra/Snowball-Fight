@@ -9,9 +9,6 @@ public class Menu : MonoBehaviour
     public GameParametersSingleton parameters;
     public Inventory inventory; // used in BuyItemButton.cs
 
-    public GameObject LocationButtons;
-    public GameObject LevelButtons;
-
     public GameObject titlePanel;
     public List<AnimatedObject> menuButtons;
 
@@ -22,7 +19,6 @@ public class Menu : MonoBehaviour
     public List<LevelDataObject> location3;
     public List<LevelDataObject> location4;
 
-    private int locationIndex = -1;
     private List<List<LevelDataObject>> locations;
 
     private void Awake()
@@ -32,6 +28,8 @@ public class Menu : MonoBehaviour
         locations.Add(location2);
         locations.Add(location3);
         locations.Add(location4);
+
+        parameters.Load();
     }
 
     private void Start()
@@ -46,19 +44,21 @@ public class Menu : MonoBehaviour
             {
                 button.Animate();
             }
-        }
+        }       
     }
 
-    public void ChooseLocation(int index)
+    public void LoadLevel(int locationIndex)
     {
-        locationIndex = index;
-        LocationButtons.SetActive(false);
-        LevelButtons.SetActive(true);
-    }
-
-    public void LoadLevel(int levelIndex)
-    {
+        Debug.Log("TODO: Async");
+        var levelsOpened = parameters.openedLevelsOnLocation;
+        int levelIndex;
+        if (levelsOpened.Count != 0)
+            levelIndex = levelsOpened[locationIndex - 1];
+        else
+            levelIndex = 1;
         levelDataHolder.levelData = locations[locationIndex - 1][levelIndex - 1];
+        parameters.currentLocationIndex = locationIndex;
+        parameters.currentLevelIndex = levelIndex;
         SceneManager.LoadScene(scenes[locationIndex - 1]);
     }
 

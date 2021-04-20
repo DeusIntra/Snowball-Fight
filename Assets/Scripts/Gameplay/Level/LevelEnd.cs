@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class LevelEnd : MonoBehaviour
@@ -11,6 +12,7 @@ public class LevelEnd : MonoBehaviour
     public GameObject winPanel;
     public GameObject losePanel;
     public EnablerDisabler disableOnEndGame;
+    public GameParametersSingleton parameters;
 
     private Transform _player;
 
@@ -20,7 +22,7 @@ public class LevelEnd : MonoBehaviour
     }
 
     public void Win()
-    {
+    {        
         StartCoroutine(WinCoroutine());
     }
 
@@ -50,7 +52,10 @@ public class LevelEnd : MonoBehaviour
         // show score
         // TODO: animations and score
         winPanel.SetActive(true);
+
         yield return null;
+
+        SaveProgress();
     }
 
     private IEnumerator LoseCoroutine()
@@ -76,6 +81,18 @@ public class LevelEnd : MonoBehaviour
         losePanel.SetActive(true);
 
         yield return null;
+
+        SaveProgress();
+    }
+
+    private void SaveProgress()
+    {
+        var levelsOpened = parameters.openedLevelsOnLocation;
+        if (levelsOpened.Count < parameters.currentLevelIndex)
+            levelsOpened.Add(1);
+        else
+            levelsOpened[parameters.currentLevelIndex - 1] += 1;
+        parameters.Save();
     }
 
     private void DisableUI()

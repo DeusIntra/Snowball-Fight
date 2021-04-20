@@ -11795,10 +11795,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1855538652317724455}
@@ -11822,26 +11818,6 @@ PrefabInstance:
       propertyPath: gameObjects.Array.data[5]
       value: 
       objectReference: {fileID: 1855538652317724456}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 1855538652317724455}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1855538652317724458}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1855538652317724457}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 1855538652317724454}
-    - target: {fileID: 377313910, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: gameObjects.Array.data[4]
-      value: 
-      objectReference: {fileID: 1855538652317724453}
     - target: {fileID: 474471125, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[0]
       value: 
@@ -11862,14 +11838,6 @@ PrefabInstance:
       propertyPath: gameObjects.Array.data[4]
       value: 
       objectReference: {fileID: 1855538652317724453}
-    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: objectsToHideOnPause.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: objectsToRevealOnPause.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: objectsToHideOnPause.Array.data[0]
       value: 
@@ -11890,14 +11858,6 @@ PrefabInstance:
       propertyPath: objectsToRevealOnPause.Array.data[0]
       value: 
       objectReference: {fileID: 1855538652317724452}
-    - target: {fileID: 1223013593, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: objectsToRevealOnPause.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1346000281512233498, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
-      propertyPath: CollisionModule.plane0
-      value: 
-      objectReference: {fileID: 1963811326}
     - target: {fileID: 6757219863420487994, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: timerText
       value: 
