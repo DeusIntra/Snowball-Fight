@@ -28,9 +28,9 @@ public class LevelLoader : MonoBehaviour
 
             if (progress >= 1f)
             {
-                Time.timeScale = 1f;
+                operation.completed += (AsyncOperation a) => Time.timeScale = 1f;
                 operation.allowSceneActivation = true;
             }
-        }        
+        }
     }
 }

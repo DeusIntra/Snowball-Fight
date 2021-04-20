@@ -14,7 +14,6 @@ public class MeshAnimator : MonoBehaviour
     private AnimatedMeshSequence _currentMeshAnimation;
     public bool isPaused { get; private set; }
 
-
     private void Awake()
     {
         _meshFilter = GetComponent<MeshFilter>();
@@ -28,14 +27,12 @@ public class MeshAnimator : MonoBehaviour
         }
     }
 
-
     private void Start()
     {
         bool isValid = _meshAnimations.TryGetValue(initialMeshAnimation, out _currentMeshAnimation);
         if (!isValid) Debug.LogError("Initial mesh animation is not valid");
         else _currentMeshAnimation.Play();
     }
-
 
     public void Play(string name)
     {
@@ -47,25 +44,30 @@ public class MeshAnimator : MonoBehaviour
         else _currentMeshAnimation.Play();
     }
 
-
     public void SetFPS(float FPS)
     {
         if (_currentMeshAnimation != null)
             _currentMeshAnimation.framesPerSecond = FPS;
     }
 
-
     public float GetFPS()
     {
         return _currentMeshAnimation.framesPerSecond;
     }
-
 
     public void Pause(float seconds)
     {
         StartCoroutine(PauseCoroutine(seconds));
     }
 
+    public void SlowDown(bool flag)
+    {
+        foreach (var entry in _meshAnimations)
+        {
+            AnimatedMeshSequence animation = entry.Value;
+            animation.isSlowDown = flag;
+        }
+    }
 
     private IEnumerator PauseCoroutine(float seconds)
     {

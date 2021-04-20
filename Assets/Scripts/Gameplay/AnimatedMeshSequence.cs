@@ -6,6 +6,8 @@ public class AnimatedMeshSequence : MonoBehaviour
     public float framesPerSecond = 12f;
     public bool playAtStart = false;
     public Mesh[] meshes;
+    
+    [HideInInspector] public bool isSlowDown = false;
 
     protected MeshFilter meshFilter;
     protected int position;
@@ -13,7 +15,6 @@ public class AnimatedMeshSequence : MonoBehaviour
     private Coroutine coroutine;
     
     public bool IsPlaying { get; private set; }
-
 
     private void Awake()
     {
@@ -24,12 +25,10 @@ public class AnimatedMeshSequence : MonoBehaviour
             Play();
     }
 
-
     public void SetMeshFilter(MeshFilter meshFilter)
     {
         this.meshFilter = meshFilter;
     }
-
 
     public void Play()
     {
@@ -42,7 +41,6 @@ public class AnimatedMeshSequence : MonoBehaviour
         }
     }
 
-
     public void Stop()
     {
         if (!IsReady()) return;
@@ -54,18 +52,16 @@ public class AnimatedMeshSequence : MonoBehaviour
         }
     }
 
-
     private IEnumerator AnimateMesh()
     {
         while (IsPlaying)
         {
-            float waitTime = 1f/framesPerSecond;
+            float waitTime = 1f / framesPerSecond * (isSlowDown ? 2f : 1f);
             IncrementPlayhead();
             meshFilter.mesh = meshes[position];
             yield return new WaitForSeconds(waitTime);
         }
     }
-
 
     private void IncrementPlayhead()
     {
@@ -73,7 +69,6 @@ public class AnimatedMeshSequence : MonoBehaviour
         if (position > meshes.Length - 1)
             position = 0;
     }
-
 
     private bool IsReady()
     {
