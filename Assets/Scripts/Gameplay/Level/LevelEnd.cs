@@ -34,6 +34,12 @@ public class LevelEnd : MonoBehaviour
     {
         DisableUI();
 
+        PlayerMover mover = _player.GetComponent<PlayerMover>();
+        mover.enabled = false;
+
+        PlayerAnimator playerAnimator = _player.GetComponent<PlayerAnimator>();
+        playerAnimator.SetSpeed(0);
+
         DestroySnowballs();
 
         yield return new WaitForSecondsRealtime(waitTimeBeforeWin);
@@ -50,6 +56,9 @@ public class LevelEnd : MonoBehaviour
     private IEnumerator LoseCoroutine()
     {
         DisableUI();
+
+        PlayerMover mover = _player.GetComponent<PlayerMover>();
+        mover.enabled = false;
 
         Time.timeScale = 0f;
 
