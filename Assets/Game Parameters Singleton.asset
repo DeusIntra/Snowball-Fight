@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae535df0e3c8b448a22399f519e6094, type: 3}
   m_Name: Game Parameters Singleton
   m_EditorClassIdentifier: 
-  showTitle: 1
+  showTitle: 0
   goldAmount: 0
-  openedLevelsOnLocation: 
-  currentLocationIndex: -1
+  finishedLevelsOnLocation: 
+  currentLocationIndex: 0
+  currentLevelIndex: 2

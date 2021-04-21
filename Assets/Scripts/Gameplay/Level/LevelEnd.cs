@@ -55,6 +55,8 @@ public class LevelEnd : MonoBehaviour
 
         yield return null;
 
+        Debug.Log("TODO: open location after finishing level 6");
+
         SaveProgress();
     }
 
@@ -81,17 +83,15 @@ public class LevelEnd : MonoBehaviour
         losePanel.SetActive(true);
 
         yield return null;
-
-        SaveProgress();
     }
 
     private void SaveProgress()
     {
-        var levelsOpened = parameters.openedLevelsOnLocation;
-        if (levelsOpened.Count < parameters.currentLevelIndex)
-            levelsOpened.Add(1);
-        else
-            levelsOpened[parameters.currentLevelIndex - 1] += 1;
+        int location = parameters.currentLocationIndex;
+        int level = parameters.currentLevelIndex;
+
+        parameters.finishedLevelsOnLocation[location] = level + 1;
+        
         parameters.Save();
     }
 

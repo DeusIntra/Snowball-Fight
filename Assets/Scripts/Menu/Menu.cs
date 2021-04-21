@@ -44,22 +44,26 @@ public class Menu : MonoBehaviour
             {
                 button.Animate();
             }
-        }       
+        }
+
+        Debug.Log("TODO: open or close location buttons");
     }
 
     public void LoadLevel(int locationIndex)
     {
         Debug.Log("TODO: Async");
-        var levelsOpened = parameters.openedLevelsOnLocation;
-        int levelIndex;
-        if (levelsOpened.Count != 0)
-            levelIndex = levelsOpened[locationIndex - 1];
-        else
-            levelIndex = 1;
-        levelDataHolder.levelData = locations[locationIndex - 1][levelIndex - 1];
+        var levelsOpened = parameters.finishedLevelsOnLocation;
+        int levelIndex = levelsOpened[locationIndex];
+
+        if (levelIndex == 10)
+        {
+            levelIndex = Random.Range(6, 11);
+        }
+
+        levelDataHolder.levelData = locations[locationIndex][levelIndex];
         parameters.currentLocationIndex = locationIndex;
         parameters.currentLevelIndex = levelIndex;
-        SceneManager.LoadScene(scenes[locationIndex - 1]);
+        SceneManager.LoadScene(scenes[locationIndex]);
     }
 
     public void HideTitleAndShowButtons()
@@ -73,5 +77,11 @@ public class Menu : MonoBehaviour
         }
 
         parameters.showTitle = false;
+    }
+
+    [ContextMenu("reset prefs")]
+    public void ResetPrefs()
+    {
+        parameters.ResetProgress();
     }
 }
