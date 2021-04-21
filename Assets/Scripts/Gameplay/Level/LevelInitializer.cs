@@ -189,6 +189,13 @@ public class LevelInitializer : MonoBehaviour
     {
         Time.timeScale = 0;
         enableOnCountdown.DisableObjects();
+
+        LevelEnd end = GetComponent<LevelEnd>();
+        var parameters = end.parameters;
+
+        timerText.text = $"Stage {parameters.currentLevelIndex + 1}";
+        yield return new WaitForSecondsRealtime(2f);
+
         for (int i = seconds; i > 0; i--)
         {
             timerText.text = i.ToString();
