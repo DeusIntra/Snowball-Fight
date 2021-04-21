@@ -93,8 +93,7 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -4181373583424829134}
   - {fileID: -5690742119704298465}
-  - {fileID: 5869561882999847981}
-  m_RendererFeatureMap: 32c9c236e1c6f8c51ffcab66316c06b12dfc602f6fdf7451
+  m_RendererFeatureMap: 32c9c236e1c6f8c51ffcab66316c06b1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -112,7 +111,7 @@ MonoBehaviour:
     m_Bits: 16183
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 32567
+    m_Bits: 65335
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0

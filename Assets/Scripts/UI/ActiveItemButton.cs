@@ -35,7 +35,7 @@ public class ActiveItemButton : MonoBehaviour
         {
             Player player = FindObjectOfType<Player>();
             PlayerShooter shooter = player.GetComponent<PlayerShooter>();
-            shooter.nextSnowballPrefab = ((ThrowableItem)activeItem).prefab;
+            shooter.nextSnowballPrefab = ((ThrowableItem)activeItem).throwablePrefab;
         }
 
         inventory.activeItems.RemoveAt(itemIndex);

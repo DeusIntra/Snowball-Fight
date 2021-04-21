@@ -5,15 +5,15 @@ public class BuyItemButton : MonoBehaviour
 {    
     public Item item;
 
-    public TextMeshProUGUI buttonText;
-    public GameObject badge;
+    public TextMeshProUGUI itemName;
+    public TextMeshProUGUI price;
+    public TextMeshProUGUI badge;
 
     public float itemYRotation = 100f;
 
     private Inventory _inventory;
     private GameParametersSingleton _parameters;
 
-    private TextMeshProUGUI _badgeText;
     private TextMeshProUGUI _moneyAmountText;
 
     private float itemOffsetZ = -10f;
@@ -26,7 +26,7 @@ public class BuyItemButton : MonoBehaviour
         _inventory = menu.inventory;
         _parameters = menu.parameters;
 
-        _badgeText = badge.GetComponentInChildren<TextMeshProUGUI>();
+        //_badgeText = badge.GetComponentInChildren<TextMeshProUGUI>();
 
         ShopPanel shopPanel = GetComponentInParent<ShopPanel>();
         _moneyAmountText = shopPanel.moneyText;
@@ -50,10 +50,14 @@ public class BuyItemButton : MonoBehaviour
             }
         }
 
-        if (counter == 0) badge.SetActive(false);
-        else _badgeText.text = counter.ToString();
+        if (badge)
+        {
+            if (counter == 0) badge.gameObject.SetActive(false);
+            else badge.text = counter.ToString();
+        }
 
-        buttonText.text = item.name;
+        itemName.text = item.name;
+        price.text = $"Price: {item.price}";
 
         // create 3d item
         GameObject itemGO = Instantiate(item.prefab, transform);
@@ -72,10 +76,10 @@ public class BuyItemButton : MonoBehaviour
 
         if (counter == 0)
         {
-            badge.SetActive(true);
+            badge.gameObject.SetActive(true);
         }
         counter++;
-        _badgeText.text = counter.ToString();
+        badge.text = counter.ToString();
 
         _inventory.StashItem(item);
 

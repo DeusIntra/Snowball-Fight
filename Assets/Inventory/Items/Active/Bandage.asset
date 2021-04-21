@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1819ee2b9f9078d48ac4d3842f740aee, type: 3}
   m_Name: Bandage
   m_EditorClassIdentifier: 
-  name: Bangage
+  name: Bandage
   price: 20
   prefab: {fileID: 2906978076563674276, guid: f4e97e6e07444614c85f2f5893e8bfbb, type: 3}
   effects:

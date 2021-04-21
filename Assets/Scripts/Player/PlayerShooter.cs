@@ -40,6 +40,7 @@ public class PlayerShooter : MonoBehaviour
         else sbPrefab = snowballPrefab;
         GameObject snowball = _shooter.Shoot(force, sbPrefab, sideForce);
         snowball.transform.localScale = snowball.transform.lossyScale * snowballScale;
+        snowball.tag = "Player Snowball";
 
         progressBar.StopAndReset();
     }
