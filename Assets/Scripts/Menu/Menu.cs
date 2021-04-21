@@ -57,7 +57,7 @@ public class Menu : MonoBehaviour
 
         if (levelIndex == 10)
         {
-            levelIndex = Random.Range(6, 11);
+            levelIndex = Random.Range(5, 10);
         }
 
         levelDataHolder.levelData = locations[locationIndex][levelIndex];
