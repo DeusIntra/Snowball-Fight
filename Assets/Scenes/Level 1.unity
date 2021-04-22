@@ -11726,6 +11726,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756025080315641394, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+      propertyPath: randomAtStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3136350147627999202, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_Name
       value: UI Camera
@@ -11772,6 +11776,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3136350147627999214, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4318171334380442796, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+      propertyPath: randomAtStart
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

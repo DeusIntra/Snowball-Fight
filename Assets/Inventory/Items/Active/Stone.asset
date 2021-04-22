@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57ee3e093037a9409e7f1c67b2ecad4, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  name: 
+  name: Stone
   price: 12
   prefab: {fileID: 2162560234730229070, guid: d9a3f399cbbef334dadbfc07d7a239aa, type: 3}
   effects: []
   damage: 0
+  throwablePrefab: {fileID: 0}

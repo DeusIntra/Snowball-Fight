@@ -1096,10 +1096,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5722812568771117763, guid: be5366f4dddf8ca4ebe9c7f86e0904ad, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722812568771117763, guid: be5366f4dddf8ca4ebe9c7f86e0904ad, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 30
       objectReference: {fileID: 0}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Double Shot Chance
   m_EditorClassIdentifier: 
   name: Double Shot Chance
-  value: 0.33
+  value: 0.25

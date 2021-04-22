@@ -32,7 +32,7 @@ public class GameParametersSingleton : ScriptableObject
     {
         if (finishedLevelsOnLocation == null) 
             finishedLevelsOnLocation = new List<int>();
-
+        
         int i = 0;
         while (PlayerPrefs.HasKey($"location {i}"))
         {
@@ -47,6 +47,17 @@ public class GameParametersSingleton : ScriptableObject
             }
             i++;
         }
+
+        // TODO: REMOVE
+        Debug.Log("REMOVE THIS CODE");
+
+        for (int j = 0; j < 5 - finishedLevelsOnLocation.Count; j++)
+        {
+            finishedLevelsOnLocation.Add(0);
+        }
+
+        //////////////////////////////
+
 
         if (finishedLevelsOnLocation.Count == 0)
             finishedLevelsOnLocation.Add(0);
