@@ -14,6 +14,8 @@ public class Spells : MonoBehaviour
 
     public float freezeDebuffDurationSeconds = 7f;
 
+    [HideInInspector] public float effectMultiplier = 1f;
+
     public Button spell1Button;
     public Button spell2Button;
     public Button spell3Button;
@@ -90,8 +92,8 @@ public class Spells : MonoBehaviour
             EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
             if (enemyDebuff != null)
             {
-                enemyDebuff.SlowDown(stormDurationSeconds * 2f);
-                enemyDebuff.Stun(stormDurationSeconds * 2f);
+                enemyDebuff.SlowDown(stormDurationSeconds * effectMultiplier * 2f);
+                enemyDebuff.Stun(stormDurationSeconds * effectMultiplier * 2f);
                 _enemiesStunned = true;
             }
 
@@ -110,7 +112,7 @@ public class Spells : MonoBehaviour
             _enemiesStunned = false;
         }
 
-        yield return new WaitForSeconds(stormDurationSeconds * 2f);
+        yield return new WaitForSeconds(stormDurationSeconds * effectMultiplier * 2f);
 
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
@@ -137,17 +139,17 @@ public class Spells : MonoBehaviour
             EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
             if (enemyDebuff != null)
             {
-                enemyDebuff.Freeze(freezeDebuffDurationSeconds);
+                enemyDebuff.Freeze(freezeDebuffDurationSeconds * effectMultiplier);
             }
 
             EnemyAnimator enemyAnimator = enemies[i].GetComponent<EnemyAnimator>();
             if (enemyAnimator != null)
             {
-                enemyAnimator.Pause(freezeDebuffDurationSeconds);
+                enemyAnimator.Pause(freezeDebuffDurationSeconds * effectMultiplier);
             }
 
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(7);            
+            health.Sub((int)(7f * effectMultiplier));
         }
     }
 
@@ -161,11 +163,11 @@ public class Spells : MonoBehaviour
             EnemyDebuff enemyDebuff = enemies[i].GetComponent<EnemyDebuff>();
             if (enemyDebuff != null)
             {
-                enemyDebuff.Stun(stormDurationSeconds * 2f);
+                enemyDebuff.Stun(stormDurationSeconds * effectMultiplier * 2f);
             }
 
             Health health = enemies[i].GetComponent<Health>();
-            health.Sub(health.max / 3);
+            health.Sub((int)(health.max / 3f * effectMultiplier));
         }
     }
 

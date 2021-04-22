@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
   - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
   - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
-  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
-  passiveItems: []
+  passiveItems:
+  - {fileID: 11400000, guid: e9d59ad88ceedf04ba8252afefee0b61, type: 2}
   maxActiveItemsCount: 5
   maxPassiveItemsCount: 3

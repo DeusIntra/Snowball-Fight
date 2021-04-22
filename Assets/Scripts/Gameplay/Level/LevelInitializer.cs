@@ -101,6 +101,12 @@ public class LevelInitializer : MonoBehaviour
                     case "Mana Up":
                         ManaUp(effect.value);
                         break;
+                    case "Spell Effect Up":
+                        SpellEffectUp(effect.value);
+                        break;
+                    case "Double Shot Chance":
+                        DoubleShotChance(effect.value);
+                        break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
                         break;
@@ -182,6 +188,18 @@ public class LevelInitializer : MonoBehaviour
             manaGiver.onHitAmount *= value;
             manaGiver.onKillAmount *= value;
         }
+    }
+
+    private void SpellEffectUp(float value)
+    {
+        Spells spells = _player.GetComponent<Spells>();
+        spells.effectMultiplier = value;
+    }
+
+    private void DoubleShotChance(float value)
+    {
+        PlayerShooter shooter = _player.GetComponent<PlayerShooter>();
+        shooter.doubleShotChance = value;
     }
     #endregion
 
