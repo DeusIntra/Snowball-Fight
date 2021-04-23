@@ -3454,6 +3454,14 @@ PrefabInstance:
       propertyPath: losePanel
       value: 
       objectReference: {fileID: 445124672}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: onWinGoldAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: onLoseGoldAmount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level

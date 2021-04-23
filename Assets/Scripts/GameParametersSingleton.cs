@@ -12,6 +12,8 @@ public class GameParametersSingleton : ScriptableObject
     public int currentLocationIndex = -1;
     public int currentLevelIndex = -1;
 
+    public Inventory inventory;
+
     private void OnEnable()
     {
         showTitle = true;
@@ -25,6 +27,7 @@ public class GameParametersSingleton : ScriptableObject
         }
 
         PlayerPrefs.SetInt("gold amount", goldAmount);
+
         PlayerPrefs.Save();
     }
 
@@ -58,11 +61,17 @@ public class GameParametersSingleton : ScriptableObject
 
         //////////////////////////////
 
-
         if (finishedLevelsOnLocation.Count == 0)
             finishedLevelsOnLocation.Add(0);
 
-        goldAmount = PlayerPrefs.GetInt("gold amount");
+        if (PlayerPrefs.HasKey("game loaded before"))
+            goldAmount = PlayerPrefs.GetInt("gold amount");
+        else
+        {
+            PlayerPrefs.SetInt("game loaded before", 0);
+            goldAmount = 50;
+            PlayerPrefs.SetInt("gold amount", goldAmount);
+        }
     }
 
     public void ResetProgress()
@@ -71,4 +80,5 @@ public class GameParametersSingleton : ScriptableObject
         finishedLevelsOnLocation.Add(0);
         PlayerPrefs.DeleteAll();
     }
+
 }

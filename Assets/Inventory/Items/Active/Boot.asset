@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Boot
   m_EditorClassIdentifier: 
   name: Boot
-  price: 10
+  price: 12
   prefab: {fileID: 4718087281999048757, guid: 2e7f3231044c5bd4a82520021842614b, type: 3}
   effects: []
-  damage: 0
   throwablePrefab: {fileID: 3277239919051144637, guid: 2b8982a7f24f27c46a5e61fba6fa715f, type: 3}

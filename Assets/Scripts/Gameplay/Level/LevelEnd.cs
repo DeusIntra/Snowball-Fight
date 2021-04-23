@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LevelEnd : MonoBehaviour
 {
+    public int onWinGoldAmount;
+    public int onLoseGoldAmount;
+
     public float waitTimeBeforeWin = 1f;
     public float waitTimeBeforeLose = 1f;
     public int spinsAmount = 5;
@@ -57,7 +60,10 @@ public class LevelEnd : MonoBehaviour
 
         Debug.Log("TODO: open location after finishing level 6");
 
-        SaveProgress();
+        parameters.goldAmount += onWinGoldAmount;
+
+        OpenLevel();
+        parameters.Save();
     }
 
     private IEnumerator LoseCoroutine()
@@ -82,17 +88,16 @@ public class LevelEnd : MonoBehaviour
         // TODO: animations and score
         losePanel.SetActive(true);
 
-        yield return null;
+        parameters.goldAmount += onLoseGoldAmount;
+        parameters.Save();
     }
 
-    private void SaveProgress()
+    private void OpenLevel()
     {
         int location = parameters.currentLocationIndex;
         int level = parameters.currentLevelIndex;
 
         parameters.finishedLevelsOnLocation[location] = level + 1;
-        
-        parameters.Save();
     }
 
     private void DisableUI()

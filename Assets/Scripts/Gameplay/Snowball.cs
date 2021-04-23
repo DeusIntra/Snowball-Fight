@@ -6,6 +6,8 @@ public class Snowball : MonoBehaviour
     public float lifetime = 2f;
     public int damage = 1;
     public float destructionChance = 0.1f;
+
+    public bool canBreak = true;
     
     public ParticleSystem particlesPrefab;
     public AudioClip breakSound;
@@ -29,7 +31,7 @@ public class Snowball : MonoBehaviour
             if (Random.Range(0f, 1f) < p)
             {
                 otherSnowball.Break();
-                Break();
+                if (canBreak) Break();
             }
         }
         else

@@ -69,17 +69,20 @@ public class BuyItemButton : MonoBehaviour
 
     public void Buy()
     {
-        if (_parameters.goldAmount <= item.price) return;
+        if (_parameters.goldAmount < item.price) return;
 
         _parameters.goldAmount -= item.price;
         _moneyAmountText.text = _parameters.goldAmount.ToString();
 
-        if (counter == 0)
+        if (badge != null)
         {
-            badge.gameObject.SetActive(true);
+            if (counter == 0)
+            {
+                badge.gameObject.SetActive(true);
+            }
+            counter++;
+            badge.text = counter.ToString();
         }
-        counter++;
-        badge.text = counter.ToString();
 
         _inventory.StashItem(item);
 

@@ -130,7 +130,7 @@ MonoBehaviour:
   damage: 4
   destructionChance: 0.25
   particlesPrefab: {fileID: 1474407315411643914, guid: 2b7ce2a1074f70549b705f3dacdc764e, type: 3}
-  breakSound: {fileID: 8300000, guid: ecf38209bf465804f888d3b29de31f03, type: 3}
+  breakSound: {fileID: 8300000, guid: 438c73f0220707a49a560a59f7d350e5, type: 3}
 --- !u!82 &1987853269668391477
 AudioSource:
   m_ObjectHideFlags: 0
