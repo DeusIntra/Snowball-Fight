@@ -7,11 +7,14 @@ public class EquipPanel : MonoBehaviour
     public float scaleMultiplier = 0.5f;
     public GameObject EquipButtonPrefab;
     public Inventory inventory;
+    public ItemSlotGroup itemSlotGroup;
 
-    public ItemData.Type type;
+    private ItemData.Type _type;
     
-    void Start()
+    private void Start()
     {
+        _type = itemSlotGroup.type;
+        itemSlotGroup.equipPanel = this;
         UpdateStash();
     }
 
@@ -22,7 +25,7 @@ public class EquipPanel : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        switch (type)
+        switch (_type)
         {
             case ItemData.Type.Active:
                 FillPanel(inventory.stashedActiveItems);
@@ -34,7 +37,6 @@ public class EquipPanel : MonoBehaviour
                 Debug.LogError("wat");
                 break;
         }
-
     }
 
     private void FillPanel(IList list)
@@ -44,6 +46,8 @@ public class EquipPanel : MonoBehaviour
             GameObject equipButtonGO = Instantiate(EquipButtonPrefab, transform);
             EquipButton equipButton = equipButtonGO.GetComponent<EquipButton>();
             equipButton.item = item;
+            equipButton.type = _type;
+            equipButton.inventory = inventory;
             equipButton.scaleMultiplier = scaleMultiplier;
             equipButton.SpawnItem();
         }

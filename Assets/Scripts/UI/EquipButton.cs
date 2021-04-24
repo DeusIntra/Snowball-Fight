@@ -7,6 +7,8 @@ public class EquipButton : MonoBehaviour
     public float scaleMultiplier = 1f;
     public float itemOffsetZ = -10f;
     public float itemYRotation = 100f;
+    public ItemData.Type type;
+    public Inventory inventory;
 
     public void SpawnItem()
     {
@@ -17,5 +19,11 @@ public class EquipButton : MonoBehaviour
 
         Rotator rotator = itemGO.AddComponent<Rotator>();
         rotator.rotation = new Vector3(0, itemYRotation, 0);
+    }
+
+    public void Equip()
+    {
+        EquipPanel parent = transform.parent.GetComponent<EquipPanel>();
+        parent.itemSlotGroup.Equip(item);
     }
 }

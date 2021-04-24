@@ -42,9 +42,32 @@ public class Inventory : ScriptableObject
         }            
     }
 
-    public void EquipItem(Item item)
+    public void Equip(Item item)
     {
+        if (item is ActiveItem)
+        {
+            stashedActiveItems.Remove((ActiveItem)item);
+            activeItemsEquipped.Add((ActiveItem)item);
+        }
+        else
+        {
+            stashedPassiveItems.Remove((PassiveItem)item);
+            passiveItemsEquipped.Add((PassiveItem)item);
+        }
+    }
 
+    public void Unquip(Item item)
+    {
+        if (item is ActiveItem)
+        {
+            activeItemsEquipped.Remove((ActiveItem)item);
+            stashedActiveItems.Add((ActiveItem)item);
+        }
+        else
+        {
+            passiveItemsEquipped.Remove((PassiveItem)item);
+            stashedPassiveItems.Add((PassiveItem)item);
+        }
     }
 
     public List<ItemData> GetItemData()
