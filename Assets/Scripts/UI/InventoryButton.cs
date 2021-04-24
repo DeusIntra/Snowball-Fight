@@ -38,7 +38,7 @@ public class InventoryButton : MonoBehaviour
     {
         if (inventoryPanel.childCount == 0)
         {
-            List<ActiveItem> activeItems = inventory.activeItems;
+            List<ActiveItem> activeItems = inventory.activeItemsEquipped;
             for (int i = 0; i < activeItems.Count; i++)
             {
                 GameObject go = Instantiate(itemButtonPrefab, inventoryPanel);

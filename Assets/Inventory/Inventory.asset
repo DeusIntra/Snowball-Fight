@@ -13,17 +13,34 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   stashedActiveItems:
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
   - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
   - {fileID: 11400000, guid: 68342abac14aaa54a98695b9b4ad1b60, type: 2}
+  - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
   - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
-  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
-  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
-  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
-  - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
-  - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
-  stashedPassiveItems: []
-  activeItems: []
-  passiveItems:
+  stashedPassiveItems:
   - {fileID: 11400000, guid: e9d59ad88ceedf04ba8252afefee0b61, type: 2}
+  activeItemsEquipped: []
+  passiveItemsEquipped: []
   maxActiveItemsCount: 5
   maxPassiveItemsCount: 3
+  activeItemsList:
+  - {fileID: 11400000, guid: 30229d30b532aa24aa86b4b9d3ff479d, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: 68342abac14aaa54a98695b9b4ad1b60, type: 2}
+  - {fileID: 11400000, guid: 9a64927db62994b4396fac992011b639, type: 2}
+  - {fileID: 11400000, guid: c482e2962c0be61488430207e188cb3a, type: 2}
+  - {fileID: 11400000, guid: 1318677f549edd84a8c75187bf268234, type: 2}
+  - {fileID: 11400000, guid: 25b0cb5034a2d24498c568b1261e47f1, type: 2}
+  - {fileID: 11400000, guid: 46597d269db8f644eadc05aee40e72fd, type: 2}
+  passiveItemsList:
+  - {fileID: 11400000, guid: e9d59ad88ceedf04ba8252afefee0b61, type: 2}
+  - {fileID: 11400000, guid: bd31e2ec25c75b44485d04eb44fa67f4, type: 2}
+  - {fileID: 11400000, guid: f865c2fefa7700343aa4224dba731fb2, type: 2}
+  - {fileID: 11400000, guid: 3f7daf804aec41147919aa0fdd0d5892, type: 2}
+  - {fileID: 11400000, guid: 59e4502f1db15d640a274e5b84743b56, type: 2}
+  - {fileID: 11400000, guid: 778979d6853ea2d4a923001384ac33df, type: 2}
+  - {fileID: 11400000, guid: 1b5d992fd9c7a434d8541f3ec5a455c7, type: 2}
+  - {fileID: 11400000, guid: 9ab15443f1a26c04e82484e9118bcbe6, type: 2}
+  - {fileID: 11400000, guid: 267a9a1e9b565624bb35c301366c25f1, type: 2}

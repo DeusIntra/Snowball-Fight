@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 [CreateAssetMenu(fileName = "Game Parameters Singleton", menuName = "ScriptableObjects/Game Parameters Singleton", order = 8)]
 public class GameParametersSingleton : ScriptableObject
@@ -27,6 +30,16 @@ public class GameParametersSingleton : ScriptableObject
         }
 
         PlayerPrefs.SetInt("gold amount", goldAmount);
+
+        List<ItemData> itemData = inventory.GetItemData();
+
+        XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<ItemData>));
+
+        using (StringWriter stringWriter = new StringWriter())
+        {
+            xmlSerializer.Serialize(stringWriter, itemData);
+            PlayerPrefs.SetString("item data", stringWriter.ToString());
+        }
 
         PlayerPrefs.Save();
     }
@@ -71,6 +84,21 @@ public class GameParametersSingleton : ScriptableObject
             PlayerPrefs.SetInt("game loaded before", 0);
             goldAmount = 50;
             PlayerPrefs.SetInt("gold amount", goldAmount);
+        }
+
+        if (PlayerPrefs.HasKey("item data"))
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<ItemData>));
+
+            string xml = PlayerPrefs.GetString("item data");
+            List<ItemData> itemData;
+
+            using (StringReader stringReader = new StringReader(xml))
+            {
+                itemData = (List<ItemData>)xmlSerializer.Deserialize(stringReader);
+            }
+
+            inventory.SetStashedItems(itemData);
         }
     }
 

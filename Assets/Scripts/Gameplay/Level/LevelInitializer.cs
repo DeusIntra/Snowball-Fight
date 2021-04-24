@@ -71,7 +71,7 @@ public class LevelInitializer : MonoBehaviour
         #endregion
 
         #region Passive items buffs
-        foreach (PassiveItem passiveItem in inventory.passiveItems)
+        foreach (PassiveItem passiveItem in inventory.passiveItemsEquipped)
         {
             if (passiveItem.effects.Count == 0)
             {

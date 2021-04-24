@@ -38,7 +38,7 @@ public class ActiveItemButton : MonoBehaviour
             shooter.nextSnowballPrefab = ((ThrowableItem)activeItem).throwablePrefab;
         }
 
-        inventory.activeItems.RemoveAt(itemIndex);
+        inventory.activeItemsEquipped.RemoveAt(itemIndex);
 
         inventoryButton.OnPress();
 
