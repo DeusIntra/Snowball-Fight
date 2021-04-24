@@ -9,14 +9,16 @@ public class BuyItemButton : MonoBehaviour
     public TextMeshProUGUI price;
     public TextMeshProUGUI badge;
 
+
+    public float itemOffsetZ = -10f;
     public float itemYRotation = 100f;
 
     private Inventory _inventory;
     private GameParametersSingleton _parameters;
 
     private TextMeshProUGUI _moneyAmountText;
+    private EquipPanel _equipPanel;
 
-    private float itemOffsetZ = -10f;
 
     private int counter;
 
@@ -26,10 +28,11 @@ public class BuyItemButton : MonoBehaviour
         _inventory = menu.inventory;
         _parameters = menu.parameters;
 
-        //_badgeText = badge.GetComponentInChildren<TextMeshProUGUI>();
-
         ShopPanel shopPanel = GetComponentInParent<ShopPanel>();
         _moneyAmountText = shopPanel.moneyText;
+
+        ShopTabContent shopTabContent = GetComponentInParent<ShopTabContent>();
+        _equipPanel = shopTabContent.equipPanel;
     }
 
     private void Start()
@@ -87,5 +90,7 @@ public class BuyItemButton : MonoBehaviour
         _inventory.StashItem(item);
 
         _parameters.Save();
+
+        _equipPanel.UpdateStash();
     }
 }

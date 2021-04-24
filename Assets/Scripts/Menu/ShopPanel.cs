@@ -12,9 +12,4 @@ public class ShopPanel : MonoBehaviour
     {
         moneyText.text = parameters.goldAmount.ToString();
     }
-
-    public void Buy(Item item)
-    {
-        Debug.Log("Not implemented yet");
-    }
 }

@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class EquipButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Item item;
 
-    // Update is called once per frame
-    void Update()
+    public float scaleMultiplier = 1f;
+    public float itemOffsetZ = -10f;
+    public float itemYRotation = 100f;
+
+    public void SpawnItem()
     {
-        
+        // create 3d item
+        GameObject itemGO = Instantiate(item.prefab, transform);
+        itemGO.transform.position += new Vector3(0, 0, itemOffsetZ);
+        itemGO.transform.localScale *= scaleMultiplier;
+
+        Rotator rotator = itemGO.AddComponent<Rotator>();
+        rotator.rotation = new Vector3(0, itemYRotation, 0);
     }
 }
