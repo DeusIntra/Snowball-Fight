@@ -1515,6 +1515,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8200954165326026130, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
   m_PrefabInstance: {fileID: 445124655}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &445124673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5950704257842545897, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 445124655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &445124674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5403118202921579700, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 445124655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &509691599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4998326679312090, guid: 2b519101e10d4a74580d4c86ac9e03e6, type: 3}
@@ -3462,6 +3484,14 @@ PrefabInstance:
       propertyPath: onLoseGoldAmount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: winPanelMoneyText
+      value: 
+      objectReference: {fileID: 445124674}
+    - target: {fileID: 6757219863655331223, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
+      propertyPath: losePanelMoneyText
+      value: 
+      objectReference: {fileID: 445124673}
     - target: {fileID: 6757219864067537706, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: m_Name
       value: Level

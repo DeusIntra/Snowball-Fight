@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class LevelEnd : MonoBehaviour
 {
     public int onWinGoldAmount;
-    public int onLoseGoldAmount;
 
     public float waitTimeBeforeWin = 1f;
     public float waitTimeBeforeLose = 1f;
     public int spinsAmount = 5;
     public float spinTime = 1f;
     public float jumpHeight = 0.5f;
+    [HideInInspector] public int enemyCount;
     public GameObject winPanel;
     public GameObject losePanel;
+    public TextMeshProUGUI winPanelMoneyText;
+    public TextMeshProUGUI losePanelMoneyText;
     public EnablerDisabler disableOnEndGame;
     public GameParametersSingleton parameters;
 
@@ -55,6 +58,7 @@ public class LevelEnd : MonoBehaviour
         // show score
         // TODO: animations and score
         winPanel.SetActive(true);
+        winPanelMoneyText.text = $"you earned ${onWinGoldAmount}";
 
         yield return null;
 
@@ -86,7 +90,10 @@ public class LevelEnd : MonoBehaviour
 
         // show score
         // TODO: animations and score
+        int onLoseGoldAmount = enemyCount - GetComponent<EnemyHolder>().enemies.Count;
+
         losePanel.SetActive(true);
+        losePanelMoneyText.text = $"you earned ${onLoseGoldAmount}";
 
         parameters.goldAmount += onLoseGoldAmount;
         parameters.Save();

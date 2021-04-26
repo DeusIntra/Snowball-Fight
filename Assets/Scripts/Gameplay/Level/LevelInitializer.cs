@@ -68,6 +68,8 @@ public class LevelInitializer : MonoBehaviour
             SpawnEnemies(_levelData.minion1Prefab, _levelData.minion1Count);
         if (_levelData.minion2Count > 0)
             SpawnEnemies(_levelData.minion2Prefab, _levelData.minion2Count);
+
+        GetComponent<LevelEnd>().enemyCount = _enemyCount;
         #endregion
 
         #region Passive items buffs

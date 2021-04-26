@@ -863,13 +863,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17541837d23dc3644ad15e05e9eeb439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onWinGoldAmount: 10
   waitTimeBeforeWin: 1
   waitTimeBeforeLose: 1
   spinsAmount: 3
   spinTime: 1
   jumpHeight: 1.5
+  enemyCount: 0
   winPanel: {fileID: 0}
   losePanel: {fileID: 0}
+  winPanelMoneyText: {fileID: 0}
+  losePanelMoneyText: {fileID: 0}
   disableOnEndGame: {fileID: 114843424}
   parameters: {fileID: 11400000, guid: f118b3802afe57546914829baef35980, type: 2}
 --- !u!1 &6757219864067537706
