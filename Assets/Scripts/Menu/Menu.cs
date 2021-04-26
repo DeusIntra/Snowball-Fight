@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public LevelDataHolder levelDataHolder;
     public GameParametersSingleton parameters;
-    public Inventory inventory; // used in BuyItemButton.cs
+    public Inventory inventory;
 
     public GameObject titlePanel;
     public List<AnimatedObject> menuButtons;
@@ -19,6 +19,7 @@ public class Menu : MonoBehaviour
     public List<LevelDataObject> location3;
     public List<LevelDataObject> location4;
 
+    private int _savedLocationIndex = -1;
     private List<List<LevelDataObject>> locations;
 
     private void Awake()
@@ -49,21 +50,18 @@ public class Menu : MonoBehaviour
         Debug.Log("TODO: open or close location buttons");
     }
 
-    public void LoadLevel(int locationIndex)
+    public void ChooseLocationIndex(int locationIndex)
     {
-        Debug.Log("TODO: Async");
-        var levelsOpened = parameters.finishedLevelsOnLocation;
-        int levelIndex = levelsOpened[locationIndex];
-
-        if (levelIndex == 10)
+        if (inventory.IsEmpty) LoadLevel(locationIndex);
+        else
         {
-            levelIndex = Random.Range(5, 10);
+            _savedLocationIndex = locationIndex;
         }
+    }
 
-        levelDataHolder.levelData = locations[locationIndex][levelIndex];
-        parameters.currentLocationIndex = locationIndex;
-        parameters.currentLevelIndex = levelIndex;
-        SceneManager.LoadScene(scenes[locationIndex]);
+    public void LoadLevel()
+    {
+        LoadLevel(_savedLocationIndex);
     }
 
     public void HideTitleAndShowButtons()
@@ -83,5 +81,23 @@ public class Menu : MonoBehaviour
     public void ResetPrefs()
     {
         parameters.ResetProgress();
+    }
+
+    private void LoadLevel(int locationIndex)
+    {
+        Debug.Log("TODO: Async");
+
+        var levelsOpened = parameters.finishedLevelsOnLocation;
+        int levelIndex = levelsOpened[locationIndex];
+
+        if (levelIndex == 10)
+        {
+            levelIndex = Random.Range(5, 10);
+        }
+
+        levelDataHolder.levelData = locations[locationIndex][levelIndex];
+        parameters.currentLocationIndex = locationIndex;
+        parameters.currentLevelIndex = levelIndex;
+        SceneManager.LoadScene(scenes[locationIndex]);
     }
 }

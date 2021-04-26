@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Inventory", menuName = "ScriptableObjects/Inventory", order = 3)]
 public class Inventory : ScriptableObject
 {
-    public List<ActiveItem> stashedActiveItems;
-    public List<PassiveItem> stashedPassiveItems;
+    public List<ActiveItem> activeItemsStashed;
+    public List<PassiveItem> passiveItemsStashed;
 
     public List<ActiveItem> activeItemsEquipped;
     public List<PassiveItem> passiveItemsEquipped;
@@ -17,10 +17,23 @@ public class Inventory : ScriptableObject
     public List<ActiveItem> activeItemsList;
     public List<PassiveItem> passiveItemsList;
 
+    public bool IsEmpty
+    {
+        get
+        {
+            bool empty =
+                activeItemsStashed.Count == 0 &&
+                passiveItemsStashed.Count == 0 &&
+                activeItemsEquipped.Count == 0 &&
+                passiveItemsEquipped.Count == 0;
+            return empty;
+        }
+    }
+
     public void OnEnable()
     {
-        if (stashedPassiveItems is null) stashedPassiveItems = new List<PassiveItem>();
-        if (stashedActiveItems is null) stashedActiveItems = new List<ActiveItem>();
+        if (passiveItemsStashed is null) passiveItemsStashed = new List<PassiveItem>();
+        if (activeItemsStashed is null) activeItemsStashed = new List<ActiveItem>();
         if (activeItemsEquipped is null) activeItemsEquipped = new List<ActiveItem>();
         if (passiveItemsEquipped is null) passiveItemsEquipped = new List<PassiveItem>();
     }
@@ -34,11 +47,11 @@ public class Inventory : ScriptableObject
     {
         if (item is ActiveItem)
         {
-            stashedActiveItems.Add((ActiveItem)item);
+            activeItemsStashed.Add((ActiveItem)item);
         }
         else if (item is PassiveItem)
         {
-            stashedPassiveItems.Add((PassiveItem)item);
+            passiveItemsStashed.Add((PassiveItem)item);
         }            
     }
 
@@ -46,12 +59,12 @@ public class Inventory : ScriptableObject
     {
         if (item is ActiveItem)
         {
-            stashedActiveItems.Remove((ActiveItem)item);
+            activeItemsStashed.Remove((ActiveItem)item);
             activeItemsEquipped.Add((ActiveItem)item);
         }
         else
         {
-            stashedPassiveItems.Remove((PassiveItem)item);
+            passiveItemsStashed.Remove((PassiveItem)item);
             passiveItemsEquipped.Add((PassiveItem)item);
         }
     }
@@ -61,12 +74,12 @@ public class Inventory : ScriptableObject
         if (item is ActiveItem)
         {
             activeItemsEquipped.Remove((ActiveItem)item);
-            stashedActiveItems.Add((ActiveItem)item);
+            activeItemsStashed.Add((ActiveItem)item);
         }
         else
         {
             passiveItemsEquipped.Remove((PassiveItem)item);
-            stashedPassiveItems.Add((PassiveItem)item);
+            passiveItemsStashed.Add((PassiveItem)item);
         }
     }
 
@@ -74,12 +87,12 @@ public class Inventory : ScriptableObject
     {
         List<ItemData> list = new List<ItemData>();
 
-        foreach (Item item in stashedActiveItems)
+        foreach (Item item in activeItemsStashed)
         {
             list.Add(new ItemData(item.name, ItemData.Type.Active));
         }
 
-        foreach (Item item in stashedPassiveItems)
+        foreach (Item item in passiveItemsStashed)
         {
             list.Add(new ItemData(item.name, ItemData.Type.Passive));
         }
@@ -89,16 +102,16 @@ public class Inventory : ScriptableObject
 
     public void SetStashedItems(List<ItemData> listOfItems)
     {
-        stashedActiveItems = new List<ActiveItem>();
-        stashedPassiveItems = new List<PassiveItem>();
+        activeItemsStashed = new List<ActiveItem>();
+        passiveItemsStashed = new List<PassiveItem>();
 
         foreach(ItemData itemData in listOfItems)
         {
             Item item = GetItem(itemData);
             if (itemData.type == ItemData.Type.Active)
-                stashedActiveItems.Add((ActiveItem)item);
+                activeItemsStashed.Add((ActiveItem)item);
             else
-                stashedPassiveItems.Add((PassiveItem)item);
+                passiveItemsStashed.Add((PassiveItem)item);
         }
     }
 

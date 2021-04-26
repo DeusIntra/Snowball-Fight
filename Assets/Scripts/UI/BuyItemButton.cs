@@ -40,14 +40,14 @@ public class BuyItemButton : MonoBehaviour
         counter = 0;
         if (item is ActiveItem)
         {
-            foreach (ActiveItem stashedItem in _inventory.stashedActiveItems)
+            foreach (ActiveItem stashedItem in _inventory.activeItemsStashed)
             {
                 if (item == stashedItem) counter++;
             }
         }
         else if (item is PassiveItem)
         {
-            foreach (PassiveItem stashedItem in _inventory.stashedPassiveItems)
+            foreach (PassiveItem stashedItem in _inventory.passiveItemsStashed)
             {
                 if (item == stashedItem) counter++;
             }

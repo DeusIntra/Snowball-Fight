@@ -28,10 +28,10 @@ public class EquipPanel : MonoBehaviour
         switch (_type)
         {
             case ItemData.Type.Active:
-                FillPanel(inventory.stashedActiveItems);
+                FillPanel(inventory.activeItemsStashed);
                 break;
             case ItemData.Type.Passive:
-                FillPanel(inventory.stashedPassiveItems);
+                FillPanel(inventory.passiveItemsStashed);
                 break;
             default:
                 Debug.LogError("wat");
