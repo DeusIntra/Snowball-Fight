@@ -1737,7 +1737,7 @@ MonoBehaviour:
   disableOnOpen: {fileID: 5593218698770486378}
   inventoryPanel: {fileID: 1524617751}
   itemButtonPrefab: {fileID: 209769102674558734, guid: 6ed595ac77e241b4d81788835244f48e, type: 3}
-  inventory: {fileID: 11400000, guid: 381a540588d07f34cbb37a339fc1f5fd, type: 2}
+  parameters: {fileID: 11400000, guid: f118b3802afe57546914829baef35980, type: 2}
 --- !u!1 &1855538652738108757
 GameObject:
   m_ObjectHideFlags: 0

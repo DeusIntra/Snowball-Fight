@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering;
 
-public class ScreenshotHandler : MonoBehaviour 
+public class ScreenshotHandler : MonoBehaviour
 {
+    [SerializeField] private Camera _camera;
 
     private static ScreenshotHandler instance;
-
-    private Camera _camera;
     private bool _takeScreenshotOnNextFrame;
 
     void OnEnable()
@@ -25,7 +24,7 @@ public class ScreenshotHandler : MonoBehaviour
     private void Awake() 
     {
         instance = this;
-        _camera = gameObject.GetComponent<Camera>();
+        if (_camera == null) _camera = GetComponent<Camera>();
         Debug.Log("screnshot camera");
     }
 

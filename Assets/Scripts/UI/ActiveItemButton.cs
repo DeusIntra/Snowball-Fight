@@ -4,9 +4,15 @@ public class ActiveItemButton : MonoBehaviour
 {
     public ActiveItem activeItem;
     public int itemIndex;
-    public Inventory inventory;
+    public GameParametersSingleton parameters;
 
+    private Inventory _inventory;
     private InventoryButton inventoryButton;
+
+    private void OnEnable()
+    {
+        _inventory = parameters.inventory;
+    }
 
     public void UseItem()
     {
@@ -38,7 +44,8 @@ public class ActiveItemButton : MonoBehaviour
             shooter.nextSnowballPrefab = ((ThrowableItem)activeItem).throwablePrefab;
         }
 
-        inventory.activeItemsEquipped.RemoveAt(itemIndex);
+        _inventory.activeItemsEquipped.RemoveAt(itemIndex);
+        parameters.Save();
 
         inventoryButton.OnPress();
 

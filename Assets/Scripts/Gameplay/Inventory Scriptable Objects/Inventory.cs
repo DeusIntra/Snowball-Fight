@@ -97,6 +97,16 @@ public class Inventory : ScriptableObject
             list.Add(new ItemData(item.name, ItemData.Type.Passive));
         }
 
+        foreach (Item item in activeItemsEquipped)
+        {
+            list.Add(new ItemData(item.name, ItemData.Type.Active));
+        }
+
+        foreach (Item item in passiveItemsEquipped)
+        {
+            list.Add(new ItemData(item.name, ItemData.Type.Passive));
+        }
+
         return list;
     }
 

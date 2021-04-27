@@ -43,7 +43,6 @@ public class LevelInitializer : MonoBehaviour
         _enemyHolder = GetComponent<EnemyHolder>();
     }
 
-
     private void Start()
     {
         #region Enemy spawning

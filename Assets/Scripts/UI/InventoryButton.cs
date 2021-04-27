@@ -9,7 +9,14 @@ public class InventoryButton : MonoBehaviour
     public EnablerDisabler disableOnOpen;
     public Transform inventoryPanel;
     public GameObject itemButtonPrefab;
-    public Inventory inventory;
+    public GameParametersSingleton parameters;
+
+    private Inventory _inventory;
+
+    private void Awake()
+    {
+        _inventory = parameters.inventory;
+    }
 
     public bool isOpen { get; private set; } = false;
 
@@ -38,7 +45,7 @@ public class InventoryButton : MonoBehaviour
     {
         if (inventoryPanel.childCount == 0)
         {
-            List<ActiveItem> activeItems = inventory.activeItemsEquipped;
+            List<ActiveItem> activeItems = _inventory.activeItemsEquipped;
             for (int i = 0; i < activeItems.Count; i++)
             {
                 GameObject go = Instantiate(itemButtonPrefab, inventoryPanel);
@@ -46,7 +53,7 @@ public class InventoryButton : MonoBehaviour
 
                 itemButton.activeItem = activeItems[i];
                 itemButton.itemIndex = i;
-                itemButton.inventory = inventory;
+                itemButton.parameters = parameters;
             }
         }
     }
