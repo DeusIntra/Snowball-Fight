@@ -39,7 +39,7 @@ public class ItemSlotGroup : MonoBehaviour
         if (equippedCount <= 0) return;
         equippedCount--;
 
-        inventory.Unquip(item);
+        inventory.Unequip(item);
 
         equipPanel.UpdateStash();        
     }

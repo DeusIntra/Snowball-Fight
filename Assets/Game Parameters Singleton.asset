@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Game Parameters Singleton
   m_EditorClassIdentifier: 
   showTitle: 0
-  goldAmount: 109486
-  finishedLevelsOnLocation: 0a00000000000000000000000000000000000000
+  goldAmount: 48150
+  finishedLevelsOnLocation: 0000000000000000000000000000000000000000
   currentLocationIndex: 0
-  currentLevelIndex: 9
+  currentLevelIndex: 2
   inventory: {fileID: 11400000, guid: 381a540588d07f34cbb37a339fc1f5fd, type: 2}

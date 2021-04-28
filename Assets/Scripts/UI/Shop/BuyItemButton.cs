@@ -13,6 +13,9 @@ public class BuyItemButton : MonoBehaviour
     public float itemOffsetZ = -10f;
     public float itemYRotation = 100f;
 
+    public delegate void onItemBought();
+    public event onItemBought OnItemBought;
+
     private Inventory _inventory;
     private GameParametersSingleton _parameters;
 
@@ -93,5 +96,7 @@ public class BuyItemButton : MonoBehaviour
         _parameters.Save();
 
         _equipPanel.UpdateStash();
+
+        OnItemBought?.Invoke();        
     }
 }

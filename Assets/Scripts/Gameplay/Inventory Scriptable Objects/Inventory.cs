@@ -38,9 +38,12 @@ public class Inventory : ScriptableObject
         if (passiveItemsEquipped is null) passiveItemsEquipped = new List<PassiveItem>();
     }
 
-    public void ClearPassiveItems()
+    public void UnequipPassiveItems()
     {
-        passiveItemsEquipped = new List<PassiveItem>();
+        for (int i = passiveItemsEquipped.Count -1; i >= 0; i--)
+        {
+            Unequip(passiveItemsEquipped[i]);
+        }
     }
 
     public void StashItem(Item item)
@@ -52,7 +55,10 @@ public class Inventory : ScriptableObject
         else if (item is PassiveItem)
         {
             passiveItemsStashed.Add((PassiveItem)item);
-        }            
+        }
+
+        Debug.Log(item.GetType().FullName);
+        
     }
 
     public void Equip(Item item)
@@ -69,7 +75,7 @@ public class Inventory : ScriptableObject
         }
     }
 
-    public void Unquip(Item item)
+    public void Unequip(Item item)
     {
         if (item is ActiveItem)
         {

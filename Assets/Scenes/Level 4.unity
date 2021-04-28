@@ -1391,10 +1391,6 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 2433762165267994096, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
-      propertyPath: max
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: spellBar
       value: 

@@ -116,8 +116,7 @@ public class LevelInitializer : MonoBehaviour
 
         }
 
-        //inventory.ClearPassiveItems();
-        Debug.Log("TODO: uncomment me");
+        inventory.UnequipPassiveItems();
         #endregion
 
         StartCoroutine(CountdownCoroutine());
