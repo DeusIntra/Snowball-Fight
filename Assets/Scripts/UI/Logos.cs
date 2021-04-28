@@ -19,6 +19,7 @@ public class Logos : MonoBehaviour
     private IEnumerator ShowLogosCoroutine()
     {
         Image image = GetComponent<Image>();
+        image.enabled = true;
         float t;
         foreach (var logo in logos)
         {
@@ -42,10 +43,10 @@ public class Logos : MonoBehaviour
         t = 0;
         while (true)
         {
-            if (t >= 1) break;
+            if (t / time * 2 >= 1) break;
 
-            float x = Mathf.Lerp(0, 1, t / time);
-            image.color = new Color(1, 1, 1, x);
+            float x = Mathf.Lerp(1, 0, t / time * 2);
+            image.color = new Color(0, 0, 0, x);
 
             t += Time.deltaTime;
             yield return null;
