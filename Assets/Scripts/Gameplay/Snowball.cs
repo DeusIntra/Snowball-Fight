@@ -12,6 +12,7 @@ public class Snowball : MonoBehaviour
     public ParticleSystem particlesPrefab;
     public AudioClip breakSound;
 
+    private bool isBroken = false;
     private AudioSource _audioSource;
     private MeshRenderer _meshRenderer;
 
@@ -42,6 +43,9 @@ public class Snowball : MonoBehaviour
 
     public void Break()
     {
+        if (isBroken) return;
+        isBroken = true;
+
         Instantiate(particlesPrefab, transform.position, particlesPrefab.transform.rotation);
 
         if (_audioSource != null)

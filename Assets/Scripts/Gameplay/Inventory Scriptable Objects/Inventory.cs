@@ -56,8 +56,6 @@ public class Inventory : ScriptableObject
         {
             passiveItemsStashed.Add((PassiveItem)item);
         }
-
-        Debug.Log(item.GetType().FullName);
         
     }
 
