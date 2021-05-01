@@ -25,7 +25,7 @@ public class EnemyShooter : MonoBehaviour
     private EnemyAnimator _enemyAnimator;
     private Transform _target;
 
-    private const float hack = 0.55f;
+    private const float hack = 0.57f;
 
     private void Awake()
     {
