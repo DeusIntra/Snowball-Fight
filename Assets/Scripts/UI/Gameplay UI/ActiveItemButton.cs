@@ -5,19 +5,22 @@ public class ActiveItemButton : MonoBehaviour
     public ActiveItem activeItem;
     public int itemIndex;
     public GameParametersSingleton parameters;
+    public float itemOffsetZ = -500;
+    public float scaleMultiplier = 1f;
+    public float itemYRotation = 100f;
 
-    private InventoryButton inventoryButton;
+    [HideInInspector] public InventoryButton inventoryButton;
+    private bool spawned = false;
 
     public void UseItem()
     {
-        Inventory inventory = parameters.inventory;
-        inventoryButton = transform.parent.parent.GetComponentInChildren<InventoryButton>();
-
         if (inventoryButton == null)
         {
-            Debug.LogError("Inventory button was not found in hierarchy");
+            Debug.LogError("Inventory button was not found");
             return;
         }
+
+        Inventory inventory = parameters.inventory;
 
         foreach (ItemEffect effect in activeItem.effects)
         {
@@ -48,6 +51,25 @@ public class ActiveItemButton : MonoBehaviour
         {
             Destroy(button.gameObject);
         }
+    }
+
+    public void SpawnItem()
+    {
+        if (spawned) return;
+        spawned = true;
+
+        GameObject itemGO = Instantiate(activeItem.prefab, transform);
+        itemGO.transform.position += new Vector3(0, 0, itemOffsetZ);
+        itemGO.transform.localScale *= scaleMultiplier;
+        GameObjectUtil.IterateChildren(itemGO, SetUILayer, true);
+
+        Rotator rotator = itemGO.AddComponent<Rotator>();
+        rotator.rotation = new Vector3(0, itemYRotation, 0);
+    }
+
+    private void SetUILayer(GameObject obj)
+    {
+        obj.layer = 5;
     }
 
     #region Active effects

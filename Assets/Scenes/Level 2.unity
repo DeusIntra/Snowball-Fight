@@ -579,6 +579,7 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 497909029}
+  - {fileID: 1739071926}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -1728,7 +1729,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[0]
@@ -1761,11 +1762,11 @@ PrefabInstance:
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 1586202486}
+      objectReference: {fileID: 624445000}
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1586202484}
+      objectReference: {fileID: 0}
     - target: {fileID: 114843424, guid: 6e303bd5ea9ede34780c996b00c30bf7, type: 3}
       propertyPath: gameObjects.Array.data[9]
       value: 
@@ -2078,7 +2079,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3136350147627999202, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_Name
-      value: UI Camera
+      value: UI Camera Perspective
       objectReference: {fileID: 0}
     - target: {fileID: 3136350147627999214, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
       propertyPath: m_RootOrder
@@ -2137,6 +2138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c487e35c03cff4ab19c37e71ea9103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &624445000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5057761693984440926, guid: 13148a596caa85e4ab3d2eccbebad9c8, type: 3}
+  m_PrefabInstance: {fileID: 624444998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &646160179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5327,6 +5333,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750229036844788, guid: 4c1686a5131ac8b45bfe913f509289c0, type: 3}
   m_PrefabInstance: {fileID: 1719941912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1739071926 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3622793253368787165, guid: 26ffad3fbd8fc1c4db8a2057b72142ab, type: 3}
+  m_PrefabInstance: {fileID: 1586202481}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1835719444
 PrefabInstance:

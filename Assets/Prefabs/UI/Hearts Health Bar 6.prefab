@@ -99,10 +99,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[5]
       value: 
       objectReference: {fileID: 3972496323807599047}
-    - target: {fileID: 1801597475078033399, guid: ee7018e910e48df4c9cec33afd0c6b4e, type: 3}
-      propertyPath: randomAtStart
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3662166460187949526, guid: ee7018e910e48df4c9cec33afd0c6b4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.575

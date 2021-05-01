@@ -54,6 +54,8 @@ public class InventoryButton : MonoBehaviour
                 itemButton.activeItem = activeItems[i];
                 itemButton.itemIndex = i;
                 itemButton.parameters = parameters;
+                itemButton.inventoryButton = this;
+                itemButton.SpawnItem();
             }
         }
     }
