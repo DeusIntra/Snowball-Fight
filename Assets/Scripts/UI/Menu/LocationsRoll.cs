@@ -36,7 +36,7 @@ public class LocationsRoll : MonoBehaviour
         float num = _locations.Count;
         float x;
         if (num % 2 == 0)
-            x = (width + spacing) / 2 + (num / 2 - 1) * width;
+            x = (width + spacing) / 2 + (num / 2 - 1) * (width + spacing);
         else
             x = (num - 1) / 2 * (width + spacing);
 

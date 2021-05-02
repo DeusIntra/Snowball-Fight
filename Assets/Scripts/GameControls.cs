@@ -98,18 +98,18 @@ public class @GameControls : IInputActionCollection, IDisposable
             ""id"": ""83616197-8545-4577-9007-6fbb4f5e270e"",
             ""actions"": [
                 {
-                    ""name"": ""Pointer Position"",
-                    ""type"": ""Value"",
-                    ""id"": ""68bc1a9a-9554-49f9-a1c4-7262acb8c00b"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Pointer Press"",
-                    ""type"": ""Button"",
+                    ""name"": ""Touch"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""a29697ae-16a8-4fb3-894d-a968bcbb14e5"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Touch Position"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""68bc1a9a-9554-49f9-a1c4-7262acb8c00b"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -117,45 +117,45 @@ public class @GameControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""c2b12fdf-0192-4093-93e8-d9b89b97e9f7"",
-                    ""path"": ""<Mouse>/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pointer Position"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""34e5e55a-cd4c-4db0-a21e-a14b47a4eab6"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""path"": ""<Touchscreen>/primaryTouch/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pointer Position"",
+                    ""action"": ""Touch Position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a2293e00-d05c-4144-a73c-f5ca9c934afd"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""id"": ""94a0d208-8b7c-40a6-8de6-28439334afcc"",
+                    ""path"": ""<Pointer>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pointer Press"",
+                    ""action"": ""Touch Position"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""ba01f961-c610-42d1-8c63-9a6667d70b5a"",
-                    ""path"": ""<Touchscreen>/touch0/tap"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pointer Press"",
+                    ""action"": ""Touch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f059cee9-5b98-41aa-9962-13e3c5bd7fd8"",
+                    ""path"": ""<Pointer>/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Touch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -170,8 +170,8 @@ public class @GameControls : IInputActionCollection, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_PointerPosition = m_Menu.FindAction("Pointer Position", throwIfNotFound: true);
-        m_Menu_PointerPress = m_Menu.FindAction("Pointer Press", throwIfNotFound: true);
+        m_Menu_Touch = m_Menu.FindAction("Touch", throwIfNotFound: true);
+        m_Menu_TouchPosition = m_Menu.FindAction("Touch Position", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -262,14 +262,14 @@ public class @GameControls : IInputActionCollection, IDisposable
     // Menu
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
-    private readonly InputAction m_Menu_PointerPosition;
-    private readonly InputAction m_Menu_PointerPress;
+    private readonly InputAction m_Menu_Touch;
+    private readonly InputAction m_Menu_TouchPosition;
     public struct MenuActions
     {
         private @GameControls m_Wrapper;
         public MenuActions(@GameControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @PointerPosition => m_Wrapper.m_Menu_PointerPosition;
-        public InputAction @PointerPress => m_Wrapper.m_Menu_PointerPress;
+        public InputAction @Touch => m_Wrapper.m_Menu_Touch;
+        public InputAction @TouchPosition => m_Wrapper.m_Menu_TouchPosition;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -279,22 +279,22 @@ public class @GameControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_MenuActionsCallbackInterface != null)
             {
-                @PointerPosition.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPosition;
-                @PointerPosition.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPosition;
-                @PointerPosition.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPosition;
-                @PointerPress.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPress;
-                @PointerPress.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPress;
-                @PointerPress.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPointerPress;
+                @Touch.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
+                @Touch.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
+                @Touch.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
+                @TouchPosition.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
+                @TouchPosition.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @PointerPosition.started += instance.OnPointerPosition;
-                @PointerPosition.performed += instance.OnPointerPosition;
-                @PointerPosition.canceled += instance.OnPointerPosition;
-                @PointerPress.started += instance.OnPointerPress;
-                @PointerPress.performed += instance.OnPointerPress;
-                @PointerPress.canceled += instance.OnPointerPress;
+                @Touch.started += instance.OnTouch;
+                @Touch.performed += instance.OnTouch;
+                @Touch.canceled += instance.OnTouch;
+                @TouchPosition.started += instance.OnTouchPosition;
+                @TouchPosition.performed += instance.OnTouchPosition;
+                @TouchPosition.canceled += instance.OnTouchPosition;
             }
         }
     }
@@ -306,7 +306,7 @@ public class @GameControls : IInputActionCollection, IDisposable
     }
     public interface IMenuActions
     {
-        void OnPointerPosition(InputAction.CallbackContext context);
-        void OnPointerPress(InputAction.CallbackContext context);
+        void OnTouch(InputAction.CallbackContext context);
+        void OnTouchPosition(InputAction.CallbackContext context);
     }
 }
