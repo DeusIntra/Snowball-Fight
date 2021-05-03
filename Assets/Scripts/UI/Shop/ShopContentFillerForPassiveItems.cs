@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopContentFillerForPassiveItems : MonoBehaviour
 {
     public Transform content;
     public BuyItemButton buttonPrefab;
+    public GameObject soldTextPrefab;
     public Inventory inventory;
 
     private List<PassiveItem> _passiveItems;
@@ -27,7 +29,7 @@ public class ShopContentFillerForPassiveItems : MonoBehaviour
     public void UpdateContent()
     {
         FilterItemsWithoutPrefabs();
-        FilterOwnedItems();
+        List<PassiveItem> ownedItems = FilterOwnedItems();
         SortByPriceAsc();
 
         foreach (Transform child in content)
@@ -40,6 +42,13 @@ public class ShopContentFillerForPassiveItems : MonoBehaviour
             BuyItemButton button = Instantiate(buttonPrefab, content);
             button.item = item;
             button.OnItemBought += UpdateContent;
+
+            if (ownedItems.Contains(item))
+            {
+                button.GetComponent<Button>().interactable = false;
+                button.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1f);
+                Instantiate(soldTextPrefab, button.transform);
+            }
         }
     }
 
@@ -74,16 +83,20 @@ public class ShopContentFillerForPassiveItems : MonoBehaviour
         }
     }
 
-    private void FilterOwnedItems()
+    private List<PassiveItem> FilterOwnedItems()
     {
+        var ownedItems = new List<PassiveItem>();
         for (int i = _passiveItems.Count - 1; i >= 0; i--)
         {
             var item = _passiveItems[i];
             if (inventory.passiveItemsStashed.Contains(item) ||
                 inventory.passiveItemsEquipped.Contains(item))
             {
-                _passiveItems.Remove(item);
+                //_passiveItems.Remove(item);
+                ownedItems.Add(item);
             }
         }
+
+        return ownedItems;
     }
 }

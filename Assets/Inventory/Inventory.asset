@@ -18,10 +18,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
   - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
   - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
   passiveItemsStashed: []
   activeItemsEquipped:
   - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
-  - {fileID: 11400000, guid: 68342abac14aaa54a98695b9b4ad1b60, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
+  - {fileID: 11400000, guid: cda149ac7f1f9da44bab89bb097a4ab7, type: 2}
   passiveItemsEquipped: []
   maxActiveItemsCount: 5
   maxPassiveItemsCount: 3

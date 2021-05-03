@@ -67,12 +67,6 @@ public class GameParametersSingleton : ScriptableObject
         if (finishedLevelsOnLocation.Count == 0)
             finishedLevelsOnLocation.Add(0);
 
-        int lastLocationFinished = finishedLevelsOnLocation[finishedLevelsOnLocation.Count - 1];
-        if (lastLocationFinished >= 10)
-        {
-            finishedLevelsOnLocation.Add(0);
-        }
-
         if (PlayerPrefs.HasKey("game loaded before"))
             goldAmount = PlayerPrefs.GetInt("gold amount");
         else

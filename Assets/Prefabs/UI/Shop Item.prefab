@@ -95,6 +95,8 @@ MonoBehaviour:
   itemName: {fileID: 5030415842505646577}
   price: {fileID: 4307862938672569595}
   badge: {fileID: 0}
+  scaleMultiplier: 1
+  itemOffsetZ: -10
   itemYRotation: 100
 --- !u!114 &2215853330896573608
 MonoBehaviour:

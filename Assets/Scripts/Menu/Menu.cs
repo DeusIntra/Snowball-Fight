@@ -46,8 +46,6 @@ public class Menu : MonoBehaviour
                 button.Animate();
             }
         }
-
-        Debug.Log("TODO: open or close location buttons");
     }
 
     public void ChooseLocationIndex(int locationIndex)

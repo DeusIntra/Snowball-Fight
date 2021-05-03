@@ -62,7 +62,11 @@ public class LevelEnd : MonoBehaviour
 
         yield return null;
 
-        Debug.Log("TODO: open location after finishing level 6");
+        int lastLocationFinished = parameters.finishedLevelsOnLocation[parameters.finishedLevelsOnLocation.Count - 1];
+        if (lastLocationFinished >= 10)
+        {
+            parameters.finishedLevelsOnLocation.Add(0);
+        }
 
         parameters.goldAmount += onWinGoldAmount;
 
