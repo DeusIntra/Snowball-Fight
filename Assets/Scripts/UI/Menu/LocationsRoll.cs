@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LocationsRoll : MonoBehaviour
 {
     public float animationTime = 1f;
     public float inactiveButtonsScale = 0.7f;
+    public GameParametersSingleton parameters;
     public AnimationCurve animationCurve;
 
     [SerializeField] private List<RectTransform> _locations;
@@ -46,6 +48,19 @@ public class LocationsRoll : MonoBehaviour
         for (int i = 1; i < _locations.Count; i++)
         {
             _locations[i].localScale = Vector3.one * inactiveButtonsScale;
+        }
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (i >= parameters.finishedLevelsOnLocation.Count) break;
+
+            Transform child = transform.GetChild(i);
+
+            Button button = child.GetComponentInChildren<Button>();
+            button.interactable = true;
+
+            TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+            text.gameObject.SetActive(false);
         }
     }
 

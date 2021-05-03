@@ -8281,7 +8281,6 @@ GameObject:
   - component: {fileID: 793919962}
   - component: {fileID: 793919964}
   - component: {fileID: 793919963}
-  - component: {fileID: 793919965}
   m_Layer: 5
   m_Name: Location Butons
   m_TagString: Untagged
@@ -8352,6 +8351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationTime: 0.7
   inactiveButtonsScale: 0.7
+  parameters: {fileID: 11400000, guid: f118b3802afe57546914829baef35980, type: 2}
   animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -8391,19 +8391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 0
---- !u!114 &793919965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793919960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977d171e96ee79647aac43a1208d2471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swipeDetector: {fileID: 870137879}
 --- !u!1001 &799583911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9694,8 +9681,6 @@ GameObject:
   m_Component:
   - component: {fileID: 870137877}
   - component: {fileID: 870137876}
-  - component: {fileID: 870137878}
-  - component: {fileID: 870137879}
   m_Layer: 0
   m_Name: Menu Scripts
   m_TagString: Untagged
@@ -9786,32 +9771,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &870137878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870137875}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db834b20c1b45444fbae03890efdbc9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &870137879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870137875}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83498e9da8fb5c9498d3f01c72e7e0c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minDistance: 0.01
-  maxTime: 0.1
 --- !u!1001 &879297116
 PrefabInstance:
   m_ObjectHideFlags: 0

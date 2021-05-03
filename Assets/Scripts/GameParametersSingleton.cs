@@ -64,18 +64,14 @@ public class GameParametersSingleton : ScriptableObject
             i++;
         }
 
-        // TODO: REMOVE
-        Debug.Log("REMOVE THIS CODE");
+        if (finishedLevelsOnLocation.Count == 0)
+            finishedLevelsOnLocation.Add(0);
 
-        for (int j = 0; j < 5 - finishedLevelsOnLocation.Count; j++)
+        int lastLocationFinished = finishedLevelsOnLocation[finishedLevelsOnLocation.Count - 1];
+        if (lastLocationFinished >= 10)
         {
             finishedLevelsOnLocation.Add(0);
         }
-
-        //////////////////////////////
-
-        if (finishedLevelsOnLocation.Count == 0)
-            finishedLevelsOnLocation.Add(0);
 
         if (PlayerPrefs.HasKey("game loaded before"))
             goldAmount = PlayerPrefs.GetInt("gold amount");

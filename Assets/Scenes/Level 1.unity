@@ -3773,7 +3773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &563980955
 Transform:
   m_ObjectHideFlags: 0
@@ -6529,6 +6529,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 210638980}
+    - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: useJoystick
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8547217461581300474, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: max
       value: 20
