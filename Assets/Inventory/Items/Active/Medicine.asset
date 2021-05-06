@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Medicine
   price: 30
-  prefab: {fileID: 0}
+  prefab: {fileID: 2906978076563674276, guid: b05a982e43213c94e81f22aaad719fca, type: 3}
   effects:
   - {fileID: 11400000, guid: adbff949737fd8b48ba1e1ae7d5783de, type: 2}
