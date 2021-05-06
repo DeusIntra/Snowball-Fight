@@ -15,4 +15,5 @@ MonoBehaviour:
   name: Slingshot
   price: 1000
   prefab: {fileID: 8091062002699259093, guid: 5b020aaa8d67d3544a11d1a3d472de6f, type: 3}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 353e35bdf8e7d4344858d3fca132e400, type: 2}

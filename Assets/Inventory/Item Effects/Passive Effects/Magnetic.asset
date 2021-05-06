@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99ebf184df97e774c9731e2995c776e6, type: 3}
-  m_Name: Heal
+  m_Name: Magnetic
   m_EditorClassIdentifier: 
-  name: Heal
-  value: 5
+  name: Magnetic
+  value: 1000

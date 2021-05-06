@@ -11,6 +11,8 @@ public class PlayerShooter : MonoBehaviour
     public float snowballScale = 1f;
 
     [HideInInspector] public float doubleShotChance = 0f;
+    [HideInInspector] public bool magneticSnowballs = false;
+    [HideInInspector] public float magnetForceMultiplier = 1f;
 
     public ProgressBarTimed progressBar;
     public GameObject snowballPrefab;
@@ -55,6 +57,12 @@ public class PlayerShooter : MonoBehaviour
         GameObject snowball = _shooter.Shoot(force, sbPrefab, sideForce);
         snowball.transform.localScale = snowball.transform.lossyScale * snowballScale;
         snowball.tag = "Player Snowball";
+        if (magneticSnowballs)
+        {
+            var magnet = snowball.GetComponent<SnowballEnemyMagnet>();
+            magnet.enabled = true;
+            magnet.forceMultiplier = magnetForceMultiplier;
+        }
     }
 
     private IEnumerator SecondShotCoroutine(float force, GameObject sbPrefab, float sideForce)

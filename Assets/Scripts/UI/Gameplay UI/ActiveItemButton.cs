@@ -10,7 +10,14 @@ public class ActiveItemButton : MonoBehaviour
     public float itemYRotation = 100f;
 
     [HideInInspector] public InventoryButton inventoryButton;
+
     private bool spawned = false;
+    private Player _player;
+
+    private void Awake()
+    {
+        _player = FindObjectOfType<Player>();
+    }
 
     public void UseItem()
     {
@@ -37,8 +44,7 @@ public class ActiveItemButton : MonoBehaviour
 
         if (activeItem is ThrowableItem)
         {
-            Player player = FindObjectOfType<Player>();
-            PlayerShooter shooter = player.GetComponent<PlayerShooter>();
+            PlayerShooter shooter = _player.GetComponent<PlayerShooter>();
             shooter.nextSnowballPrefab = ((ThrowableItem)activeItem).throwablePrefab;
         }
 
@@ -75,7 +81,8 @@ public class ActiveItemButton : MonoBehaviour
     #region Active effects
     private void Heal(int value)
     {
-        Debug.Log("heal " + value);
+        Health health = _player.GetComponent<Health>();
+        health.Add(value);
     }
     #endregion
 }

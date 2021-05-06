@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4295951947071019504}
   - component: {fileID: 6115517566162212986}
   - component: {fileID: -4302497503761261358}
+  - component: {fileID: 6870158004016978971}
   m_Layer: 0
   m_Name: Ice
   m_TagString: Player Snowball
@@ -174,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277110c546b4dba4288f6b99451b9daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
+  lifetime: 2
   damage: 8
   destructionChance: 0.1
   canBreak: 0
@@ -206,8 +207,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da4d80eebbe9bc40bd0b4c362b94773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
-  icePrefab: {fileID: 0}
+  duration: 7
+--- !u!114 &6870158004016978971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277239919051144637}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b6db1991bfc247a9ddb64c5c45007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMultiplier: 1
 --- !u!1 &7421149374240656494
 GameObject:
   m_ObjectHideFlags: 0

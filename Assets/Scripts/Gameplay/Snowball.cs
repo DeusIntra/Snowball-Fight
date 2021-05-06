@@ -75,6 +75,6 @@ public class Snowball : MonoBehaviour
 
         GetComponent<Collider>().enabled = false;
 
-        Destroy(gameObject, lifetime/2);
+        Destroy(gameObject);
     }
 }

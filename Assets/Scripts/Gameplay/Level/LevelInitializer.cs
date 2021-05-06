@@ -108,6 +108,9 @@ public class LevelInitializer : MonoBehaviour
                     case "Double Shot Chance":
                         DoubleShotChance(effect.value);
                         break;
+                    case "Magnetic":
+                        Magnetic(effect.value);
+                        break;
                     default:
                         Debug.LogError("Effect name " + effect.name + " is not used");
                         break;
@@ -200,6 +203,13 @@ public class LevelInitializer : MonoBehaviour
     {
         PlayerShooter shooter = _player.GetComponent<PlayerShooter>();
         shooter.doubleShotChance = value;
+    }
+
+    private void Magnetic(float value)
+    {
+        PlayerShooter shooter = _player.GetComponent<PlayerShooter>();
+        shooter.magneticSnowballs = true;
+        shooter.magnetForceMultiplier = value;
     }
     #endregion
 

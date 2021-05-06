@@ -16,4 +16,4 @@ MonoBehaviour:
   price: 20
   prefab: {fileID: 2906978076563674276, guid: f4e97e6e07444614c85f2f5893e8bfbb, type: 3}
   effects:
-  - {fileID: 11400000, guid: adbff949737fd8b48ba1e1ae7d5783de, type: 2}
+  - {fileID: 11400000, guid: 18fc7b761dcd9214a91881f103dc6be5, type: 2}
