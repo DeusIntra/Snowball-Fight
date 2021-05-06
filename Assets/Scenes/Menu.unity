@@ -3843,6 +3843,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 793919965}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &347502918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8281,6 +8293,7 @@ GameObject:
   - component: {fileID: 793919962}
   - component: {fileID: 793919964}
   - component: {fileID: 793919963}
+  - component: {fileID: 793919965}
   m_Layer: 5
   m_Name: Location Butons
   m_TagString: Untagged
@@ -8391,6 +8404,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 0
+--- !u!114 &793919965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793919960}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885d3b402a8607d4b965e260d97a8789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeDetector: {fileID: 870137878}
 --- !u!1001 &799583911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9318,7 +9344,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 2
+  m_PointerBehavior: 0
 --- !u!114 &842610385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9681,6 +9707,8 @@ GameObject:
   m_Component:
   - component: {fileID: 870137877}
   - component: {fileID: 870137876}
+  - component: {fileID: 870137879}
+  - component: {fileID: 870137878}
   m_Layer: 0
   m_Name: Menu Scripts
   m_TagString: Untagged
@@ -9771,6 +9799,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870137878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870137875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc653ade5c7d10146bb4da0e76799f68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistance: 100
+  maxTime: 1
+--- !u!114 &870137879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870137875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fee588550f9719459ac550ad6ef916c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &879297116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19495,6 +19549,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 793919965}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1879130971
 MonoBehaviour:

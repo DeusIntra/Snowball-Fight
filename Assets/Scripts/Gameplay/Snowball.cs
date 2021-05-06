@@ -6,7 +6,6 @@ public class Snowball : MonoBehaviour
     public float lifetime = 2f;
     public int damage = 1;
     public float destructionChance = 0.1f;
-
     public bool canBreak = true;
     
     public ParticleSystem particlesPrefab;
@@ -15,11 +14,13 @@ public class Snowball : MonoBehaviour
     private bool isBroken = false;
     private AudioSource _audioSource;
     private MeshRenderer _meshRenderer;
+    private IDebuffEffect _debuffEffect;
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
         _meshRenderer = GetComponent<MeshRenderer>();
+        _debuffEffect = GetComponent<IDebuffEffect>();
         Destroy(gameObject, lifetime);
     }
 
@@ -28,15 +29,24 @@ public class Snowball : MonoBehaviour
         Snowball otherSnowball = otherCollider.GetComponent<Snowball>();
         if (otherSnowball != null)
         {
-            float p = 1 - Mathf.Sqrt(1 - destructionChance);
-            if (Random.Range(0f, 1f) < p)
+            if (canBreak == false) otherSnowball.Break();
+            else
             {
-                otherSnowball.Break();
-                if (canBreak) Break();
+                float p = 1 - Mathf.Sqrt(1 - destructionChance);
+                if (Random.Range(0f, 1f) < p)
+                {
+                    otherSnowball.Break();
+                    Break();
+                }
             }
         }
         else
         {
+            if (_debuffEffect != null)
+            {
+                _debuffEffect.Debuff(otherCollider.gameObject);
+            }
+
             Break();
         }
     }
@@ -65,6 +75,6 @@ public class Snowball : MonoBehaviour
 
         GetComponent<Collider>().enabled = false;
 
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, lifetime/2);
     }
 }

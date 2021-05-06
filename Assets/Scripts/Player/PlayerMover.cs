@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
-public class PlayerMover : MonoBehaviour
+public class PlayerMover : MonoBehaviour, IMover
 {
     public float speed = 4f;
     public float speedMultiplier = 1f;

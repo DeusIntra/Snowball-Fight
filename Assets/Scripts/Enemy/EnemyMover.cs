@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class EnemyMover : MonoBehaviour
+public class EnemyMover : MonoBehaviour, IMover
 {
     public float speed = 1.5f;
     public float debuffedSpeedFraction = 0.5f;

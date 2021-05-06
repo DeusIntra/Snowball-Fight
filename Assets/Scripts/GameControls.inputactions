@@ -85,15 +85,15 @@
             "id": "83616197-8545-4577-9007-6fbb4f5e270e",
             "actions": [
                 {
-                    "name": "Touch",
-                    "type": "PassThrough",
+                    "name": "Press",
+                    "type": "Button",
                     "id": "a29697ae-16a8-4fb3-894d-a968bcbb14e5",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": ""
                 },
                 {
-                    "name": "Touch Position",
+                    "name": "Point",
                     "type": "PassThrough",
                     "id": "68bc1a9a-9554-49f9-a1c4-7262acb8c00b",
                     "expectedControlType": "Vector2",
@@ -104,34 +104,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "34e5e55a-cd4c-4db0-a21e-a14b47a4eab6",
-                    "path": "<Touchscreen>/primaryTouch/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Touch Position",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "94a0d208-8b7c-40a6-8de6-28439334afcc",
                     "path": "<Pointer>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Touch Position",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ba01f961-c610-42d1-8c63-9a6667d70b5a",
-                    "path": "<Touchscreen>/primaryTouch/press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Touch",
+                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -142,7 +120,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Touch",
+                    "action": "Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -98,15 +98,15 @@ public class @GameControls : IInputActionCollection, IDisposable
             ""id"": ""83616197-8545-4577-9007-6fbb4f5e270e"",
             ""actions"": [
                 {
-                    ""name"": ""Touch"",
-                    ""type"": ""PassThrough"",
+                    ""name"": ""Press"",
+                    ""type"": ""Button"",
                     ""id"": ""a29697ae-16a8-4fb3-894d-a968bcbb14e5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 },
                 {
-                    ""name"": ""Touch Position"",
+                    ""name"": ""Point"",
                     ""type"": ""PassThrough"",
                     ""id"": ""68bc1a9a-9554-49f9-a1c4-7262acb8c00b"",
                     ""expectedControlType"": ""Vector2"",
@@ -117,34 +117,12 @@ public class @GameControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""34e5e55a-cd4c-4db0-a21e-a14b47a4eab6"",
-                    ""path"": ""<Touchscreen>/primaryTouch/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Touch Position"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""94a0d208-8b7c-40a6-8de6-28439334afcc"",
                     ""path"": ""<Pointer>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Touch Position"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ba01f961-c610-42d1-8c63-9a6667d70b5a"",
-                    ""path"": ""<Touchscreen>/primaryTouch/press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Touch"",
+                    ""action"": ""Point"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -155,7 +133,7 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Touch"",
+                    ""action"": ""Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -170,8 +148,8 @@ public class @GameControls : IInputActionCollection, IDisposable
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_Touch = m_Menu.FindAction("Touch", throwIfNotFound: true);
-        m_Menu_TouchPosition = m_Menu.FindAction("Touch Position", throwIfNotFound: true);
+        m_Menu_Press = m_Menu.FindAction("Press", throwIfNotFound: true);
+        m_Menu_Point = m_Menu.FindAction("Point", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -262,14 +240,14 @@ public class @GameControls : IInputActionCollection, IDisposable
     // Menu
     private readonly InputActionMap m_Menu;
     private IMenuActions m_MenuActionsCallbackInterface;
-    private readonly InputAction m_Menu_Touch;
-    private readonly InputAction m_Menu_TouchPosition;
+    private readonly InputAction m_Menu_Press;
+    private readonly InputAction m_Menu_Point;
     public struct MenuActions
     {
         private @GameControls m_Wrapper;
         public MenuActions(@GameControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Touch => m_Wrapper.m_Menu_Touch;
-        public InputAction @TouchPosition => m_Wrapper.m_Menu_TouchPosition;
+        public InputAction @Press => m_Wrapper.m_Menu_Press;
+        public InputAction @Point => m_Wrapper.m_Menu_Point;
         public InputActionMap Get() { return m_Wrapper.m_Menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -279,22 +257,22 @@ public class @GameControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_MenuActionsCallbackInterface != null)
             {
-                @Touch.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
-                @Touch.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
-                @Touch.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouch;
-                @TouchPosition.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnTouchPosition;
+                @Press.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPress;
+                @Press.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPress;
+                @Press.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPress;
+                @Point.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPoint;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Touch.started += instance.OnTouch;
-                @Touch.performed += instance.OnTouch;
-                @Touch.canceled += instance.OnTouch;
-                @TouchPosition.started += instance.OnTouchPosition;
-                @TouchPosition.performed += instance.OnTouchPosition;
-                @TouchPosition.canceled += instance.OnTouchPosition;
+                @Press.started += instance.OnPress;
+                @Press.performed += instance.OnPress;
+                @Press.canceled += instance.OnPress;
+                @Point.started += instance.OnPoint;
+                @Point.performed += instance.OnPoint;
+                @Point.canceled += instance.OnPoint;
             }
         }
     }
@@ -306,7 +284,7 @@ public class @GameControls : IInputActionCollection, IDisposable
     }
     public interface IMenuActions
     {
-        void OnTouch(InputAction.CallbackContext context);
-        void OnTouchPosition(InputAction.CallbackContext context);
+        void OnPress(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
 }

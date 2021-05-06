@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a57ee3e093037a9409e7f1c67b2ecad4, type: 3}
-  m_Name: Icicle
+  m_Name: Ice Cube
   m_EditorClassIdentifier: 
-  name: Icicle
+  name: Ice Cube
   price: 14
   prefab: {fileID: 3251315773040284289, guid: b991ab0c8c57edf46bf1176a15f6881f, type: 3}
   effects: []
-  damage: 0
+  throwablePrefab: {fileID: 3277239919051144637, guid: 7adf9bad84b39a542bebd52e4339f7f3, type: 3}
