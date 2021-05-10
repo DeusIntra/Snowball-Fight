@@ -9,6 +9,9 @@ using System.IO;
 public class GameParametersSingleton : ScriptableObject
 {
     public bool showTitle = true;
+    public bool music;
+    public bool sounds;
+
     public int goldAmount = 0;
     public List<int> finishedLevelsOnLocation;
 
@@ -40,6 +43,9 @@ public class GameParametersSingleton : ScriptableObject
             xmlSerializer.Serialize(stringWriter, itemData);
             PlayerPrefs.SetString("item data", stringWriter.ToString());
         }
+
+        PlayerPrefs.SetInt("music", music ? 1 : 0);
+        PlayerPrefs.SetInt("sounds", sounds ? 1 : 0);
 
         PlayerPrefs.Save();
     }
@@ -90,6 +96,18 @@ public class GameParametersSingleton : ScriptableObject
 
             inventory.SetStashedItems(itemData);
         }
+
+        if (PlayerPrefs.HasKey("music") == false)
+        {
+            PlayerPrefs.SetInt("music", 1);
+        }
+        music = PlayerPrefs.GetInt("music") == 1;
+
+        if (PlayerPrefs.HasKey("sounds") == false)
+        {
+            PlayerPrefs.SetInt("sounds", 1);
+        }
+        sounds = PlayerPrefs.GetInt("sounds") == 1;
     }
 
     public void ResetProgress()
