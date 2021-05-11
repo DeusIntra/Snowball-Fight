@@ -46,6 +46,14 @@ public class Inventory : ScriptableObject
         }
     }
 
+    public void UnequipActiveItems()
+    {
+        for (int i = activeItemsEquipped.Count - 1; i >= 0; i--)
+        {
+            Unequip(activeItemsEquipped[i]);
+        }
+    }
+
     public void StashItem(Item item)
     {
         if (item is ActiveItem)
@@ -77,6 +85,7 @@ public class Inventory : ScriptableObject
     {
         if (item is ActiveItem)
         {
+            Debug.Log("unequipped " + item.name);
             activeItemsEquipped.Remove((ActiveItem)item);
             activeItemsStashed.Add((ActiveItem)item);
         }

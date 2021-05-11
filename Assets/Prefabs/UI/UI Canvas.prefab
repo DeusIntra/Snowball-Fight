@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 856747812}
   - component: {fileID: 856747811}
   - component: {fileID: 856747810}
+  - component: {fileID: 1343167201841316346}
   m_Layer: 5
   m_Name: Go Home Button
   m_TagString: Untagged
@@ -559,6 +560,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1343167201841316346}
+        m_TargetAssemblyTypeName: EquippedItemsClearer, Assembly-CSharp
+        m_MethodName: OnReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &856747810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +586,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Menu
   progressBar: {fileID: 1172545885333544532}
+--- !u!114 &1343167201841316346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856747808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1279aedfedf14064fa1b5f40380ff452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameters: {fileID: 11400000, guid: f118b3802afe57546914829baef35980, type: 2}
 --- !u!1 &1014717252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you earned $xxx
+  m_text: Earned $xxx
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0ecac9952b6c2c4db7398d6c489d284, type: 2}
   m_sharedMaterial: {fileID: 908804194387471587, guid: d0ecac9952b6c2c4db7398d6c489d284, type: 2}
@@ -2498,7 +2524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you earned $xxx
+  m_text: 'Earned: $xxx'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d0ecac9952b6c2c4db7398d6c489d284, type: 2}
   m_sharedMaterial: {fileID: 908804194387471587, guid: d0ecac9952b6c2c4db7398d6c489d284, type: 2}

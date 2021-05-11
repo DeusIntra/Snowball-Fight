@@ -20,6 +20,10 @@ public class LevelEnd : MonoBehaviour
     public EnablerDisabler disableOnEndGame;
     public GameParametersSingleton parameters;
 
+    public AudioSource musicSource;
+    public AudioClip winMusic;
+    public AudioClip loseMusic;
+
     private Transform _player;
 
     private void Start()
@@ -40,6 +44,10 @@ public class LevelEnd : MonoBehaviour
 
     private IEnumerator WinCoroutine()
     {
+        musicSource.Stop();
+        musicSource.clip = winMusic;
+        musicSource.loop = false;
+
         DisableUI();
 
         PlayerMover mover = _player.GetComponent<PlayerMover>();
@@ -55,10 +63,12 @@ public class LevelEnd : MonoBehaviour
         // spin player and jump
         yield return SpinAndJump(spinsAmount, spinTime, jumpHeight);
 
+        musicSource.Play();
+
         // show score
         // TODO: animations and score
         winPanel.SetActive(true);
-        winPanelMoneyText.text = $"you earned ${onWinGoldAmount}";
+        winPanelMoneyText.text = $"Earned ${onWinGoldAmount}";
 
         yield return null;
 
@@ -76,6 +86,10 @@ public class LevelEnd : MonoBehaviour
 
     private IEnumerator LoseCoroutine()
     {
+        musicSource.Stop();
+        musicSource.clip = loseMusic;
+        musicSource.loop = false;
+
         DisableUI();
 
         PlayerMover mover = _player.GetComponent<PlayerMover>();
@@ -87,6 +101,8 @@ public class LevelEnd : MonoBehaviour
 
         yield return SpinAndJump(spinsAmount, waitTimeBeforeLose, 0);
 
+        musicSource.Play();
+
         // animate death
         PlayerAnimator playerAnimator = _player.GetComponent<PlayerAnimator>();
         playerAnimator.Die();
@@ -97,7 +113,7 @@ public class LevelEnd : MonoBehaviour
         int onLoseGoldAmount = enemyCount - GetComponent<EnemyHolder>().enemies.Count;
 
         losePanel.SetActive(true);
-        losePanelMoneyText.text = $"you earned ${onLoseGoldAmount}";
+        losePanelMoneyText.text = $"Earned ${onLoseGoldAmount}";
 
         parameters.goldAmount += onLoseGoldAmount;
         parameters.Save();
