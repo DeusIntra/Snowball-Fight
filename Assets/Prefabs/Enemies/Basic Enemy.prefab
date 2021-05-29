@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05358ab5ae152fa468230af6780c05fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowballSpawn: {fileID: 7695807918820735178}
+  snowballSpawnPoint: {fileID: 7695807918820735178}
   throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
   throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &3925469274262616083

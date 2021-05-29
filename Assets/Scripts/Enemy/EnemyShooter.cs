@@ -37,7 +37,7 @@ public class EnemyShooter : MonoBehaviour
     private void Start()
     {
         g = Physics.gravity.y;
-        angle = -_shooter.snowballSpawn.rotation.eulerAngles.x;
+        angle = -_shooter.snowballSpawnPoint.rotation.eulerAngles.x;
         resetShootTime();
     }
 

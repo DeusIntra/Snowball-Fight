@@ -223,6 +223,7 @@ MonoBehaviour:
   playAtStart: 0
   meshes:
   - {fileID: -2432090755550338912, guid: 25cfb784db6c34148b6bb0c80a423152, type: 3}
+  isSlowDown: 0
 --- !u!1 &2722015450798895812
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +335,7 @@ MonoBehaviour:
   playAtStart: 0
   meshes:
   - {fileID: -2432090755550338912, guid: 8b6bcff6b2113b44b9561bec7356b290, type: 3}
+  isSlowDown: 0
 --- !u!1 &7652669517417678221
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +383,7 @@ MonoBehaviour:
   playAtStart: 0
   meshes:
   - {fileID: -2432090755550338912, guid: b1683cccb88275e43bd75a0a7181a92d, type: 3}
+  isSlowDown: 0
 --- !u!1 &7813636266334934092
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +432,7 @@ MonoBehaviour:
   meshes:
   - {fileID: -2432090755550338912, guid: 4b397da7ed488344f9cee24ac6f95c12, type: 3}
   - {fileID: -2432090755550338912, guid: 7133df8589b77064799f9cfe2eece0fd, type: 3}
+  isSlowDown: 0
 --- !u!1 &8668231041199322643
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05358ab5ae152fa468230af6780c05fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snowballSpawn: {fileID: 484951766}
+  snowballSpawnPoint: {fileID: 484951766}
   throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
   throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &8590910627596644898
@@ -535,6 +539,9 @@ MonoBehaviour:
   minShootForceFraction: 0.4
   snowballSideVelocityMultiplier: 1
   snowballScale: 1
+  doubleShotChance: 0
+  magneticSnowballs: 0
+  magnetForceMultiplier: 1
   progressBar: {fileID: 0}
   snowballPrefab: {fileID: 5939075157995140235, guid: ae7ca2e9348ab414d99a3a2668ed3353, type: 3}
   nextSnowballPrefab: {fileID: 0}
@@ -674,6 +681,7 @@ MonoBehaviour:
   icebergFallSeconds: 0.2
   hailDurationSeconds: 2
   freezeDebuffDurationSeconds: 7
+  effectMultiplier: 1
   spell1Button: {fileID: 0}
   spell2Button: {fileID: 0}
   spell3Button: {fileID: 0}

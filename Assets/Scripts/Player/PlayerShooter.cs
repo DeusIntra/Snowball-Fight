@@ -57,6 +57,7 @@ public class PlayerShooter : MonoBehaviour
         GameObject snowball = _shooter.Shoot(force, sbPrefab, sideForce);
         snowball.transform.localScale = snowball.transform.lossyScale * snowballScale;
         snowball.tag = "Player Snowball";
+
         if (magneticSnowballs)
         {
             var magnet = snowball.GetComponent<SnowballEnemyMagnet>();

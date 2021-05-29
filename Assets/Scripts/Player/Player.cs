@@ -57,8 +57,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        ReadMoveInput();
-
         if (_isSwinging)
         {
             float FPS = Mathf.Lerp(4, 10, _shotProgressBar.currentFill);
@@ -91,12 +89,6 @@ public class Player : MonoBehaviour
 
             _isSwinging = false;
         };
-    }
-
-    public void ReadMoveInput()
-    {
-        float value = _gameControls.Gameplay.Move.ReadValue<float>();
-        _mover.SetHorizontal(value);
     }
 
     public void FillHealthBar()
