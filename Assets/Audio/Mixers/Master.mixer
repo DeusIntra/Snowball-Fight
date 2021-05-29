@@ -451,7 +451,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Throw
+  m_Name: Shoot
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: d37ab8ade01dd3a4abbc9e8a116d659f
   m_Children: []

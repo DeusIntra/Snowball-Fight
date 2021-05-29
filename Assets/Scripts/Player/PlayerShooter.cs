@@ -14,7 +14,6 @@ public class PlayerShooter : MonoBehaviour
     [HideInInspector] public bool magneticSnowballs = false;
     [HideInInspector] public float magnetForceMultiplier = 1f;
 
-    public ProgressBarTimed progressBar;
     public GameObject snowballPrefab;
     [HideInInspector] public GameObject nextSnowballPrefab = null;
 
@@ -27,9 +26,9 @@ public class PlayerShooter : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();        
     }
 
-    public void Shoot()
+    public void Shoot(float progressBarFill)
     {
-        float shootForce = progressBar.currentFill * maxShootForce * (1f - minShootForceFraction);
+        float shootForce = progressBarFill * maxShootForce * (1f - minShootForceFraction);
 
         // if shootForce = 0, snowball will get at least a minimal shoot force
         float force = shootForce + maxShootForce * minShootForceFraction;
@@ -48,8 +47,6 @@ public class PlayerShooter : MonoBehaviour
 
         if (doubleShotChance > Random.Range(0f, 1f))
             StartCoroutine(SecondShotCoroutine(force, sbPrefab, sideForce));
-
-        progressBar.StopAndReset();
     }
 
     private void CreateSnowball(float force, GameObject sbPrefab, float sideForce)

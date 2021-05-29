@@ -106,7 +106,6 @@ public class LevelEnd : MonoBehaviour
         // animate death
         PlayerAnimator playerAnimator = _player.GetComponent<PlayerAnimator>();
         playerAnimator.Die();
-        _player.GetComponent<Player>().PlayDeathSound();
 
         // show score
         // TODO: animations and score

@@ -24,6 +24,7 @@ public class EnemyShooter : MonoBehaviour
     private Shooter _shooter;
     private EnemyAnimator _enemyAnimator;
     private Transform _target;
+    private CharacterAudio _characterAudio;
 
     private const float hack = 0.57f;
 
@@ -31,7 +32,9 @@ public class EnemyShooter : MonoBehaviour
     {
         _shooter = GetComponent<Shooter>();
         _enemyAnimator = GetComponent<EnemyAnimator>();
-        _target = GameObject.FindGameObjectWithTag("Player").transform;
+        _characterAudio = GetComponent<CharacterAudio>();
+        
+        _target = FindObjectOfType<Player>().transform;
     }
 
     private void Start()
@@ -55,6 +58,7 @@ public class EnemyShooter : MonoBehaviour
         {
             _enemyAnimator.Throw();
             ShootAtTarget();
+            _characterAudio.Shoot();
             resetShootTime();
             onShoot.Invoke();
         }

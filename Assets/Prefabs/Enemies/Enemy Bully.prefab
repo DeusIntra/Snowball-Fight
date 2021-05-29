@@ -59,6 +59,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.931
       objectReference: {fileID: 0}
+    - target: {fileID: 4252111512855215644, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: _death
+      value: 
+      objectReference: {fileID: 8300000, guid: b396ca04b16d91c4fab902991c87b122, type: 3}
+    - target: {fileID: 4252111512855215644, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
+      propertyPath: _deathMixer
+      value: 
+      objectReference: {fileID: -5147655468538275948, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
     - target: {fileID: 4627689020216647386, guid: c7cabe1e1e6082f42b1aca962be9c68b, type: 3}
       propertyPath: maxJumpTimeSeconds
       value: 7.5

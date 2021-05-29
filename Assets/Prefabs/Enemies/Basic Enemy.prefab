@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 7702308527376925847}
   - component: {fileID: 6332574273900030559}
   - component: {fileID: 9083715412884696815}
+  - component: {fileID: 4252111512855215644}
   - component: {fileID: 5638602311746608654}
   - component: {fileID: 1047307387874480603}
   - component: {fileID: 7695807918632469614}
@@ -299,8 +300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snowballSpawnPoint: {fileID: 7695807918820735178}
-  throwSound: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
-  throwMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &3925469274262616083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,6 +550,22 @@ MonoBehaviour:
   isEnabled: 0
   onHitAmount: 0
   onKillAmount: 1
+--- !u!114 &4252111512855215644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695807918632469623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f309d186ee948eb49ac05cc6326376a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shoot: {fileID: 8300000, guid: 937cf8083f90b594082dde3b1edaaab3, type: 3}
+  _death: {fileID: 8300000, guid: 5773da39f567d2a47989024fb484f10c, type: 3}
+  _shootMixer: {fileID: 6258304635622197403, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
+  _deathMixer: {fileID: 1330469440606736613, guid: 2c9b03a5fffe9b442a5fc700ce5dab2d, type: 2}
 --- !u!114 &5638602311746608654
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12036,6 +12036,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4336680422346408102, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: m_Name
+      value: Shoot
+      objectReference: {fileID: 0}
     - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: spellBar
       value: 
@@ -12052,6 +12056,10 @@ PrefabInstance:
       propertyPath: shootButton
       value: 
       objectReference: {fileID: 5437006805455879827}
+    - target: {fileID: 4810657145280257783, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
+      propertyPath: _shotProgressBar
+      value: 
+      objectReference: {fileID: 7040686170283508660}
     - target: {fileID: 6718269652752470965, guid: 696f8a950804d014ea8131ca6fff9b60, type: 3}
       propertyPath: joystick
       value: 

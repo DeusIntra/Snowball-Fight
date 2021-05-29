@@ -26,13 +26,13 @@ public class PlayerAnimator : MonoBehaviour
         meshAnimator.Play("Swing");
     }
 
-    public void Throw()
+    public void Shoot()
     {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
         
-        animator.Play("throw");
-        meshAnimator.Play("Throw");
+        animator.Play("shoot");
+        meshAnimator.Play("Shoot");
 
         _coroutine = StartCoroutine(DelayWalk());
     }

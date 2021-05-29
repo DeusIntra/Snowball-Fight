@@ -11,8 +11,6 @@ using UnityEngine.Audio;
 public class Enemy : MonoBehaviour
 {
     public ProgressBar healthBar;
-    public AudioClip deathSound;
-    public AudioMixerGroup deathMixer;
 
     private EnemyShooter _shooter;
     private EnemyMover _mover;
@@ -22,7 +20,7 @@ public class Enemy : MonoBehaviour
     private BoxCollider _collider;
     private Coroutine _coroutine;
     private EnemyHolder _enemyHolder;
-    private AudioSource _audioSource;
+    private CharacterAudio _characterAudio;
 
 
     private void Awake()
@@ -34,7 +32,7 @@ public class Enemy : MonoBehaviour
         _health = GetComponent<Health>();
         _collider = GetComponent<BoxCollider>();
         _enemyHolder = FindObjectOfType<EnemyHolder>();
-        _audioSource = GetComponent<AudioSource>();
+        _characterAudio = GetComponent<CharacterAudio>();
     }
 
     public void OnZeroHealth()
@@ -73,15 +71,8 @@ public class Enemy : MonoBehaviour
 
         _collider.enabled = false;
 
-        PlayDeathSound();
+        _characterAudio.Die();
 
         _enemyHolder.Remove(gameObject);
-    }
-
-    private void PlayDeathSound()
-    {
-        _audioSource.clip = deathSound;
-        _audioSource.outputAudioMixerGroup = deathMixer;
-        _audioSource.Play();
     }
 }

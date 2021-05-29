@@ -18,16 +18,16 @@ public class Player : MonoBehaviour
 
     public AudioClip playerDeathSound;
     public AudioMixerGroup playerDeathMixer;
+    [SerializeField] private ProgressBarTimed _shotProgressBar;
 
     private bool _isSwinging = false;
 
     private PlayerShooter _shooter;
     private PlayerMover _mover;
     private PlayerAnimator _playerAnimator;
-    private ProgressBarTimed _shotProgressBar;
     private Health _health;
     private Mana _mana;
-    private AudioSource _audioSource;
+    private CharacterAudio _playerAudio;
 
     private GameControls _gameControls;
 
@@ -35,13 +35,12 @@ public class Player : MonoBehaviour
     {
         _shooter = GetComponent<PlayerShooter>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _mover = GetComponent<PlayerMover>();
-        _shotProgressBar = _shooter.progressBar;
+        _mover = GetComponent<PlayerMover>();        
         _health = GetComponent<Health>();
         _mana = GetComponent<Mana>();
-        _audioSource = GetComponent<AudioSource>();
-
+        _playerAudio = GetComponent<CharacterAudio>();
         _gameControls = new GameControls();
+
         ReadShootInput();
     }
 
@@ -78,14 +77,15 @@ public class Player : MonoBehaviour
         {
             if (_shotProgressBar.currentFill > 0.1f)
             {
-                _shooter.Shoot();
-                _playerAnimator.Throw();
+                _shooter.Shoot(_shotProgressBar.currentFill);
+                _playerAnimator.Shoot();
+                _playerAudio.Shoot();
             }
             else
             {
-                _shotProgressBar.StopAndReset();
                 _playerAnimator.Walk();
             }
+            _shotProgressBar.StopAndReset();
 
             _isSwinging = false;
         };
@@ -109,9 +109,7 @@ public class Player : MonoBehaviour
 
     public void PlayDeathSound()
     {
-        _audioSource.clip = playerDeathSound;
-        _audioSource.outputAudioMixerGroup = playerDeathMixer;
-        _audioSource.Play();
+        _playerAudio.Die();
     }
 
     private void Die()
@@ -120,6 +118,8 @@ public class Player : MonoBehaviour
         _mover.enabled = false;
         _mover.joystick.gameObject.SetActive(false);
         _shotProgressBar.enabled = false;
+
+        PlayDeathSound();
 
         GetComponent<Collider>().enabled = false;
     }    
