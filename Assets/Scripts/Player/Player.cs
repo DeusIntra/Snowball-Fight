@@ -35,13 +35,14 @@ public class Player : MonoBehaviour
     {
         _shooter = GetComponent<PlayerShooter>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _mover = GetComponent<PlayerMover>();        
+        _mover = GetComponent<PlayerMover>();
         _health = GetComponent<Health>();
         _mana = GetComponent<Mana>();
         _playerAudio = GetComponent<CharacterAudio>();
-        _gameControls = new GameControls();
 
-        ReadShootInput();
+        _gameControls = new GameControls();
+        _gameControls.Gameplay.Shoot.started += OnShootActionStarted;
+        _gameControls.Gameplay.Shoot.canceled += OnShootActionCancelled;
     }
 
     private void OnEnable()
@@ -63,34 +64,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ReadShootInput()
-    {
-        _gameControls.Gameplay.Shoot.started += ctx =>
-        {
-            _shotProgressBar.StartFilling();
-            _isSwinging = true;
-            _playerAnimator.Swing();
-            _playerAnimator.SetFPS(4f);
-        };
-
-        _gameControls.Gameplay.Shoot.canceled += ctx =>
-        {
-            if (_shotProgressBar.currentFill > 0.1f)
-            {
-                _shooter.Shoot(_shotProgressBar.currentFill);
-                _playerAnimator.Shoot();
-                _playerAudio.Shoot();
-            }
-            else
-            {
-                _playerAnimator.Walk();
-            }
-            _shotProgressBar.StopAndReset();
-
-            _isSwinging = false;
-        };
-    }
-
     public void FillHealthBar()
     {
         healthBar.value = _health.current;
@@ -107,20 +80,39 @@ public class Player : MonoBehaviour
         spellBar.SetFill(_mana.currentFraction);
     }
 
-    public void PlayDeathSound()
-    {
-        _playerAudio.Die();
-    }
-
     private void Die()
     {
         _shooter.enabled = false;
         _mover.enabled = false;
         _mover.joystick.gameObject.SetActive(false);
         _shotProgressBar.enabled = false;
-
-        PlayDeathSound();
-
         GetComponent<Collider>().enabled = false;
-    }    
+
+        _playerAudio.Die();
+    }
+
+    private void OnShootActionStarted(InputAction.CallbackContext ctx)
+    {
+        _shotProgressBar.StartFilling();
+        _isSwinging = true;
+        _playerAnimator.Swing();
+        _playerAnimator.SetFPS(4f);
+    }
+
+    private void OnShootActionCancelled(InputAction.CallbackContext ctx)
+    {
+        if (_shotProgressBar.currentFill > 0.1f)
+        {
+            _shooter.Shoot(_shotProgressBar.currentFill);
+            _playerAnimator.Shoot();
+            _playerAudio.Shoot();
+        }
+        else
+        {
+            _playerAnimator.Walk();
+        }
+        _shotProgressBar.StopAndReset();
+
+        _isSwinging = false;
+    }
 }
