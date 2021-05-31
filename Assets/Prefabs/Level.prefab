@@ -9051,6 +9051,7 @@ MonoBehaviour:
   - {fileID: 7040686169239947905}
   - {fileID: 3405651292566519234}
   - {fileID: 2795414107221544701}
+  - {fileID: 2467062036650299582}
   objectsToRevealOnPause:
   - {fileID: 6702319736798566891}
 --- !u!114 &6757219863655331223
@@ -13376,7 +13377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -250
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalScale.x
