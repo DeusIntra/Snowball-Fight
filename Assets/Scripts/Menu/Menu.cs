@@ -20,15 +20,15 @@ public class Menu : MonoBehaviour
     public List<LevelDataObject> location4;
 
     private int _savedLocationIndex = -1;
-    private List<List<LevelDataObject>> locations;
+    private List<List<LevelDataObject>> _locations;
 
     private void Awake()
     {
-        locations = new List<List<LevelDataObject>>();
-        locations.Add(location1);
-        locations.Add(location2);
-        locations.Add(location3);
-        locations.Add(location4);
+        _locations = new List<List<LevelDataObject>>();
+        _locations.Add(location1);
+        _locations.Add(location2);
+        _locations.Add(location3);
+        _locations.Add(location4);
 
         parameters.Load();
     }
@@ -93,7 +93,7 @@ public class Menu : MonoBehaviour
             levelIndex = Random.Range(5, 10);
         }
 
-        levelDataHolder.levelData = locations[locationIndex][levelIndex];
+        levelDataHolder.levelData = _locations[locationIndex][levelIndex];
         parameters.currentLocationIndex = locationIndex;
         parameters.currentLevelIndex = levelIndex;
         SceneManager.LoadScene(scenes[locationIndex]);
