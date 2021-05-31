@@ -26,6 +26,14 @@ public class LevelEnd : MonoBehaviour
 
     private Transform _player;
 
+    private bool isAppropriateLevelForAd
+    {
+        get
+        {
+            return parameters.finishedLevelsOnLocation[0] > 3;
+        }
+    }
+
     private void Start()
     {
         _player = FindObjectOfType<Player>().transform;
@@ -101,6 +109,8 @@ public class LevelEnd : MonoBehaviour
 
         yield return SpinAndJump(spinsAmount, waitTimeBeforeLose, 0);
 
+        if (isAppropriateLevelForAd) AdManager.Instance?.ShowEndLevelAd();
+
         musicSource.Play();
 
         // animate death
@@ -140,6 +150,7 @@ public class LevelEnd : MonoBehaviour
         }
     }
 
+    // Move it to player class
     private IEnumerator SpinAndJump(int spinsAmount, float spinTime, float jumpHeight)
     {
         float t = 0;

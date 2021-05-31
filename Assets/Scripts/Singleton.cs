@@ -18,44 +18,25 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            if (_shuttingDown)
+            if (_instance == null)
             {
-                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-                    "' already destroyed. Returning null.");
-                return null;
-            }
+                // Search for existing instance.
+                _instance = (T)FindObjectOfType(typeof(T));
 
-            lock (_lock)
-            {
+                // Create new instance if one doesn't already exist.
                 if (_instance == null)
                 {
-                    // Search for existing instance.
-                    _instance = (T)FindObjectOfType(typeof(T));
+                    var singletonObject = new GameObject();
+                    _instance = singletonObject.AddComponent<T>();
+                    singletonObject.name = typeof(T).ToString() + " (Singleton)";
 
-                    // Create new instance if one doesn't already exist.
-                    if (_instance == null)
-                    {
-                        var singletonObject = new GameObject();
-                        _instance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
-
-                        // Make instance persistent.
-                        //DontDestroyOnLoad(singletonObject);
-                    }
+                    // Make instance persistent.
+                    //DontDestroyOnLoad(singletonObject);
                 }
-
-                return _instance;
             }
+
+            return _instance;
+
         }
-    }
-
-    private void OnApplicationQuit()
-    {
-        _shuttingDown = true;
-    }
-
-    private void OnDestroy()
-    {
-        _shuttingDown = true;
     }
 }
